@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     <header
       // className={cn(
-      //   "border-2 border-[red] fixed top-0 z-50 w-full border-accent bg-background backdrop-blur supports-[backdrop-filter]:bg-background-transparent transition-all px-3 flex",
+      //   " fixed top-0 z-50 w-full border-accent bg-background backdrop-blur supports-[backdrop-filter]:bg-background-transparent transition-all px-3 flex",
       //   isScrolled && "shadow-sm shadow-accent"
       // )}
       className={cn(
@@ -60,7 +60,7 @@ export default function Navbar() {
       <div className=" justify-center items-center w-fit">
         <Link href="/">
           <Image 
-            src={"/logo.svg"} 
+            src={"/logo-nobg.png"} 
             width={1000} 
             height={1000}
             alt="Gracespring Hospitals Foundation" 
@@ -71,7 +71,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between m-auto">
+      <div className=" container flex h-14 max-w-screen-2xl items-center justify-end lg:justify-between m-auto">
         {/* Mobile sidebar */}
         <MobileNav />
 
@@ -189,7 +189,7 @@ export default function Navbar() {
           </nav>
         </div>
 
-        <div className=" flex items-center gap-x-4 mr-5">
+        <div className="hidden lg:block flex items-center gap-x-4 mr-5">
           <motion.button
             className="lg:bg-primary hover:bg-black text-white font-semibold py-2 px-5 lg:rounded-lg lg:shadow-md flex lg:gap-3 lg:w-full lg:h-[40px]"
             whileHover={{ scale: 1.05 }}
@@ -258,12 +258,12 @@ export default function Navbar() {
 
 //   return (
 
-//   <ul className="border-2 border-[red] flex flex-col md:flex-row bg-[#EDEDF7] w-full md:w-auto md:shadow-none shadow-sm p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6 lg:justify-center lg:items-center ">
+//   <ul className=" flex flex-col md:flex-row bg-[#EDEDF7] w-full md:w-auto md:shadow-none shadow-sm p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6 lg:justify-center lg:items-center ">
 
 //     {links.map(({ name, url, iconPath }) => (
 //       <li 
 //         key={name} 
-//         // className="border-2 border-[red] flex w-full h-full py-2 "
+//         // className=" flex w-full h-full py-2 "
 //         className="flex w-full h-full py-2 lg:py-0 lg:px-0 lg:mx-0 lg:h-auto"
 //       >
 //         <a

@@ -6,7 +6,7 @@ import { cn } from "../../lib/utils";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiOutlineLogin, HiPhone } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 export default function MobileNav() {
   const pathname = usePathname();
@@ -25,64 +25,46 @@ export default function MobileNav() {
   return (
     <>
 
-      <div className="animate lg:hidden">
 
-        <div className=" justify-center items-center w-fit">
-            <Link href="/">
-            <Image 
-                src={"/logo.svg"} 
-                width={1000} 
-                height={1000}
-                alt="Gracespring Hospitals Foundation" 
-                className="gshf-Logo"
-                priority
-                id="logo"
-            />
-            </Link>
-        </div>
+      
+      <div className="lg:hidden mr-2">
+        <motion.button
+          className="bg-primary hover:bg-black text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
 
+        <Image
+          src={"assets/icons/arrow-up-right.svg"}
+          width={20}
+          height={20}
+          alt="arrow-up-right"
+          className="lg:hidden my-auto ml-2"
+        />
+
+        <a 
+          href="#portfolios"
+          className="text-white text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
+        >
+          Donate
+        </a>
+
+        </motion.button>
       </div>
 
-      <div className="border-2 border-[red] flex gap-2">
-
-
-      {/* <div className="flex items-center lg:hidden ">
-          <ThemeToggler />
-        </div> */}
-
-
-        <Link
-          href="/auth/signin"
-          className="ml-2 duration-300 ease-in-out hover:text-[#00d0ff] lg:hidden"
-        >
-        {/* <FaSignInAlt className="h-4 w-4 m-auto" />  */}
-          <HiOutlineLogin className="h-[26px] w-[21px] m-auto" /> 
-          {/* Lightweight Login Icon */}
-          <p className="text-[10px] text-black dark:text-white hover:text-[#00d0ff] ">Login</p>
-        </Link>
-
-        <Link
-          href="/contact"
-          className="ml-2  duration-300 ease-in-out hover:text-[#00d0ff] lg:hidden"
-        >
-        {/* <FaEnvelope className="h-4 w-4 m-auto" /> Icon representing Contact */}
-          <HiPhone className="h-[26px] w-[21px] m-auto" /> {/* Lightweight Contact Icon */}
-          <p className="text-[10px] text-black dark:text-white hover:text-[#00d0ff] ">Contact</p>
-        </Link>
+      <div className="flex gap-2">
 
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="ml-2 block md:hidden"
         >
-          <Menu className="h-[26px] w-[21px] m-auto hover:text-[#00d0ff] " />
-          <p className="text-[10px] text-black dark:text-white hover:text-[#00d0ff] ">Menu</p>
+          <Menu className="h-[36px] w-[31px] m-auto hover:text-[#2A157C ] " />
+          {/* <p className="text-[10px] text-black dark:text-white hover:text-[#00d0ff] ">Menu</p> */}
         </button>
         
 
       </div>
-
-
 
       <div
         className={cn(
@@ -95,16 +77,19 @@ export default function MobileNav() {
         <div className="flex items-center justify-between bg-white">
 
           <div>
-            <Link
-              href="/"
-              className="relative items-center gap-x-3 flex font-bold text-muted hover:text-accent text-3xl transition ease-in-out"
-            >
-              <img
-                src="/images/logo/TimobSanta2.png"
-                alt="logo"
-                width={119.03}
-              />
-            </Link>
+            <div className=" justify-center items-center w-fit">
+              <Link href="/">
+                <Image 
+                  src={"/logo-nobg.png"} 
+                  width={1000} 
+                  height={1000}
+                  alt="Gracespring Hospitals Foundation" 
+                  className="gshf-Logo"
+                  priority
+                  id="logo"
+                />
+              </Link>
+            </div>
           </div>
 
           <div>        
@@ -184,7 +169,7 @@ export default function MobileNav() {
 
           className="flex items-center justify-center rounded-full bg-primary px-3.5 py-0.5 text-[12px] text-white duration-300 ease-in-out hover:bg-primaryblack hover:text-white lg:hidden"
         >
-          Create Account
+          Donate
         </Link>
 
         {/* <Link
@@ -196,7 +181,8 @@ export default function MobileNav() {
         </nav>
 
       </div>
-      
+
+     
     </>
   );
 }
