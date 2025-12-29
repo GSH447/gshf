@@ -1,0 +1,6 @@
+other color: 2A157C - FFC000 - 223A5C - 4966AA
+
+bg: EDEDF7
+
+
+replace white sometimes with DBE1EF

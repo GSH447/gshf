@@ -12,6 +12,8 @@ const Footer = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
     const handleSubscribe = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -40,11 +42,51 @@ const Footer = () => {
 
     return (
         <footer className="pt-20 w-full footer">
-            <div className="container mx-auto flex flex-wrap justify-between gap-y-10 sm:space-y-0 lg:gap-5">
-                <Section title="Company" links={FooterLinks.company} />
-                <Section title="Links" links={FooterLinks.link} />
-                <ContactSection contacts={FooterLinks.contact} />
-                <NewsletterSection email={email} setEmail={setEmail} handleSubscribe={handleSubscribe} loading={loading} message={message} error={error} />
+
+            <div className="mx-auto mx-[1%] flex flex-wrap justify-between gap-y-10 sm:space-y-0 lg:gap-5">
+                <div className="border-2 border-[transparent] lg:w-[50%]  grid gap-y-6">
+
+                    <Link href="/">
+                      <Image 
+                        src={"/logo-nobg.png"} 
+                        width={1000} 
+                        height={1000}
+                        alt="Gracespring Hospitals Foundation" 
+                        className="gshf-Logo"
+                        priority
+                        id="logo"
+                      />
+                    </Link>
+                    
+                    <ContactSection contacts={FooterLinks.contact} />
+
+                    <div className="flex space-x-4 lg:items-center socialBottomLinks  my-auto">
+                        
+                        {FooterLinks.social.map((social, index) => (
+                            <Link
+                                key={index}
+                                href={social.url}
+                                target="_blank"
+                                className="text-gray-600 hover:text-primary text-2xl transition duration-300"
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
+                            >
+                                <Image
+                                    src={hoveredIndex === index ? social.iconPathHover : social.iconPath}
+                                    width={20}
+                                    height={20}
+                                    alt="Social Icon"
+                                    className="w-[15px] h-[15px]"
+                                />
+                            </Link>
+                        ))}
+                    </div>
+
+                </div>
+                <Section links={FooterLinks.company} />
+                <Section links={FooterLinks.link1} />
+                <Section links={FooterLinks.link2} />
+                {/* <NewsletterSection email={email} setEmail={setEmail} handleSubscribe={handleSubscribe} loading={loading} message={message} error={error} /> */}
             </div>
             <FooterBottom currentYear={currentYear} />
         </footer>
@@ -65,8 +107,7 @@ const Section = ({ title, links }) => (
 );
 
 const ContactSection = ({ contacts }) => (
-    <AnimatedDiv className="w-56 flex-1 min-w-48">
-        <h2 className="text-1xl font-semibold text-gray-800 mb-4">Contact</h2>
+    <AnimatedDiv className="flex-1 min-w-48">
         <ul className="text-gray-600 space-y-2">
             {contacts.map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
@@ -107,14 +148,13 @@ const NewsletterSection = ({ email, setEmail, handleSubscribe, loading, message,
 
 
 const FooterBottom = ({ currentYear }) => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
         <div className="border-t border-gray-300 lg:mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600  ">
 
             <div className="flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last ">
 
-                <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks ">
+                {/* <div className="flex gap-4 sm:gap-6 lg:items-center lg:justify-center companyBottomLinks ">
                     {FooterLinks.footerBottom.map((link, index) => (
                         <Link 
                             key={index} 
@@ -125,33 +165,35 @@ const FooterBottom = ({ currentYear }) => {
                             {link.name}
                         </Link>
                     ))}
-                </div>
+                </div> */}
 
-                <div className="flex space-x-4 lg:items-center socialBottomLinks  my-auto">
-                    {FooterLinks.social.map((social, index) => (
-                        <Link
-                            key={index}
-                            href={social.url}
-                            target="_blank"
-                            className="text-gray-600 hover:text-primary text-2xl transition duration-300"
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                            <Image
-                                src={hoveredIndex === index ? social.iconPathHover : social.iconPath}
-                                width={20}
-                                height={20}
-                                alt="Social Icon"
-                                className="w-[15px] h-[15px]"
-                            />
-                        </Link>
-                    ))}
-                </div>
+
 
             </div>
 
-            <div className="flex gap-4 lg:items-center lg:justify-center signatureBottomLinks ">
-                <p className="text-[14px] text-left">© {currentYear} Heelheid Business Acqusition & Management Company. All Rights Reserved.</p>
+
+
+            <div className="grid gap-4 lg:items-center lg:justify-center signatureBottomLinks ">
+
+                <Link href="/">
+                    <Image 
+                    src={"/logo-icon-nobg.png"} 
+                    width={1000} 
+                    height={1000}
+                    alt="Gracespring Hospitals Foundation" 
+                    className="gshf-Logo"
+                    priority
+                    id="logo"
+                    />
+                </Link>
+                
+                <div>
+
+                    The Gracespring Health Foundation is a registered foundation in Nigeria, UK and USA, No. 666 and a company limited by guarantee, No. 999. Registered address: Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Lekki, Lagos, Nigeria.
+                    
+                </div>
+
+                <p className="text-[14px] text-left">© {currentYear} Gracespring Health Foundation. All Rights Reserved.</p>
             </div>
 
         </div>

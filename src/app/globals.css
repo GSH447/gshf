@@ -36,9 +36,15 @@ html, body {
 } */
 
 /* logo */
-#logo {
+/* #logo {
   width: 80px !important;
   height: 65px !important;
+} */
+
+
+.gshf-Logo {
+  width: 8em;
+  /* min-height: 6em; */
 }
 
 /* Hero (Desktop) */
@@ -90,6 +96,11 @@ html, body {
 .hero-text {
   line-height: 1.2em
 }
+
+.footer {
+  background-color: #DBE1EF;
+}
+
 
 #faq,
 #explore,
@@ -308,8 +319,9 @@ html, body {
 
 
   
-  .heelHeid-Logo {
-    width: 60px;
+  .gshf-Logo {
+    width: 100px;
+    min-height:100px;
   }
 
   #services-container {
@@ -346,6 +358,7 @@ html, body {
   .footer {
     margin-top: 10%;
     padding: 5%;
+    /* background-color: #2A157C; */
   }
 
   .companyBottomLinks,
