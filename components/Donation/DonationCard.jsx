@@ -25,7 +25,7 @@ const DonationCard = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="w-full max-w-md bg-white rounded-3xl shadow-xl p-6 space-y-6"
+        className=" bg-white rounded-3xl shadow-xl px-2 space-y-6"
       >
         {/* Header */}
         <div className="hidden flex items-center gap-2 text-sm font-semibold text-gray-700">
@@ -33,7 +33,7 @@ const DonationCard = () => {
         </div>
 
         {/* Frequency Toggle */}
-        <div className="flex rounded-full border overflow-hidden">
+        <div className=" flex rounded-full border overflow-hidden">
           {["one-time", "monthly"].map((type) => (
             <button
               key={type}
@@ -50,7 +50,7 @@ const DonationCard = () => {
         </div>
 
         {/* Preset Amounts */}
-        <div className="grid grid-cols-3 gap-3">
+        <div className=" grid grid-cols-3 gap-3">
           {PRESET_AMOUNTS.map((amt) => (
             <button
               key={amt}
@@ -67,7 +67,7 @@ const DonationCard = () => {
         </div>
 
         {/* Custom Amount */}
-        <div className="flex items-center border rounded-lg px-3 py-2">
+        <div className=" flex items-center border rounded-lg px-3 py-2">
           <span className="text-gray-500 mr-2">₦</span>
           <input
             type="number"
@@ -80,7 +80,7 @@ const DonationCard = () => {
         </div>
 
         {/* Dedication */}
-        <div className="space-y-2">
+        <div className=" space-y-2">
           <label className="flex items-center gap-2 text-sm text-gray-600">
             <input
               type="checkbox"

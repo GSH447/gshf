@@ -15,7 +15,7 @@ export default function Home() {
       <Hero2/>
       
       <div
-        className="border-2 border-[red] -mt-[23.5rem] lg:-mt-[9rem]"
+        className="-mt-[28.5rem] lg:-mt-[9rem]"
       >
         <CTA/>
       </div>

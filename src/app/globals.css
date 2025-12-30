@@ -127,7 +127,7 @@ html, body {
 }
 
 /* Left Side - Parent Circle */
-.custom-bg::before {
+/* .custom-bg::before {
   content: "";
   position: absolute;
   width: 39%;
@@ -137,10 +137,10 @@ html, body {
   border-radius: 15rem;
   background: linear-gradient(to right,  rgba(255, 255, 255, 0.15), #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF);
   
-}
+} */
 
 /* Left Side - Child Circle */
-.custom-bg::after {
+/* .custom-bg::after {
   content: "";
   position: absolute;
   width: 20%;
@@ -149,10 +149,10 @@ html, body {
   left: -15%;
   border-radius: 50%;
   background: #DBE1EF;
-}
+} */
 
 /* Right Side - Large Circle */
-.right-circle {
+/* .right-circle {
   position: absolute;
   width: 96%;
   height: 120%;
@@ -161,7 +161,7 @@ html, body {
   border-radius: 15rem;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),#EDEDF7, );
   z-index: -1;
-}
+} */
 
 
 
@@ -326,7 +326,7 @@ html, body {
 
   .hero-typewriter-container{
     border: 2px solid red;
-    margin-top: -50vh !important;
+    margin-top: -52vh !important;
   }
 
  
@@ -418,7 +418,7 @@ html, body {
   }
   
   /* Right Side - Large Circle */
-  .right-circle {
+  /* .right-circle {
   position: absolute;
   width: 100%;
   height: 120%;
@@ -428,7 +428,7 @@ html, body {
   border-radius: 15rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),rgba(255, 255, 255, 0.042),#EDEDF7, #EDEDF7,#EDEDF7, #EDEDF7,#EDEDF7, #EDEDF7);
   z-index: -1;
-  }
+  } */
 
   .banner-dynamic-title {
     font-size: large !important;

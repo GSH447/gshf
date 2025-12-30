@@ -8,11 +8,11 @@ const CTA = () => {
   return (
     <>
 
-      <section className="rounded-[32px] shadow-lg gradient-bg">
+      <section className=" rounded-[32px] shadow-lg gradient-bg mx-2">
 
-        <div className="container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-2 p-4 custom-bg">
+        <div className=" container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 custom-bg">
 
-          <div className="right-circle" ></div>
+          {/* <div className="right-circle" ></div> */}
 
           <motion.div
             variants={{
@@ -30,33 +30,37 @@ const CTA = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="border-2 border-[red] animate_left lg:w-1/2 h-fit subscribeCTA"
+            // className=" animate_left lg:w-1/2 h-fit subscribeCTA"
+            className=" animate_left lg:w-1/2 h-fit subscribeCTA mx-auto"
           >
 
-              <div>
+              <div
+                className=" grid gap-2"
+              >
 
+                <div
+                  className=""
+                >
                   <h1 
-                      className="relative text-4xl lg:text-7xl text-black"
+                      className="relative text-2xl lg:text-6xl text-[#4966AA] "
                       style={{fontFamily: 'AvenirBold'}}
                   >
-                  Be Exclusive!
+                    Saving the <i>lives</i> of children born with heart conditions <i>everywhere</i>
                   </h1>
+                </div>
+                
+                <div
+                  className=""
+                >
                   
-                  <p className="relative text-black">
-                      Join our Newsletter.
-                  </p>
-              </div>
-            
-            
-              <div className="grid gap-[1em]">
-                <h1 className="text-black text-[18px] font-extrabold">
-                    Stay ahead of the curve with our weekly newsletter.  
-                </h1>
+                  <h3 className="text-[#2A157C ] text-[11px] lg:text-[15px] font-extrabold text-justify">
+                    Your donations directly fund life-saving heart surgeries, strengthen pediatric cardiac care, and give Nigerian children born with heart conditions a chance to live full, healthy lives.
+                  </h3>
 
-                <p className="text-black">
-                    Get exclusive updates on, new acquisition opportunities, Job openings for talented team members, Insider information on upcoming events, Behind-the-scenes insights into our company's journey, challenges, and successes
-                </p>
+                </div>
+
               </div>
+           
 
           </motion.div>
 
@@ -76,9 +80,9 @@ const CTA = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className="animate_right lg:w-1/2 m-auto subscribeCTA"
+            className=" animate_right lg:w-1/2 m-auto subscribeCTA"
           >
-            <div className="relative m-auto w-fit">
+            <div className=" relative m-auto lg:w-[70%] w-full">
 
 
               <DonationCard />
