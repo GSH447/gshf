@@ -1,338 +1,109 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from "framer-motion";
-import Image from "next/image";
-import HeroTypeWriter from './TypewriteEffect';
+
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import HeroTypeWriter from "./TypewriteEffect";
+
+const heroImages = [
+  "/assets/images/hero/care-01.png",
+  "/assets/images/hero/care-02.png",
+  "/assets/images/hero/care-03.png",
+];
 
 const Hero2 = () => {
+  const [currentImage, setCurrentImage] = useState(0);
 
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null); 
-  const [showControls, setShowControls] = useState(true);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-
-  const handleHeroSubscribe = async (e) => {
-      e.preventDefault();
-      setLoading(true);
-      setMessage(null);
-      setError(null);
-
-      try {
-          const response = await fetch("http://localhost/heelheid/subscribe.php", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ email }),
-          });
-          const result = await response.json();
-          if (result.success) {
-              setMessage(`Subscribed successfully! Location: ${result.location.country}`);
-              setEmail("");
-          } else {
-              setError(result.error || "Subscription failed.");
-          }
-      } catch (err) {
-          setError("Network error, please try again.");
-      } finally {
-          setLoading(false);
-      }
-  };
-  
+  // Auto-rotate background images
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.volume = volume;
-      video.addEventListener("timeupdate", () => setCurrentTime(video.currentTime));
-      video.addEventListener("loadedmetadata", () => setDuration(video.duration));
-    }
-    return () => {
-      if (video) {
-        video.removeEventListener("timeupdate", () => setCurrentTime(video.currentTime));
-        video.removeEventListener("loadedmetadata", () => setDuration(video.duration));
-      }
-    };
-  }, [volume]);
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 6000); // 6 seconds
 
-  const togglePlayPause = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-    setShowControls(false); // Hide buttons on click
-  };
-
-  const handleRewind = () => {
-    videoRef.current.currentTime -= 5;
-    setShowControls(false);
-  };
-
-  const handleFastForward = () => {
-    videoRef.current.currentTime += 5;
-    setShowControls(false);
-  };
-
-  const handleVolumeChange = (e) => {
-    setVolume(e.target.value);
-  };
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-
-    <>
-
-
-    
-   
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-          className={`relative w-full h-screen flex flex-col items-center justify-center text-center text-white px-4 lg:my-10 hero-section ${
-            imageLoaded ? "image-loaded" : ""
-          }`}
-          style={{
-            backgroundColor: "#1a1a1a", // Fallback background color
-            backgroundImage: imageLoaded ? `url('/assets/images/hero/hero-7.svg')` : "none",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          id="hero"
-        >
-          {/* Next.js Optimized Image */}
-          <Image
-            src="/assets/images/hero/hero-7.svg"
-            alt="Hero Background"
-            layout="fill"
-            objectFit="cover"
-            priority
-            onLoadingComplete={() => setImageLoaded(true)}
-            className="hidden" // Hide the actual img element since we use bg-image
-          />
+    <section
+      id="hero"
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+    >
+      {/* ================= BACKGROUND IMAGES ================= */}
+      <AnimatePresence>
         <motion.div
-          className="lg:h-fit grid gap-5  hero-main"
-          initial={{ opacity: 0, y: 50 }}
+          key={currentImage}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImages[currentImage]})`,
+          }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
+
+      {/* ================= OVERLAY (Opacity Control) ================= */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+
+      {/* ================= CONTENT ================= */}
+      <div className="relative z-10 text-white px-4 text-center max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
+          className="space-y-6"
         >
-              
-          {/* Heading Section */}
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='h-fit my-auto hero-heading-section '
+          {/* Hero Text */}
+          <motion.h1
+            initial={{ rotateY: 90, opacity: 0 }}
+            animate={{ rotateY: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 25 }}
+            className="lg:text-[42px] text-[26px] font-extrabold leading-tight"
+            style={{ fontFamily: "AvenirBold" }}
           >
-              <div className='hero-text-container my-auto'>
+            <HeroTypeWriter />
+          </motion.h1>
 
-                <h1 className="lg:text-[40px] text-1xl font-extrabold hero-text" style={{ fontFamily: 'AvenirBold'}}>
-                  We are Globally
-                  <div className="flex justify-center gap-2 block text-white">
+          {/* Sub Text */}
+          {/* <p className="text-sm lg:text-lg text-gray-200 max-w-2xl mx-auto">
+            Delivering trusted, innovative, and compassionate healthcare
+            solutions for everyone.
+          </p> */}
 
-                    {/* <div>
-                      Building <span className='m-1'></span>
-                    </div> */}
-                     
-
-                     <motion.div
-                    // key={currentText} // Unique key to trigger animation on text change
-                    initial={{ rotateY: 90, opacity: 0 }} // Initial state of the animation (off-screen)
-                    animate={{ rotateY: 0, opacity: 1, color: '#fff' }} // Final state (visible and flipped)
-                    exit={{ rotateY: -90, opacity: 0 }} // Exit animation (flip out)
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    className="lg:text-[40px] text-1xl font-extrabold hero-text"
-                    >
-                      <HeroTypeWriter/>
-                    </motion.div>
-                  
-                    {/*<div>
-                      growth
-                    </div>  */}
-                    
-                  </div>
-
-                </h1>
-
-              </div>
-          </motion.div>
-
-            
-        </motion.div>
-
-        <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="hero-main-2 h-fit w-fit mx-auto "
-          >
-
-              <div className=''>
-                <p className="lg:mt-4 lg:text-[25px] lg:text-lg font-bold">Subscribe to join our newsletter</p>
-              </div>
-
-              <motion.div
-                className="lg:mt-6 mx-auto"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-              <form onSubmit={handleHeroSubscribe}>
-                <input
-                  type="email"
-                  placeholder="Enter your Email Address"
-                  className="flex-1 px-4 py-3 rounded-l-md text-gray-900 focus:outline-none lg:w-[434px]"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <motion.button
-                  type="submit"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="bg-primary hover:bg-black text-white px-6 py-3 rounded-r-md font-semibold lg:w-[156px]"
-                >
-                  {loading ? "Submitting..." : "Submit"}
-                </motion.button>
-              </form>
-
-                {message && <p className="text-green-600 mt-2">{message}</p>}
-                {error && <p className="text-red-600 mt-2">{error}</p>}
-              </motion.div>
-
-              {/* <div className=''>
-                <p className="lg:mt-4 text-[20px]">
-                  Not ready to get started? <motion.button onClick={() => setIsOpen(true)} className="underline">view Demo</motion.button>
-                </p>
-              </div> */}
-
-        </motion.div>
-
-      </motion.div>
-
-      {/* Video Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50  flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg overflow-hidden lg:w-[1099px] w-full lg:h-fit h-full relative">
-
-            {/* Close Button */}
-            <button
-              className="absolute lg:right-[1em] right-4 text-black hover:text-primary hover:font-extrabold lg:text-5xl text-4xl"
-              // onClick={() => setIsOpen(false)}
-              onClick={() => {
-                setIsOpen(false);
-                setIsPlaying(false);
-                if (videoRef.current) {
-                  videoRef.current.pause();
-                }
-              }}
+          {/* CTA Buttons */}
+          {/* <div className="flex justify-center gap-4 pt-4">
+            <a
+              href="/auth/signup"
+              className="px-6 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primaryblack transition"
             >
-              &times;
-            </button>
-            
-            {/* Video Embed */}
-            <div className="relative w-[90%] lg:h-[569px] mx-auto  rounded-lg my-10">
-              {/* <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with actual video link
-                title="Demo Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe> */}
+              Get Started
+            </a>
 
-              {/* <video className="w-full h-full" controls>
-                <source src="/assets/videos/demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video> */}
-
-
-            {/* Custom Video Player */}
-            <div className="relative w-full h-[550px] flex items-center mt-[4em rounded-lg justify-center bg-black"
-            onMouseEnter={() => setShowControls(true)}
-            onMouseLeave={() => setShowControls(false)}
+            <a
+              href="/contact"
+              className="px-6 py-2 rounded-full border border-white text-white text-sm font-semibold hover:bg-white hover:text-black transition"
             >
-              {/* <video className="w-full h-full object-cover rounded-lg" autoPlay muted controlsList="nodownload noremoteplayback nofullscreen"> */}
+              Contact Us
+            </a>
+          </div> */}
+        </motion.div>
+      </div>
 
-              <video ref={videoRef} className="w-full h-full object-cover rounded-lg" controlsList="nodownload noremoteplayback nofullscreen">
-             
-
-                <source src="/assets/videos/demo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              {/* Custom Play Button */}
-
-              {showControls && (
-                <div className="absolute w-full flex justify-between px-10 my-10 ">
-
-              
-                  <button 
-                    className="play-button bg-[grey] bg-opacity-50 p-2 my-auto rounded-full shadow-md hover:bg-opacity-100 w-20 h-20"
-                    onClick={handleRewind}
-                    >
-                    <Image 
-                      src={isPlaying ? '/assets/icons/previous.svg' : '/assets/icons/previous.svg'}
-                      width={50} 
-                      height={50} 
-                      alt={isPlaying ? 'Rewind Video' : 'Rewind Video'} 
-                    />
-
-                  </button>
-                  
-                  <button 
-                    className="play-button bg-[grey] bg-opacity-50 p-6 rounded-full shadow-md hover:bg-opacity-100"
-                    onClick={togglePlayPause}
-                    >
-                    <Image 
-                      src={isPlaying ? '/assets/icons/pause.svg' : '/assets/icons/play-new.svg'}
-                      width={50} 
-                      height={50} 
-                      alt={isPlaying ? 'Pause Video' : 'Play Video'} 
-                    />
-
-                  </button>
-                  
-                  <button 
-                    className="play-button bg-[grey] bg-opacity-50 p-3 my-auto rounded-full shadow-md hover:bg-opacity-100 w-20 h-20"
-                    onClick={handleFastForward}
-                    >
-                    <Image 
-                      src={isPlaying ? '/assets/icons/forward.svg' : '/assets/icons/forward.svg'}
-                      width={50} 
-                      height={50} 
-                      alt={isPlaying ? 'Fast-forward Video' : 'Fast-forward Video'} 
-                    />
-
-                  </button>
-
-                </div>
-              )}
-
-
-            </div>
-
-            {/* Video Time & Volume Controls */}
-            <div className="absolute bottom-5 left-5 flex items-center space-x-4 bg-black bg-opacity-50 p-2 rounded-lg">
-              <span className="text-white text-sm">{Math.floor(currentTime)}s / {Math.floor(duration)}s</span>
-              <input type="range" min="0" max="1" step="0.1" value={volume} onChange={handleVolumeChange}
-                className="volume-slider appearance-none w-24 h-2 bg-blue-500 rounded-lg cursor-pointer" />
-            </div>
-
-            </div>
-          </div>
-        </div>
-      )}
-
-    </>
+      {/* ================= DOT INDICATORS ================= */}
+      <div className="absolute bottom-6 flex gap-2 z-10">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImage(index)}
+            className={`h-2 w-2 rounded-full transition-all ${
+              currentImage === index
+                ? "bg-white w-6"
+                : "bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

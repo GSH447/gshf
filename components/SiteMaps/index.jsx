@@ -12,6 +12,20 @@ export const navLinks = [
 
   export const links = [
 
+   
+
+
+
+
+
+// Our reports and accounts
+// Discover our latest reports and accounts.
+
+// Careers with us
+// Find out more about working at The Royal Marsden Cancer Charity
+
+
+
   {
     label: "Who we are",
     href: "#",
@@ -20,62 +34,34 @@ export const navLinks = [
     caption: "#bookcolonoscopy #colonoscopy #colonscreening",
     subLinks: [
       {
-        header: "Timob Cares",
+        header: " About us",
         subMenu: [
           {
-            label: "Body Mass Index",
-            href: "/bmi",
-          },
-          {
-            label: "Speak to a Doctor",
-            href: "/find-doctor",
-          },
-          {
-            label: "Ambulance services",
-            href: "/error",
-          },
-          {
-            label: "Find a Doctor",
-            href: "/find-doctor",
-          },
-          {
-            label: "Testimonials",
-            href: "/testimonials",
+            label: "Find out more about who we are and why we exist",
+            href: "/about",
           },
         ],
       },
-
       
       {
-        header: "Gastro Procedures and Services",
+        header: "Our people",
         subMenu: [
+
           {
-            label: "Colonoscopy",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product1.php",
+            label: "Meet our Joint Patrons, Trustees and our leadership team",
+            href: "/team",
           },
+
+        ],
+      },
+      
+      {
+        header: "Careers with us",
+        subMenu: [
+
           {
-            label: "Gastroscopy",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product2.php",
-          },
-          {
-            label: "Liver Drainage",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product6.php",
-          },
-          {
-            label: "Liver Biopsy",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product7.php",
-          },
-          {
-            label: "Barium Swallow",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product3.php",
-          },
-          {
-            label: "Barium Enema",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product4.php",
-          },
-          {
-            label: "Pancreas Scan",
-            href: "https://timobhealthinternational.org//Product_pages/Products/product5.php",
+            label: "Find out more about working at The Gracespring Health Foundation",
+            href: "/careers",
           },
 
         ],
@@ -88,60 +74,34 @@ export const navLinks = [
     href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
-    caption: "#excerise #stayhealthy",
+    caption: "#charity #donation #giveback",
     subLinks: [
       {
-        header: "Telephone",
+        header: "Making breakthroughs happen",
         subMenu: [
+
           {
-            label: "+234 (0)803 576 8694",
-            href: "tel:+23408035768694",
-          },
-          {
-            label: "+234 (0)902 436 2969",
-            href: "tel:+2309024362969",
-          },
-          {
-            label: "+234 (0)7003 761 6991",
-            href: "tel:+234070037616991",
-          },
-          {
-            label: "+234 (0)813 056 2585",
-            href: "tel:+23408130562585",
+            label: "Discover how your support is revolutionising cardiac diagnosis and treatment, everywhere",
+            href: "/cardiac-diagnosis-and-treatment",
           },
         ],
       },
       {
-        header: "Email",
+        header: "Cardiac-leading treatment and care",
         subMenu: [
           {
-            label: "info@timobhealthinternational.org",
-            href: "mail:info@timobhealthinternational.org",
-          },
-          {
-            label: "timobhealthinternational@gmail.com",
-            href: "mail:timobhealthinternational@gmail.com",
+            label: "Discover how your support is helping people to live well from diagnosis, throughout treatment and beyond",
+            href: "/cardiac-leading-treatment-and-care",
           },
         ],
       },
+ 
       {
-        header: "Social Network",
+        header: "Paediatric-leading treatment and care",
         subMenu: [
           {
-            label: "Whatsapp",
-            href: "https://wa.me/+23408035768694?text=hi",
-          },
-          {
-            label: "Facebook",
-            href: "https://www.facebook.com/toyin.asaolu.1/",
-          },
-          {
-            label: "Instagram",
-            href: "https://www.instagram.com/hepatitiscorner/",
-          },
-          {
-            label: "Youtube",
-            href: "https://www.linkedin.com/in/toyin-asaolu-5608a668/?originalSubdomain=ng",
+            label: "Discover how your support is helping children to live well from diagnosis, throughout treatment and beyond",
+            href: "/paediatric-leading-treatment-and-care",
           },
         ],
       },
@@ -149,65 +109,97 @@ export const navLinks = [
     ],
   },
 
+
+  
+
+
+
   {
     label: "Get involved",
     href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
-    caption: "#excerise #stayhealthy",
+    caption: "#donate #fundraise #volunteer",
     subLinks: [
       {
-        header: "Telephone",
+        header: "Ways to donate",
         subMenu: [
           {
-            label: "+234 (0)803 576 8694",
-            href: "tel:+23408035768694",
+            label: "Donate online",
+            href: "/donate-online",
           },
           {
-            label: "+234 (0)902 436 2969",
-            href: "tel:+2309024362969",
+            label: "Make a monthly donation",
+            href: "/make-monthly-donation",
           },
           {
-            label: "+234 (0)7003 761 6991",
-            href: "tel:+234070037616991",
+            label: "Donate in memory",
+            href: "/donate-in-memory",
           },
           {
-            label: "+234 (0)813 056 2585",
-            href: "tel:+23408130562585",
+            label: "Leave a gift in your Will",
+            href: "/leave-a-gift-in-your-will",
           },
         ],
       },
       {
-        header: "Email",
+        header: "More ways to get involved",
         subMenu: [
           {
-            label: "info@timobhealthinternational.org",
-            href: "mail:info@timobhealthinternational.org",
+            label: "Special Occasion giving",
+            href: "/special-occasion-giving",
           },
           {
-            label: "timobhealthinternational@gmail.com",
-            href: "mail:timobhealthinternational@gmail.com",
+            label: "Sponsor a Day",
+            href: "/sponsor-a-day",
           },
+          {
+            label: "Fundraise for us",
+            href: "/fundraise-for-us",
+          },
+          {
+            label: "Volunteer with us",
+            href: "/volunteer-with-us",
+          },
+          {
+            label: "Corporate Partnerships",
+            href: "/corporate-partnerships",
+          },
+          {
+            label: "Community Fundraising",
+            href: "/community-fundraising",
+          },
+          {
+            label: "Events",
+            href: "/events",
+          },
+          {
+            label: "Payroll Giving",
+            href: "/payroll-giving",
+          }
+
         ],
       },
       {
-        header: "Social Network",
+        header: "Fundraise for us",
+
+        
         subMenu: [
           {
-            label: "Whatsapp",
-            href: "https://wa.me/+23408035768694?text=hi",
+            label: "Find an event to take part in",
+            href: "/find-an-event-to-take-part-in",
           },
           {
-            label: "Facebook",
-            href: "https://www.facebook.com/toyin.asaolu.1/",
+            label: "Do your own fundraising",
+            href: "/do-your-own-fundraising",
           },
           {
-            label: "Instagram",
-            href: "https://www.instagram.com/hepatitiscorner/",
+            label: "Fundraising ideas",
+            href: "/fundraising-ideas",
           },
           {
-            label: "Youtube",
-            href: "https://www.linkedin.com/in/toyin-asaolu-5608a668/?originalSubdomain=ng",
+            label: "Pay in your fundraising",
+            href: "/pay-in-your-fundraising",
           },
         ],
       },

@@ -35,11 +35,11 @@ export default function MobileNav() {
         >
 
         <Image
-          src={"assets/icons/arrow-up-right.svg"}
+          src={"/assets/icons/love.png"}
           width={20}
           height={20}
-          alt="arrow-up-right"
-          className="lg:hidden my-auto ml-2"
+          alt="love"
+          className="my-auto ml-2"
         />
 
         <a 
