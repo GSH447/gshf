@@ -1,5 +1,4 @@
 import Typewriter from "typewriter-effect";
-// import './style.css';
 
 const HeroTypeWriter = () => {
 
@@ -13,7 +12,7 @@ const HeroTypeWriter = () => {
             strings: [
                 " Saving the lives of people with congenital heart disease everywhere.",
                 " Helping cure CHD affecting approximately nearly 1 in 100 newborns annually. ",
-                " Support Groups and Counselling Services, providing financial assistance program to patients and families.",
+                " Providing financial assistance program to patients and families.",
             ],
             autoStart: true,
             loop: true,

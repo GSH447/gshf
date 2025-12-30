@@ -120,7 +120,7 @@ export default function Navbar() {
               className={cn(
                 "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8  w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
                 hovering || hovering === 0
-                  ? "opacity-100 border-t border-b border-accent border-2 border-[red] mx-auto"
+                  ? "opacity-100 border-t border-b border-accent mx-auto"
                   : "opacity-0 border-none"
               )}
               onMouseLeave={() => setHovering(null)}
@@ -209,7 +209,7 @@ export default function Navbar() {
           href="#portfolios"
           className="text-white text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
         >
-          Donate
+          Donate today
         </a>
 
         </motion.button>

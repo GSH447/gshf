@@ -121,7 +121,7 @@ html, body {
 
 .custom-bg {
   position: relative;
-  background: linear-gradient(to right, #E86512, #f4710f);
+  background: linear-gradient(to right, #EDEDF7, #EDEDF7  );
   border-radius: 32px;
   overflow: hidden;
 }
@@ -135,7 +135,7 @@ html, body {
   top: -10%;
   left: -15%;
   border-radius: 15rem;
-  background: linear-gradient(to right,  rgba(255, 255, 255, 0.15), #D35D13);
+  background: linear-gradient(to right,  rgba(255, 255, 255, 0.15), #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF);
   
 }
 
@@ -148,7 +148,7 @@ html, body {
   top: 0%;
   left: -15%;
   border-radius: 50%;
-  background: #D35D13;
+  background: #DBE1EF;
 }
 
 /* Right Side - Large Circle */
@@ -159,7 +159,8 @@ html, body {
   top: -10%;
   right: -20%;
   border-radius: 15rem;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),#D35D13, #D35D13,#D35D13, #D35D13,#D35D13, #D35D13);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),#EDEDF7, );
+  z-index: -1;
 }
 
 
@@ -288,6 +289,12 @@ html, body {
   /* *{
     font-size: small !important;
   } */
+
+   
+  .gshf-Logo {
+    min-height:100px;
+  }
+
   .hero-section {
     background-size: cover;
     background-position: center;
@@ -317,11 +324,12 @@ html, body {
     font-size: 28px;
   }
 
-
-  
-  .gshf-Logo {
-    min-height:100px;
+  .hero-typewriter-container{
+    border: 2px solid red;
+    margin-top: -50vh !important;
   }
+
+ 
 
   #services-container {
     margin: auto !important;
@@ -368,8 +376,8 @@ html, body {
 
 
  .subscribeCTA {
-  margin: 5%;
-  padding: 5%;
+  /* margin: 5%;
+  padding: 5%; */
   width: 90%;
  }
 
@@ -418,7 +426,8 @@ html, body {
   top: -10%;
   right: 0%;
   border-radius: 15rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),rgba(255, 255, 255, 0.042),#D35D13, #D35D13,#D35D13, #D35D13,#D35D13, #D35D13);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),rgba(255, 255, 255, 0.042),#EDEDF7, #EDEDF7,#EDEDF7, #EDEDF7,#EDEDF7, #EDEDF7);
+  z-index: -1;
   }
 
   .banner-dynamic-title {

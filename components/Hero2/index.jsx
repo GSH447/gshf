@@ -46,7 +46,7 @@ const Hero2 = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
 
       {/* ================= CONTENT ================= */}
-      <div className="relative z-10 text-white px-4 text-center max-w-4xl">
+      <div className="relative z-10 text-white px-4 text-center max-w-4xl hero-typewriter-container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ const Hero2 = () => {
       </div>
 
       {/* ================= DOT INDICATORS ================= */}
-      <div className="absolute bottom-6 flex gap-2 z-10">
+      <div className="hidden absolute bottom-6 flex gap-2 z-10">
         {heroImages.map((_, index) => (
           <button
             key={index}

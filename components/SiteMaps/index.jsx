@@ -242,7 +242,7 @@ export const FooterLinks = {
       { name: "Fundraising ideas", url: "#" },
       { name: "Become a corporate partner", url: "#" },
       { name: "Corporate partners", url: "#" },
-      { name: "News and stories", url: "#" },
+      { name: "Account", url: "/account" },
 
   ],
 
