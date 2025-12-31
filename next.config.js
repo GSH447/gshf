@@ -6,6 +6,16 @@ const nextConfig = {
             {
               protocol: 'https',
               hostname: 'discovertemplate.com'
+            },
+            
+            {
+              protocol: 'https',
+              hostname: 'flagcdn.com'
+            },
+
+            {
+              protocol: 'https',
+              hostname: 'upload.wikimedia.org'
             }
           ],
     }
