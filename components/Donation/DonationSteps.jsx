@@ -1,13 +1,14 @@
-// "use client";
 
-// import { useState } from "react";
-// import Image from "next/image";
-// import StepBasicInfo from "./steps/StepBasicInfo";
-// import StepAddress from "./steps/StepAddress";
-// import StepPayment from "./steps/StepPayment";
+"use client";
 
-// export default function DonationSteps({ onClose, donation }) {
-//   const [step, setStep] = useState(0);
+import { useState } from "react";
+import Image from "next/image";
+import StepBasicInfo from "./steps/StepBasicInfo";
+import StepAddress from "./steps/StepAddress";
+import StepPayment from "./steps/StepPayment";
+
+export default function DonationSteps({ onClose, donation }) {
+  const [step, setStep] = useState(0);
 
 //   const [form, setForm] = useState({
 //     donation,
@@ -24,102 +25,52 @@
 //     payment: {},
 //   });
 
-//   const next = () => setStep((s) => s + 1);
-//   const back = () => setStep((s) => Math.max(0, s - 1));
-
-//   return (
-//     <div className="flex flex-col lg:flex-row gap-4">
-
-//       {/* LEFT PANEL */}
-//       <div className="lg:w-2/3 bg-white border rounded-2xl overflow-hidden">
-//         <Image
-//           src="/assets/images/hero/care-01.png"
-//           alt="Donation"
-//           width={1200}
-//           height={600}
-//           className="w-full h-[45vh] object-cover"
-//         />
-//         <div className="p-6 text-sm">
-//           <h2 className="font-bold mb-2">Your support is life-saving</h2>
-//           <p className="text-justify">
-//             1 in 100 Nigerians will be diagnosed with Congenital Heart Disease.
-//             Together, we fund life-saving care.
-//           </p>
-//         </div>
-//       </div>
-
-//       {/* RIGHT PANEL */}
-//       <div className="lg:w-1/3 bg-white border rounded-2xl p-4 relative">
-
-//         {/* BACK BUTTON */}
-//         {step > 0 && (
-//           <button
-//             onClick={back}
-//             className="absolute top-4 left-4 text-sm font-medium"
-//           >
-//             ← Back
-//           </button>
-//         )}
-
-//         {step === 0 && (
-//           <StepBasicInfo
-//             value={form.basic}
-//             onChange={(basic) =>
-//               setForm((f) => ({ ...f, basic }))
-//             }
-//             onNext={next}
-//           />
-//         )}
-
-//         {step === 1 && (
-//           <StepAddress
-//             value={form.address}
-//             onChange={(address) =>
-//               setForm((f) => ({ ...f, address }))
-//             }
-//             onNext={next}
-//           />
-//         )}
-
-//         {step === 2 && <StepPayment data={form} />}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
-import StepBasicInfo from "./steps/StepBasicInfo";
-import StepAddress from "./steps/StepAddress";
-import StepPayment from "./steps/StepPayment";
-
-export default function DonationSteps({ onClose, donation }) {
-  const [step, setStep] = useState(0);
-
-  const [form, setForm] = useState({
-    donation,
-    basic: {
-      title: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      countryCode: "+234",
-      donateAsOrganisation: false,
-    },
-    address: {},
-    payment: {},
-  });
-
 //   const [form, setForm] = useState({
 //     donation,
 //     basic: {},
 //     address: {},
 //     payment: {},
 //   });
+
+
+//   const [formData, setFormData] = useState({
+//     // donation: {},
+//     donation: donation || {},
+//     basic: {},
+//     address: {}
+//   });
+
+  const [formData, setFormData] = useState({
+    donation: donation || {},
+    basic: {
+        title: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        countryCode: "+234",
+        donateAsOrganisation: false,
+    },
+    address: {
+        street: "",
+        apartment: "",
+        city: "",
+        state: "",
+        zip: "",
+        country: "",
+    }
+  });
+
+
+    const updateFormData = (section, values) => {
+        setFormData(prev => ({
+        ...prev,
+        [section]: {
+            ...prev[section],
+            ...values
+        }
+        }));
+    };
 
   const next = () => setStep((s) => s + 1);
 
@@ -203,26 +154,18 @@ export default function DonationSteps({ onClose, donation }) {
         <div
             className="lg:w-1/3 bg-white border lg:rounded-2xl p-2 relative"
         >
-            
-            
-            {/* <button
-                onClick={onClose}
-                className="absolute top-4 left-4 text-xl"
+            <>
+            {/* BACK BUTTON */}
+            {step > 0 && (
+            <button
+                onClick={back}
+                className="absolute top-4 left-4 text-sm font-medium"
             >
-                ←
-            </button> */}
+                ← Back
+            </button>
+            )}
 
-         {/* BACK BUTTON */}
-         {step > 0 && (
-          <button
-            onClick={back}
-            className="absolute top-4 left-4 text-sm font-medium"
-          >
-            ← Back
-          </button>
-        )}
-
-            {step === 0 && (
+            {/* {step === 0 && (
                 <StepBasicInfo
                 onNext={next}
                 onChange={(data) =>
@@ -242,7 +185,42 @@ export default function DonationSteps({ onClose, donation }) {
                 <StepPayment
                 data={form}
                 />
-            )}
+            )} */}
+
+
+                {/* {step === 0 && (
+                    <StepDonation
+                    data={formData.donation}
+                    onChange={(values) => updateFormData("donation", values)}
+                    onNext={() => setStep(2)}
+                    />
+                )} */}
+
+                {step === 0 && (
+                    <StepBasicInfo
+                    data={formData.basic}
+                    onChange={(values) => updateFormData("basic", values)}
+                    onNext={() => setStep(1)}
+                    onBack={() => setStep(0)}
+                    />
+                )}
+
+                {step === 1 && (
+                    <StepAddress
+                    data={formData.address}
+                    onChange={(values) => updateFormData("address", values)}
+                    onNext={() => setStep(2)}
+                    onBack={() => setStep(1)}
+                    />
+                )}
+
+                {step === 2 && (
+                    <StepPayment
+                    data={formData}
+                    onBack={() => setStep(1)}
+                    />
+                )}
+            </>
 
         </div>
 

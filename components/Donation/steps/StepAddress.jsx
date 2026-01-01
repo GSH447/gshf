@@ -1,24 +1,235 @@
-
 "use client";
 
-import React from "react";
+import { useState, useEffect } from "react";
+import axiosInstance from "../../../lib/axios"; // optional if you want to use axios
 
-export default function StepAddress({ onNext, onChange }) {
-  const update = (k, v) =>
-    onChange((p) => ({ ...p, [k]: v }));
+// export default function StepAddress({ onNext, onChange }) {
+export default function StepAddress({ data, onChange, onNext, onBack }) {
+  const [countries, setCountries] = useState([]);
+  const [states, setStates] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+
+  const [formData, setFormData] = useState({
+    // street: "",
+    // apartment: "",
+    // city: "",
+    // state: "",
+    // zip: "",
+    country: "",
+  });
+
+  /* ---------------- FETCH COUNTRIES ---------------- */
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all?fields=name,cca2")
+      .then((res) => res.json())
+      .then((data) => {
+        const sorted = data
+          .map((c) => ({ name: c.name.common, code: c.cca2 }))
+          .sort((a, b) => a.name.localeCompare(b.name));
+        setCountries(sorted);
+
+        // default country
+        const defaultCountry = sorted.find((c) => c.name === "Nigeria");
+        if (defaultCountry) setFormData((p) => ({ ...p, country: defaultCountry.name }));
+      })
+      .catch((err) => console.error("Country fetch error:", err));
+  }, []);
+
+  /* ---------------- FETCH STATES ---------------- */
+  // useEffect(() => {
+  //   if (!formData.country) return;
+  //   setLoading(true);
+
+  //   // Example API: using countriesnow.space (or replace with your own)
+  //   fetch("https://countriesnow.space/api/v0.1/countries/states", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ country: formData.country }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data?.data?.states) {
+  //         setStates(data.data.states.map((s) => s.name));
+  //       } else {
+  //         setStates([]);
+  //       }
+  //     })
+  //     .catch((err) => console.error("State fetch error:", err))
+  //     .finally(() => setLoading(false));
+  // }, [formData.country]);
+
+  /* ---------------- HANDLE CHANGE ---------------- */
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((p) => ({ ...p, [name]: value }));
+  };
+
+  /* ---------------- VALIDATION ---------------- */
+  const validate = () => {
+    const e = {};
+    if (!data.street.trim()) e.street = "Street address is required";
+    if (!data.city.trim()) e.city = "City is required";
+    if (!data.state.trim()) e.state = "State is required";
+    if (!data.zip.trim()) e.zip = "Zip code is required";
+    if (!data.country.trim()) e.country = "Country is required";
+
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  };
+
+  /* ---------------- CONTINUE ---------------- */
+  const handleContinue = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    onChange(formData);
+    onNext();
+  };
 
   return (
-    <>
-      <h2 className="text-xl font-semibold mb-4">Address</h2>
+    <div className="w-fit mx-auto">
+      <h3 className="text-primary text-center font-bold tracking-wide">
+        Address
+      </h3>
 
-      <input className="input" placeholder="Street address" />
-      <input className="input" placeholder="Apartment / Suite" />
-      <input className="input" placeholder="Town / City" />
-      <input className="input" placeholder="State" />
-      <input className="input" placeholder="Zip code" />
-      <input className="input" placeholder="Country" />
+      <form className="flex flex-col space-y-4 w-full px-2">
+        <div>
+          <label className="text-black">Street Address</label>
+          <input
+            name="street"
+            // value={formData.street}
+            // onChange={handleChange}
+            // className="input w-full"
+            value={data.street || ""}
+            onChange={(e) => onChange({ street: e.target.value })}
+            className="p-2 border rounded-md w-full text-black"
+            placeholder="Street address"
+          />
+          {errors.street && <p className="text-red-500 text-sm">{errors.street}</p>}
+        </div>
 
-      <button onClick={onNext} className="btn-primary">Continue</button>
-    </>
+        <div>
+          <label className="text-black">Apartment / Suite</label>
+          <input
+            name="apartment"
+            // value={formData.apartment}
+            // onChange={handleChange}
+            
+            value={data.apartment || ""}
+            onChange={(e) => onChange({ apartment: e.target.value })}
+            // className="input w-full"
+            className="p-2 border rounded-md w-full text-black"
+            placeholder="Apartment / Suite"
+          />
+        </div>
+
+        <div>
+          <label className="text-black">Town / City</label>
+          <input
+            name="city"
+            // value={formData.city}
+            // onChange={handleChange}
+
+            
+            value={data.city || ""}
+            onChange={(e) => onChange({ city: e.target.value })}
+
+            // className="input w-full"
+            className="p-2 border rounded-md w-full text-black"
+            placeholder="Town / City"
+          />
+          {errors.city && <p className="text-red-500 text-sm">{errors.city}</p>}
+        </div>
+
+        <div>
+          <label className="text-black">Country</label>
+          <select
+            name="country"
+            // value={formData.country}
+            // onChange={handleChange}
+
+            
+            value={data.country || ""}
+            onChange={(e) => onChange({ country: e.target.value })}
+            // className="input w-full"
+            className="p-2 border rounded-md w-full text-black"
+          >
+            <option value="">Select country</option>
+            {countries.map((c) => (
+              <option key={c.code} value={c.name}>{c.name}</option>
+            ))}
+          </select>
+          {errors.country && <p className="text-red-500 text-sm">{errors.country}</p>}
+        </div>
+
+        <div>
+          <label className="text-black">State</label>
+          {/* <select
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+            className="input w-full"
+            disabled={loading || states.length === 0}
+          >
+            <option value="">{loading ? "Loading..." : "Select state"}</option>
+            {states.map((s) => (
+              <option key={s} value={s}>{s}</option>
+            ))}
+          </select> */}
+            <input
+              name="state"
+              // value={formData.state}
+              // onChange={handleChange}
+
+              
+              value={data.state || ""}
+              onChange={(e) => onChange({ state: e.target.value })}
+              // className="input w-full"
+              className="p-2 border rounded-md w-full text-black"
+              placeholder="State"
+            />
+          {errors.state && <p className="text-red-500 text-sm">{errors.state}</p>}
+        </div>
+
+        <div>
+          <label className="text-black">Zip Code</label>
+          <input
+            name="zip"
+            // value={formData.zip}
+            // onChange={handleChange}
+
+            
+            value={data.zip || ""}
+            onChange={(e) => onChange({ zip: e.target.value })}
+
+            className="input w-full"
+            placeholder="Zip code"
+          />
+          {errors.zip && <p className="text-red-500 text-sm">{errors.zip}</p>}
+        </div>
+
+        {/* <button
+          type="submit"
+          onClick={handleContinue}
+          className="btn-primary mt-2"
+        >
+          Continue
+        </button> */}
+
+        
+        {/* CONTINUE */}
+        <button
+          onClick={handleContinue}
+          className="w-full bg-primary text-white p-2 rounded-md hover:bg-black"
+          disabled={loading}
+        >
+          Continue
+        </button>
+        
+      </form>
+    </div>
   );
 }
+
