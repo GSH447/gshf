@@ -4,3 +4,10 @@ bg: EDEDF7
 
 
 replace white sometimes with DBE1EF
+
+
+
+Test Secret Key: sk_test_4847ec84412015f879f613338674b4a7934a9559
+
+
+Test Public Key: pk_test_fcb07a0079c5229f19db6de30a3f086eed1020bb

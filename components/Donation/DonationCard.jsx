@@ -69,12 +69,35 @@ const DonationCard = () => {
         {/* Custom Amount */}
         <div className=" flex items-center border rounded-lg px-3 py-2">
           <span className="text-gray-500 mr-2">₦</span>
-          <input
+          {/* <input
             type="number"
             placeholder="Enter amount"
             value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
-            className="w-full outline-none text-sm"
+            onChange={(e) => setAmount(Number(e.target.value).toLocaleString())}
+            className="w-full outline-none text-xl text-[#2A157C] font-semibold italic"
+          /> */}
+
+          {/* <input
+            type="text"
+            value={amount}
+            placeholder="Enter amount"
+            onChange={(e) =>
+              setAmount(e.target.value.replace(/,/g, ""))
+            }
+            onBlur={() =>
+              setAmount(Number(amount).toLocaleString())
+            }
+            className="w-full outline-none text-xl text-[#2A157C] font-semibold italic"
+          /> */}
+
+
+          <input
+            type="text"
+            value={amount ? Number(amount).toLocaleString() : ""}
+            onChange={(e) =>
+              setAmount(e.target.value.replace(/,/g, ""))
+            }
+            className="w-full outline-none text-xl text-[#2A157C] font-semibold italic"
           />
           <span className="ml-2 text-xs text-gray-400">NGN</span>
         </div>

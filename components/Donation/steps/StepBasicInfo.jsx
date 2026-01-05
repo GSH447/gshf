@@ -6,7 +6,16 @@ import axiosInstance from "../../../lib/axios";
 const TITLES = ["Mr", "Mrs", "Miss", "Dr", "Prof"];
 
 // export default function StepBasicInfo({ onNext, onChange }) {
-export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
+// export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
+
+export default function StepBasicInfo({
+  data,
+  donation, 
+  onChange,
+  onNext,
+  reference,
+  setReference
+}) {
   const [countries, setCountries] = useState([]);
   const [search, setSearch] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -20,14 +29,6 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
     name: "Nigeria",
   });
 
-  // const [formData, setFormData] = useState({
-  //   title: "",
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   phone: "",
-  //   donateAsOrganisation: false,
-  // });
 
   /* ---------------- FETCH COUNTRIES ---------------- */
   useEffect(() => {
@@ -57,13 +58,6 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
     setShowDropdown(false);
   };
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((p) => ({
-      ...p,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
 
   /* ---------------- VALIDATION ---------------- */
   const validate = () => {
@@ -84,20 +78,43 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
   };
 
   /* ---------------- CONTINUE ---------------- */
-  const handleContinue = (e) => {
-    e.preventDefault();
 
-    if (!validate()) return;
 
-    const payload = {
-      ...data,
-      countryCode: selectedCountry.code,
-    };
+  const handleContinue = async (e) => {
+  e.preventDefault();
+  if (!validate()) return;
 
-    // 🔑 pass data to parent step manager
+  const payload = {
+    ...data,
+    countryCode: selectedCountry.code,
+  };
+
+  setLoading(true);
+
+  try {
+    // Create pending donation ONLY ONCE
+    if (!reference) {
+      const res = await axiosInstance.post("/donations/pending/create", {
+        donation,     // ✅ dynamic donation from parent
+        basic: payload
+      });
+
+      const ref = res.data?.data?.reference;
+      if (!ref) throw new Error("No reference returned");
+
+      setReference(ref);
+    }
+
     onChange(payload);
     onNext();
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Unable to proceed. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   /* ---------------- UI ---------------- */
   return (
@@ -174,8 +191,82 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
           {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
         </div>
 
+
         {/* PHONE */}
-        <div>
+        <div className="relative">
+          <label className="text-black">Telephone</label>
+
+          <div className="flex items-center border rounded-md p-2 space-x-2">
+            <button
+              type="button"
+              onClick={() => setShowDropdown((v) => !v)}
+              className="flex items-center gap-2"
+            >
+              <Image
+                src={selectedCountry.flag || "/images/contact/flag.png"}
+                width={24}
+                height={16}
+                alt="flag"
+              />
+              <span className="text-sm">{selectedCountry.code}</span>
+            </button>
+
+            <input
+              type="tel"
+              name="phone"
+              value={data.phone || ""}
+              onChange={(e) => onChange({ phone: e.target.value })}
+              className="flex-1 p-2 outline-none text-black"
+              placeholder="8143516481"
+            />
+          </div>
+
+          {/* COUNTRY DROPDOWN */}
+          {showDropdown && (
+            <div className="absolute z-50 mt-1 bg-white border rounded-md w-full max-h-60 overflow-y-auto shadow-lg">
+              <input
+                type="text"
+                placeholder="Search country"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full p-2 border-b outline-none text-black"
+              />
+
+              {countries
+                .filter((c) =>
+                  c.name.toLowerCase().includes(search.toLowerCase())
+                )
+                .slice(0, 30)
+                .map((country) => (
+                  <button
+                    key={country.name}
+                    type="button"
+                    onClick={() => {
+                      handleCountryChange(country);
+                      onChange({
+                        countryCode: country.code,
+                        country: country.name,
+                      });
+                    }}
+                    className="flex items-center gap-2 w-full px-3 py-2 hover:bg-gray-100 text-left"
+                  >
+                    <Image src={country.flag} alt={country.name} width={20} height={14} />
+                    <span className="text-sm">
+                      {country.name} ({country.code})
+                    </span>
+                  </button>
+                ))}
+            </div>
+          )}
+
+          {errors.phone && (
+            <p className="text-red-500 text-sm">{errors.phone}</p>
+          )}
+        </div>
+
+
+
+        {/* <div>
           <label className="text-black">Telephone</label>
           <div className="flex items-center border rounded-md p-2 space-x-2">
             <button
@@ -191,6 +282,44 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
               />
               <span>{selectedCountry.code}</span>
             </button>
+{showDropdown && (
+  <div className="relative mt-2">
+    <div className="absolute z-50 bg-[red] border rounded-md w-full max-h-60 overflow-y-auto shadow-lg">
+      
+      <input
+        type="text"
+        placeholder="Search country"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full p-2 border-b outline-none text-black"
+      />
+
+      {countries
+        .filter((c) =>
+          c.name.toLowerCase().includes(search.toLowerCase())
+        )
+        .slice(0, 20)
+        .map((country, idx) => (
+          <button
+            key={idx}
+            type="button"
+            onClick={() => handleCountryChange(country)}
+            className="flex items-center gap-2 w-full px-3 py-2 hover:bg-gray-100 text-left"
+          >
+            <Image
+              src={country.flag}
+              alt={country.name}
+              width={20}
+              height={14}
+            />
+            <span className="text-sm">
+              {country.name} ({country.code})
+            </span>
+          </button>
+        ))}
+    </div>
+  </div>
+)}
 
             <input
               type="tel"
@@ -204,18 +333,8 @@ export default function StepBasicInfo({ data, onChange, onNext, onBack }) {
             />
           </div>
           {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
-        </div>
+        </div> */}
 
-        {/* ORG */}
-        <label className="flex gap-2 text-sm my-3">
-          <input
-            type="checkbox"
-            name="donateAsOrganisation"
-            checked={data.donateAsOrganisation}
-            onChange={handleChange}
-          />
-          Donate as an organisation
-        </label>
 
         {/* CONTINUE */}
         <button

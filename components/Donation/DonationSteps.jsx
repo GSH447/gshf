@@ -7,59 +7,64 @@ import StepBasicInfo from "./steps/StepBasicInfo";
 import StepAddress from "./steps/StepAddress";
 import StepPayment from "./steps/StepPayment";
 
-export default function DonationSteps({ onClose, donation }) {
+export default function DonationSteps({ donation }) {
   const [step, setStep] = useState(0);
-
-//   const [form, setForm] = useState({
-//     donation,
-//     basic: {
-//       title: "",
-//       firstName: "",
-//       lastName: "",
-//       email: "",
-//       phone: "",
-//       countryCode: "+234",
-//       donateAsOrganisation: false,
-//     },
-//     address: {},
-//     payment: {},
-//   });
-
-//   const [form, setForm] = useState({
-//     donation,
-//     basic: {},
-//     address: {},
-//     payment: {},
-//   });
+//   const [reference, setReference] = useState(null);
 
 
 //   const [formData, setFormData] = useState({
-//     // donation: {},
 //     donation: donation || {},
-//     basic: {},
-//     address: {}
+//     basic: {
+//         title: "",
+//         firstName: "",
+//         lastName: "",
+//         email: "",
+//         phone: "",
+//         countryCode: "+234",
+//         donateAsOrganisation: false,
+//     },
+//     address: {
+//         street: "",
+//         apartment: "",
+//         city: "",
+//         state: "",
+//         zip: "",
+//         country: "",
+//     }
 //   });
 
+//   const [formData, setFormData] = useState({
+//     donation: {},
+//     basic: {},
+//     address: {}
+//     });
+
+
+
   const [formData, setFormData] = useState({
-    donation: donation || {},
+    donation: donation,   // ✅ INJECT FROM CTA
     basic: {
-        title: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        countryCode: "+234",
-        donateAsOrganisation: false,
+      title: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      countryCode: "+234",
+      donateAsOrganisation: false,
     },
     address: {
-        street: "",
-        apartment: "",
-        city: "",
-        state: "",
-        zip: "",
-        country: "",
+      street: "",
+      apartment: "",
+      city: "",
+      state: "",
+      zip: "",
+      country: "",
     }
   });
+
+  
+    const [reference, setReference] = useState(null);
+
 
 
     const updateFormData = (section, values) => {
@@ -165,61 +170,37 @@ export default function DonationSteps({ onClose, donation }) {
             </button>
             )}
 
-            {/* {step === 0 && (
-                <StepBasicInfo
-                onNext={next}
-                onChange={(data) =>
-                    setForm({ ...form, basic: data })
-                }
-                />
+            {step === 0 && (
+            <StepBasicInfo
+                data={formData.basic}
+                donation={formData.donation}
+                reference={reference}
+                setReference={setReference}
+                onChange={(values) => updateFormData("basic", values)}
+                onNext={() => setStep(1)}
+                onBack={() => setStep(0)}
+            />
             )}
+
             {step === 1 && (
                 <StepAddress
-                onNext={next}
-                onChange={(data) =>
-                    setForm({ ...form, address: data })
-                }
+                data={formData.address}
+                reference={reference}
+                setReference={setReference}
+                onChange={(values) => updateFormData("address", values)}
+                onNext={() => setStep(2)}
+                onBack={() => setStep(1)}
                 />
             )}
+
             {step === 2 && (
                 <StepPayment
-                data={form}
+                data={formData}
+                reference={reference}
+                setReference={setReference}
+                onBack={() => setStep(1)}
                 />
-            )} */}
-
-
-                {/* {step === 0 && (
-                    <StepDonation
-                    data={formData.donation}
-                    onChange={(values) => updateFormData("donation", values)}
-                    onNext={() => setStep(2)}
-                    />
-                )} */}
-
-                {step === 0 && (
-                    <StepBasicInfo
-                    data={formData.basic}
-                    onChange={(values) => updateFormData("basic", values)}
-                    onNext={() => setStep(1)}
-                    onBack={() => setStep(0)}
-                    />
-                )}
-
-                {step === 1 && (
-                    <StepAddress
-                    data={formData.address}
-                    onChange={(values) => updateFormData("address", values)}
-                    onNext={() => setStep(2)}
-                    onBack={() => setStep(1)}
-                    />
-                )}
-
-                {step === 2 && (
-                    <StepPayment
-                    data={formData}
-                    onBack={() => setStep(1)}
-                    />
-                )}
+            )}
             </>
 
         </div>
