@@ -182,7 +182,14 @@ html, body {
   width: fit-content;
   padding: 1%;
 }
-/*
+
+.donation-card-css {
+  border-radius: 1.5rem;
+  border: 11px solid transparent !important;
+  z-index: 100;
+}
+
+/* Large Screens 1600px and above
 
 */
 @media screen and (min-width: 1600px) {
@@ -406,6 +413,13 @@ html, body {
   }
 
   
+
+.custom-bg {
+  position: relative;
+  background: transparent !important;
+  border-radius: 32px;
+  overflow: hidden;
+}
   /* Left Side - Parent Circle */
   .custom-bg::before {
     display: none;

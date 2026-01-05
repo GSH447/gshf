@@ -10,7 +10,7 @@ const CTA = () => {
 
       <section className=" rounded-[32px] shadow-lg gradient-bg mx-2">
 
-        <div className=" container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 sm:bg-transparent custom-bg">
+        <div className=" container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 custom-bg">
 
           {/* <div className="right-circle" ></div> */}
 
@@ -76,7 +76,6 @@ const CTA = () => {
                 x: 0,
               },
             }}
-            initial="hidden"
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}

@@ -73,7 +73,7 @@ export default function Navbar() {
 
       <div className="container flex h-14 max-w-screen-2xl items-center justify-end lg:justify-between m-auto">
         {/* Mobile sidebar */}
-        <MobileNav />
+         <MobileNav />
 
         <div className="hidden md:flex items-center gap-x-10">
 
@@ -117,12 +117,20 @@ export default function Navbar() {
 
             <div
               ref={subRef}
+              // className={cn(
+              //   "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8  w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
+              //   hovering || hovering === 0
+              //     ? "opacity-100 border-t border-b border-accent mx-auto"
+              //     : "opacity-0 border-none"
+              // )}
+
               className={cn(
-                "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8  w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
-                hovering || hovering === 0
-                  ? "opacity-100 border-t border-b border-accent mx-auto"
-                  : "opacity-0 border-none"
+                "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8 w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
+                hovering !== null
+                  ? "opacity-100 pointer-events-auto border-t border-b border-accent"
+                  : "opacity-0 pointer-events-none border-none"
               )}
+
               onMouseLeave={() => setHovering(null)}
             >
               <div className="grid grid-cols-4 max-w-[1560px] mx-auto gap-6">
@@ -214,7 +222,7 @@ export default function Navbar() {
 
         </motion.button>
 
-        </div>
+        </div> 
 
       </div>
 
