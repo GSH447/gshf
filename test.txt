@@ -15,3 +15,589 @@ Browser
  ├── www.gracespringhospitals.com       → Apache :80 (WordPress)
  ├── foundation.gracespringhospitals.com → Nginx :8081 → Node frontend
  └── foundation.gracespringhospitals.com/api/* → Apache :8080 (PHP MVC)
+
+
+
+Internet (HTTPS :443)
+        ↓
+     NGINX  (public entry)
+        ↓
+ ┌─────────────┬─────────────┐
+ │             │             │
+Node :4000   Apache :8080   Apache :80
+(frontend)     (API)        (WordPress internal if needed)
+
+
+
+
+
+migration plan:
+
+Internet
+   ↓
+NGINX :80 / :443   (public gateway)
+   ↓
+ ┌──────────────┬──────────────────┐
+ │              │                  │
+Node :4000    Apache :8080       Apache :8082
+(frontend)     (API)            (WordPress)
+
+
+
+PHASE 2 — NGINX Takes Over :80 and :443
+
+NGINX will become your public gateway:
+
+https://foundation.gracespringhospitals.com   → Node :4000
+https://foundation.gracespringhospitals.com/api → Apache :8080
+https://gracespringhospitals.com → WordPress :8082
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+server {
+    listen 8443 ssl;
+    server_name foundation.gracespringhospitals.com;
+
+    ssl_certificate /etc/letsencrypt/live/foundation.gracespringhospitals.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/foundation.gracespringhospitals.com/privkey.pem;
+
+    # Node frontend
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+
+    # phpMyAdmin
+    location /api/phpmyadmin/ {
+        proxy_pass http://127.0.0.1:8080/phpmyadmin/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_redirect / /api/phpmyadmin/;
+    }
+
+    # MVC API backend
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+ }
+}
+                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  GNU nano 7.2                                         /etc/nginx/sites-available/foundation.gracespringhospitals.com
+# ===============================
+# HTTPS (Port 8443)
+# ===============================
+server {
+    listen 8443 ssl;
+    server_name foundation.gracespringhospitals.com;
+
+    ssl_certificate /etc/letsencrypt/live/foundation.gracespringhospitals.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/foundation.gracespringhospitals.com/privkey.pem;
+
+    # Node frontend
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+
+    # phpMyAdmin
+    location /api/phpmyadmin/ {
+        proxy_pass http://127.0.0.1:8080/phpmyadmin/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_redirect / /api/phpmyadmin/;
+    }
+
+    # MVC API backend
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  }
+}
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Latest
+
+# Redirect HTTP → HTTPS
+server {
+    if ($host = foundation.gracespringhospitals.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 8081;
+    server_name foundation.gracespringhospitals.com;
+    return 301 https://$host$request_uri;
+
+
+}
+
+# HTTPS Server
+server {
+    listen 443 ssl;
+    server_name foundation.gracespringhospitals.com;
+    ssl_certificate /etc/letsencrypt/live/foundation.gracespringhospitals.com-0>
+    ssl_certificate_key /etc/letsencrypt/live/foundation.gracespringhospitals.c>
+
+    # Node frontend
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+
+    # phpMyAdmin
+    location /api/phpmyadmin/ {
+        proxy_pass http://127.0.0.1:8080/phpmyadmin/;
+
+ proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_redirect / /api/phpmyadmin/;
+    }
+
+    # PHP MVC API
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+}
+
+
+
+
+
+# ===============================
+# HTTP (Port 8081)
+# ===============================
+server {
+    listen 8081;
+    server_name foundation.gracespringhospitals.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:4000;  # Node OR Apache frontend
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto http;
+    }
+
+
+
+# phpMyAdmin route
+location /api/phpmyadmin/ {
+    proxy_pass http://127.0.0.1:8080/phpmyadmin/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_redirect / /api/phpmyadmin/;
+}
+
+# MVC API backend
+location /api/ {
+    # Exclude /api/phpmyadmin from this block
+    if ($request_uri ~ "^/api/phpmyadmin") {
+        break;
+    }
+
+    proxy_pass http://127.0.0.1:8080/;
+
+   proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+
+    # Optional: backend PHP API
+ #   location /api/ {
+  #      rewrite ^/api/phpmyadmin(/.*)?$ /phpmyadmin$1 break;  # phpMyAdmin pas>
+        #rewrite ^/api/?(.*)$ /$1 break;
+   #     proxy_pass http://127.0.0.1:8080;  # Apache PHP backend
+    #    proxy_set_header Host $host;
+     #   proxy_set_header X-Real-IP $remote_addr;
+      #  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    # Fix phpMyAdmin redirects to keep /api prefix
+    #proxy_redirect / /api/;
+
+    #}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          000-default.conf
+<VirtualHost *:8080>
+        # The ServerName directive sets the request scheme, hostname and port t>
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        #ServerName www.example.com
+
+        # ServerAdmin webmaster@localhost
+        # DocumentRoot /var/www/html
+
+
+       ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html/public
+
+
+        <Directory /var/www/html/public>
+                AllowOverride All
+                Require all granted
+        </Directory>
+
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        # For most configuration files from conf-available/, which are
+        # enabled or disabled at a global level, it is possible to
+        # include a line for only one particular virtual host. For example the
+        # following line enables the CGI configuration for this host only
+        # after it has been globally disabled with "a2disconf".
+        #Include conf-available/serve-cgi-bin.conf
+
+
+
+
+
+  api-backend.conf
+<VirtualHost *:8080>
+    ServerName foundation.gracespringhospitals.com/api
+
+    DocumentRoot /var/www/html/public
+
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/api_error.log
+    CustomLog ${APACHE_LOG_DIR}/api_access.log combined
+</VirtualHost>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ api.foundation.gracespringhospitals.com.conf
+Listen 80
+
+<VirtualHost *:80>
+    ServerName api.foundation.gracespringhospitals.com
+    DocumentRoot /var/www/foundation.gracespringhospitals.com/api
+
+    <Directory /var/www/foundation.gracespringhospitals.com/api>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ gracespringhospitals.com.conf
+<VirtualHost *:80>
+    ServerName gracespringhospitals.com
+    ServerAlias www.gracespringhospitals.com
+    DocumentRoot /var/www/gracespringhospitals.com/wordpress
+
+    <Directory /var/www/gracespringhospitals.com/wordpress>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/wp_error.log
+    CustomLog ${APACHE_LOG_DIR}/wp_access.log combined
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =www.gracespringhospitals.com [OR]
+RewriteCond %{SERVER_NAME} =gracespringhospitals.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+
+
+
+
+
+
+ gracespringhospitals.com-le-ssl.conf
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+    ServerName gracespringhospitals.com
+    ServerAlias gracespringhospitals.com
+    DocumentRoot /var/www/gracespringhospitals.com/wordpress
+
+    <Directory /var/www/gracespringhospitals.com/wordpress>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/wp_error.log
+    CustomLog ${APACHE_LOG_DIR}/wp_access.log combined
+
+Include /etc/letsencrypt/options-ssl-apache.conf
+ServerAlias www.gracespringhospitals.com
+SSLCertificateFile /etc/letsencrypt/live/gracespringhospitals.com/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/gracespringhospitals.com/privkey.pem
+</VirtualHost>
+</IfModule>
+
+
+
+
+
+
+
+
+
+
+
+
+ default-ssl.conf
+<VirtualHost *:443>
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        # For most configuration files from conf-available/, which are
+        # enabled or disabled at a global level, it is possible to
+        # include a line for only one particular virtual host. For example the
+        # following line enables the CGI configuration for this host only
+        # after it has been globally disabled with "a2disconf".
+        #Include conf-available/serve-cgi-bin.conf
+
+        #   SSL Engine Switch:
+        #   Enable/Disable SSL for this virtual host.
+        SSLEngine on
+
+        #   A self-signed (snakeoil) certificate can be created by installing
+        #   the ssl-cert package. See
+        #   /usr/share/doc/apache2/README.Debian.gz for more info.
+        #   If both key and certificate are stored in the same file, only the
+        #   SSLCertificateFile directive is needed.
+        SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile   /etc/ssl/private/ssl-cert-snakeoil.key
+
+        #   Server Certificate Chain:
+        #   Point SSLCertificateChainFile at a fil
+
+      #   o OptRenegotiate:
+        #    This enables optimized SSL connection renegotiation handling when >
+        #    directives are used in per-directory context.
+        #SSLOptions +FakeBasicAuth +ExportCertData +StrictRequire
+        <FilesMatch "\.(?:cgi|shtml|phtml|php)$">
+                SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                SSLOptions +StdEnvVars
+        </Directory>
+</VirtualHost>
+
+
+
+
+
+
