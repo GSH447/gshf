@@ -1,7 +1,8 @@
 "use client";
 import Hero2 from "../../components/Hero2"; //Hero components
 import CTA from "../../components/Banner/CTA"; //SubscribeCTA components
-// import Product_ServicesPage from "../../components/Product&Services"; //Product and Services components
+import Product_ServicesPage from "../../components/Product&Services"; //Product and Services components
+import Feedback from "../../components/Feedbacks";
 // import WorkwithUs from "../../components/Team/i/WrokWitUs";//Work with us choose us components
 // import SubscribeCTA from "../../components/Banner/CTA"; //SubscribeCTA components
 // import AboutPage from "../../components/About"; //About us components
@@ -19,9 +20,10 @@ export default function Home() {
       >
         <CTA/>
       </div>
-
-      {/* <AboutPage/>
       <Product_ServicesPage/>
+      <Feedback/>
+      {/* <AboutPage/>
+
       <WorkwithUs/>
       <TeamPage/>
       <SubscribeCTA/>

@@ -7,33 +7,12 @@ import { motion } from "framer-motion";
 export default function Product_ServicesPage() {
   return (
     <div
-    className='flex flex-col lg:flex-row bg-[#FDF2EB] justify-between lg:items-start w-full'
+    className='flex flex-col lg:flex-row bg-[#FDF2EB] justify-between w-full'
     id='services'
   >
-        
-      {/* Product_Services Image Section */}
-      <motion.div 
-        variants={{
-          hidden: {
-            opacity: 0,
-            x: -50,
-          },
-
-          visible: {
-            opacity: 1,
-            x: 0,
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 1, delay: 0.1 }}
-        viewport={{ once: true }}
-        className="animate_left lg:w-1/2 flex justify-center product_servicesImage">
-        <Product_ServicesImage />
-      </motion.div>
 
       {/* Product_Services Form Section */}
-      <div className="lg:w-3/4 lg:my-auto lg:flex">
+      <div className="lg:my-auto lg:p-10 lg:flex">
         <Product_Services product_services={product_services}/>
       </div>
 

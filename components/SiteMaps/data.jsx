@@ -44,35 +44,33 @@ export const product_services = [
 
 { 
   id: 1, 
-  image: "/assets/images/product_services/1.svg" || null,
-  title: "Early Startup Acquisition",
-  description: "We actively seek out innovative and promising early-stage startups to join our portfolio. Our acquisition process is swift, efficient, and founder-friendly, ensuring a seamless transition for all parties involved.", 
+  bg:"#df8a2fff",
+  image: "/assets/images/donation/001.svg" || null,
+  title: "Donate now",
+  description: "Our work is only possible with your support. Every donation takes us a step closer to another life-saving breakthrough.", 
+  btnText: "Donate Today",
   url: "#",
-  alt: "#heelheid services 1"
+  alt: "#Gracespring Hospitals Foundation 1"
 },
 { 
   id: 2, 
-  image: "/assets/images/product_services/2.svg" || null,
-  title: "Business Growth",
-  description: "Once we've acquired a startup, our team collaborates closely with the founders to develop and implement a customized business management plan.", 
+  bg:"#4aa0dfff",
+  image: "/assets/images/donation/002.svg" || null,
+  title: "Discover how your support is changing lives",
+  description: "Your donations ensure The Gracespring Hospitals Foundation's world-leading nurses, doctors and research teams can provide the very best care and develop life-saving treatments.", 
+  btnText: "What we do",
   url: "#",
-  alt: "#heelheid services 1"
+  alt: "#Gracespring Hospitals Foundation 1"
 },
 { 
   id: 3, 
-  image: "/assets/images/product_services/3.svg" || null,
-  title: "Coaching and Mentorship",
-  description: "Our team of seasoned entrepreneurs and industry experts provides one-on-one coaching and mentorship, empowering startup founders to navigate the challenges of building and growing a thriving business.", 
+  bg:"#f3bc4dff",
+  image: "/assets/images/donation/003.svg" || null,
+  title: "Fundraise for us",
+  description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
+  btnText: "Ways to fundraise",
   url: "#",
-  alt: "#heelheid services 1"
-},
-{ 
-  id: 4, 
-  image: "/assets/images/product_services/4.svg" || null,
-  title: "Assets Investment",
-  description: "We invest in a range of assets, including technology, intellectual property, and other business-critical assets. Our investment approach is designed to support businesses in achieving their growth objectives.", 
-  url: "#",
-  alt: "#heelheid services 1"
+  alt: "#Gracespring Hospitals Foundation 1"
 },
 
 
@@ -116,11 +114,11 @@ management: [
       about: `
 Wale Adebayo is a visionary entrepreneur and business leader with over 14 years of experience in founding and growing multiple businesses. As a seasoned expert in bootstrapping and self-funding, Wale has a proven track record of driving innovation and growth in the companies he has founded.
 
-Under his leadership, Heelheid Business Acquisition And Management Company has become a leading voice in the entrepreneurial finance space, providing innovative solutions and support to entrepreneurs and businesses around the world. Wale's unique approach to empowering entrepreneurs and business leaders has earned him recognition as a respected and sought-after voice in the entrepreneurial community.
+Under his leadership, Gracespring Hospitals Foundation Acquisition And Management Company has become a leading voice in the entrepreneurial finance space, providing innovative solutions and support to entrepreneurs and businesses around the world. Wale's unique approach to empowering entrepreneurs and business leaders has earned him recognition as a respected and sought-after voice in the entrepreneurial community.
 
 Wale's success as a leader derives from his ability to create lasting relationships, his customer-first approach, and his passion for inspiring and empowering entrepreneurs to achieve their goals. Despite facing multiple failures throughout his entrepreneurial journey, Wale has persevered and continued to innovate and grow.
 
-Wale's vision is to create a world where startup founders and entrepreneurs have access to the resources and support they need to succeed, without being hindered by financial constraints. He believes that by providing innovative financial solutions and strategic guidance, entrepreneurs can build sustainable, scalable, and impactful businesses that drive economic growth and create lasting value. Leading the team at Heelheid Business Acquisition And Management Company is a key part of Wale's strategy to achieve this vision, and he is committed to creating a lasting and generational sustainable impact in the entrepreneurial ecosystem.
+Wale's vision is to create a world where startup founders and entrepreneurs have access to the resources and support they need to succeed, without being hindered by financial constraints. He believes that by providing innovative financial solutions and strategic guidance, entrepreneurs can build sustainable, scalable, and impactful businesses that drive economic growth and create lasting value. Leading the team at Gracespring Hospitals Foundation Acquisition And Management Company is a key part of Wale's strategy to achieve this vision, and he is committed to creating a lasting and generational sustainable impact in the entrepreneurial ecosystem.
 
 In addition to his professional endeavors, Wale prioritizes community engagement and personal development, recognizing the importance of balance and continuous learning in achieving long-term success. He is also an avid golfer and values the opportunities for networking and reflection that the sport provides.
 
@@ -137,15 +135,15 @@ In addition to his professional endeavors, Wale prioritizes community engagement
       url: "#",
       alt: "Global Foresight Advisor",
       about: `
-Olivia Chester serves as Global Foresight Advisor at Heelheid Business Acquisition And Management Company, providing strategic guidance on global trends, technologies, and market dynamics to support the company's investment strategies and portfolio growth.
+Olivia Chester serves as Global Foresight Advisor at Gracespring Hospitals Foundation Acquisition And Management Company, providing strategic guidance on global trends, technologies, and market dynamics to support the company's investment strategies and portfolio growth.
 
-With a unique ability to anticipate and analyze emerging opportunities and challenges, Olivia helps Heelheid Business stay ahead of the curve and achieve sustainable growth. Her expertise spans multiple industries and geographies, enabling her to provide nuanced and informed guidance on global strategy and innovation.
+With a unique ability to anticipate and analyze emerging opportunities and challenges, Olivia helps Gracespring Hospitals Foundation stay ahead of the curve and achieve sustainable growth. Her expertise spans multiple industries and geographies, enabling her to provide nuanced and informed guidance on global strategy and innovation.
 
-As a trusted advisor to the Heelheid Business leadership team, Olivia brings a wealth of expertise in global strategy, innovation, and sustainability. Her insights and recommendations are informed by a deep understanding of global economic, political, and social trends, as well as emerging technologies and their potential impact on business and society.
+As a trusted advisor to the Gracespring Hospitals Foundation leadership team, Olivia brings a wealth of expertise in global strategy, innovation, and sustainability. Her insights and recommendations are informed by a deep understanding of global economic, political, and social trends, as well as emerging technologies and their potential impact on business and society.
 
-Olivia's approach is characterized by her ability to think critically and creatively, cutting through complexity to identify key opportunities and challenges. Her commitment to excellence, combined with her unique blend of strategic expertise and global perspective, makes her an invaluable asset to the Heelheid Business team.
+Olivia's approach is characterized by her ability to think critically and creatively, cutting through complexity to identify key opportunities and challenges. Her commitment to excellence, combined with her unique blend of strategic expertise and global perspective, makes her an invaluable asset to the Gracespring Hospitals Foundation team.
 
-Through her work at Heelheid Business, Olivia is driven by a passion to empower entrepreneurs and business leaders to achieve their goals and create lasting impact.
+Through her work at Gracespring Hospitals Foundation, Olivia is driven by a passion to empower entrepreneurs and business leaders to achieve their goals and create lasting impact.
       `,
     }, 
   2]
@@ -161,17 +159,17 @@ operations: [
     title: "Martha Awoniyi",
     description: "Operations Manager", 
     url: "#",
-    alt: "Operations Manager, Heelheid Business",
+    alt: "Operations Manager, Gracespring Hospitals Foundation",
     about: `
 Martha is a strategic and results-driven operations manager with a proven track record of driving business growth and optimizing operational efficiency. With over five years of experience in operations and business administration, Martha brings a unique blend of expertise and passion to her role.
 
 Holding a Bachelor's degree in Business Management and a Master's degree in International Business Management, Martha possesses a deep understanding of global business practices, strategic planning, and organizational leadership.
 
-As Operations Manager at Heelheid Business, Martha oversees daily operations, streamlines processes, and ensures the seamless execution of strategic objectives. Her expertise spans financial analysis, project management, and cross-functional collaboration, with a proven ability to lead teams toward achieving organizational goals.
+As Operations Manager at Gracespring Hospitals Foundation, Martha oversees daily operations, streamlines processes, and ensures the seamless execution of strategic objectives. Her expertise spans financial analysis, project management, and cross-functional collaboration, with a proven ability to lead teams toward achieving organizational goals.
 
 Martha's leadership style is characterized by effective communication, attention to detail, and a commitment to fostering a productive and positive work environment. With a passion for continuous improvement, Martha thrives in dynamic environments that require adaptability, strategic thinking, and problem-solving.
 
-Dedicated to driving business success and sustainability, Martha aligns operational excellence with business objectives, making her an invaluable asset to the Heelheid Business team.
+Dedicated to driving business success and sustainability, Martha aligns operational excellence with business objectives, making her an invaluable asset to the Gracespring Hospitals Foundation team.
     `,
   },
 
@@ -224,75 +222,19 @@ export const feedback = [
 
 {
   id: 0,
-  image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-  firstname: "Elizabeth",
-  lastname: "Kafaru",
-  title: "UI/UX Designer",
-  comment:"Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod. Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, ",
-  rating: 3,
+  title: "Every 60 seconds, we help save a life",
+  description:"Saving lives is at the heart of everything we do. Every minute, our dedicated teams work tirelessly to provide life-saving care and support to those in need. With your help, we can continue to make a difference and save even more lives.",
+  url: "#",
+  btnText: "Save a Life",
+  image: "/assets/images/donation/001.svg" || null,
 },
 {
   id: 1,
-  image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-  firstname: "Elizabeth",
-  lastname: "Kafaru",
-  title: "UI/UX Designer",
-  comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-  rating: 3,
-},
-{
-  id: 2,
-  image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-  firstname: "Elizabeth",
-  lastname: "Kafaru",
-  title: "UI/UX Designer",
-  comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-  rating: 3,
-},
-{
-  id: 3,
-  image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-  firstname: "Elizabeth",
-  lastname: "Kafaru",
-  title: "UI/UX Designer",
-  comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-  rating: 3,
-},
-{
-id: 4,
-image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-firstname: "Elizabeth",
-lastname: "Kafaru",
-title: "UI/UX Designer",
-comment:"Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod. Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, ",
-rating: 3,
-},
-{
-id: 5,
-image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-firstname: "Elizabeth",
-lastname: "Kafaru",
-title: "UI/UX Designer",
-comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-rating: 3,
-},
-{
-id: 6,
-image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-firstname: "Elizabeth",
-lastname: "Kafaru",
-title: "UI/UX Designer",
-comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-rating: 3,
-},
-{
-id: 7,
-image: "/assets/images/feedback/Elizabeth+Kafaru.svg",
-firstname: "Elizabeth",
-lastname: "Kafaru",
-title: "UI/UX Designer",
-comment:"Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-rating: 3,
+  title: "Every 90 seconds, someone is diagnosed with a cardiac disease",
+  description:" Heart disease is the leading cause of death globally, accounting for nearly 18 million deaths each year. Our mission is to change this statistic by funding groundbreaking research, providing life-saving treatments, and raising awareness about prevention and early detection.",
+  url: "#",
+  btnText: "Find out more",
+  image: "/assets/images/donation/005.svg" || null,
 },
 ];  
 
@@ -317,7 +259,7 @@ export const whychoosingus = [
 {
   id: 3,
   title: "Grow Higher University",
-  description: "If you're a tech startup founder, entrepreneur or business leader with a vision for changing the world, we invite you to join the Heelheid journey. Let's build something amazing together.",
+  description: "If you're a tech startup founder, entrepreneur or business leader with a vision for changing the world, we invite you to join the Gracespring Hospitals Foundation Let's build something amazing together.",
   url: "#",
 },
 

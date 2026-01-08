@@ -52,6 +52,13 @@ https://foundation.gracespringhospitals.com   → Node :4000
 https://foundation.gracespringhospitals.com/api → Apache :8080
 https://gracespringhospitals.com → WordPress :8082
 
+Internet
+   ↓
+NGINX :80/:443
+   ↓
+Apache :8082  → WordPress (gracespringhospitals.com)
+Apache :8080  → API
+Node   :4000  → foundation.gracespringhospitals.com
 
 
 
