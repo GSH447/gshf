@@ -1,8 +1,6 @@
 "use client";
-import Product_ServicesImage from "./Product_ServicesImage";
 import Product_Services from "./Product_Services";
 import { product_services } from "../SiteMaps/data";
-import { motion } from "framer-motion";
 
 export default function Product_ServicesPage() {
   return (

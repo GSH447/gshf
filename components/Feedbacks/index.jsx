@@ -11,7 +11,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const blobShapes = [
-  "68% 32% 57% 43% / 55% 45% 55% 45%",
+  "65% 35% 60% 40% / 60% 65% 35% 40%",
+  // "68% 32% 57% 43% / 55% 45% 55% 45%",
 ];
 
 

@@ -22,7 +22,7 @@ export default function DonationModal({ open, donation, onClose }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-50 bg-white lg:bg-black/50 w-[100%] grid lg:flex items-center justify-center px-4 py-6 overflow-auto"
+          className="fixed inset-0 z-50 bg-white lg:bg-black/50 w-[100%] grid lg:flex items-center justify-center px-4 py-6 overflow-auto zIndex-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -1,0 +1,109 @@
+"use client";
+import React from "react";
+
+import Image from "next/image";import { motion } from "framer-motion";
+import DonationCard from "../../Donation/DonationCard";
+import SubscribeForm from "../../Subscribe";
+
+const SubscribeCTA = () => {
+
+
+  return (
+    <>
+
+     <div
+       className=" relative w-full overflow-hidden bg-[#d77dbf] lg:pt-[10rem] px-5 lg:px-10 flex lg:flex-row flex-col-reverse justify-between lg:gap-[2em]"
+     >
+        <svg
+          viewBox="0 0 1440 160"
+          className="absolute top-0 left-0 w-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#FDF2EB"
+            d="
+              M0,80
+              C360,40 720,40 1080,80
+              S1440,120 1440,80
+              L1440,0
+              L0,0
+              Z
+            "
+          />
+        </svg>
+
+         <div className=" lg:w-2/3 flex flex-col justify-between h-full gap-[1em] p-10 my-auto">
+        
+          {/* Content */}
+          <div className=" text-left">
+            <Image
+                src="/assets/icons/megaphone.png"
+                width={1000}
+                height={1000}
+                alt="ok"
+                className="w-[20%] lg:w-[10%] h-full object-cover"
+            />
+          </div>
+
+          <SubscribeForm/>
+
+         </div>
+
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: 20,
+              },
+
+              visible: {
+                opacity: 1,
+                x: 0,
+              },
+            }}
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="animate_right lg:w-1/3 m-auto subscribeCTA"
+          >
+            <div className="bg-white p-10 relative m-auto w-full rounded-lg">
+
+            <h2
+                className="text-[2rem] py-1"
+            >
+
+                Donate now and help us save more lives
+
+            </h2>
+
+              <DonationCard />
+
+            </div>
+
+          </motion.div>
+
+          {/* <svg
+            viewBox="0 0 1440 160"
+            className="absolute top-0 left-0 w-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#FDF2EB"
+              d="
+                M0,80
+                C360,40 720,40 1080,80
+                S1440,120 1440,80
+                L1440,0
+                L0,0
+                Z
+              "
+            />
+          </svg> */}
+
+      </div>
+
+    </>
+  );
+};
+
+export default SubscribeCTA;

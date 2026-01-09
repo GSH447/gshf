@@ -189,6 +189,9 @@ html, body {
   z-index: 100;
 }
 
+/* #donation-card-container {
+  z-index: -100;
+} */
 /* Large Screens 1600px and above
 
 */
@@ -218,10 +221,7 @@ html, body {
     font-size: 60px !important;
   }
 
-  #services-container {
-  }
-
-  #services-card {
+   #services-card {
     gap: 2em;
   }
 
@@ -368,7 +368,7 @@ html, body {
 
 
   .footer {
-    margin-top: 10%;
+    /* margin-top: 10%; */
     padding: 5%;
     /* background-color: #2A157C; */
   }

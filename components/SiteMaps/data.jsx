@@ -50,7 +50,7 @@ export const product_services = [
   description: "Our work is only possible with your support. Every donation takes us a step closer to another life-saving breakthrough.", 
   btnText: "Donate Today",
   url: "#",
-  alt: "#Gracespring Hospitals Foundation 1"
+  alt: "#GracespringHospitalsFoundation"
 },
 { 
   id: 2, 
@@ -60,7 +60,7 @@ export const product_services = [
   description: "Your donations ensure The Gracespring Hospitals Foundation's world-leading nurses, doctors and research teams can provide the very best care and develop life-saving treatments.", 
   btnText: "What we do",
   url: "#",
-  alt: "#Gracespring Hospitals Foundation 1"
+  alt: "#GracespringHospitalsFoundation"
 },
 { 
   id: 3, 
@@ -70,7 +70,45 @@ export const product_services = [
   description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
   btnText: "Ways to fundraise",
   url: "#",
-  alt: "#Gracespring Hospitals Foundation 1"
+  alt: "#GracespringHospitalsFoundation"
+},
+
+
+
+];
+
+//Product_Services links/sitemaps
+export const save_a_life = [
+
+{ 
+  id: 1, 
+  bg:"#df8a2fff",
+  image: "/assets/images/donation/001.svg" || null,
+  title: "Find an event",
+  description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Royal Marsden.", 
+  btnText: "Find an event",
+  url: "#",
+  alt: "#GracespringHospitalsFoundation"
+},
+{ 
+  id: 2, 
+  bg:"#4aa0dfff",
+  image: "/assets/images/donation/002.svg" || null,
+  title: "Give your time",
+  description: "Our volunteers are vital. Find a volunteer role to suit you.", 
+  btnText: "Volunteer with us",
+  url: "#",
+  alt: "#GracespringHospitalsFoundation"
+},
+{ 
+  id: 3, 
+  bg:"#f3bc4dff",
+  image: "/assets/images/donation/003.svg" || null,
+  title: "Fundraise for us",
+  description: "Together, we're developing new, better treatment for people with cardiac disease at The Gracespring Hospitals Foundation and beyond.", 
+  btnText: "Ways to fundraise",
+  url: "#",
+  alt: "#GracespringHospitalsFoundation"
 },
 
 

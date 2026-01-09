@@ -52,7 +52,7 @@ export default function Navbar() {
       // )}
       className={cn(
         "fixed top-0 z-50 w-full border-accent bg-[#EDEDF7] transition-all px-3 flex",
-        isScrolled && "shadow-sm shadow-accent"
+        isScrolled && "shadow-sm shadow-accent px-5"
       )}
     >
         
