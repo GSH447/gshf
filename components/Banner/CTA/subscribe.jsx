@@ -12,7 +12,7 @@ const SubscribeCTA = () => {
     <>
 
      <div
-       className=" relative w-full overflow-hidden bg-[#d77dbf] lg:pt-[10rem] px-5 lg:px-10 flex lg:flex-row flex-col-reverse justify-between lg:gap-[2em]"
+       className=" relative w-full overflow-hidden bg-[#d77dbf] pt-[3rem] lg:pt-[10rem] px-5 lg:px-10 flex lg:flex-row flex-col-reverse justify-between lg:gap-[2em]"
      >
         <svg
           viewBox="0 0 1440 160"
@@ -20,7 +20,7 @@ const SubscribeCTA = () => {
           preserveAspectRatio="none"
         >
           <path
-            fill="#FDF2EB"
+            fill="#fff"
             d="
               M0,80
               C360,40 720,40 1080,80
@@ -66,10 +66,10 @@ const SubscribeCTA = () => {
             viewport={{ once: true }}
             className="animate_right lg:w-1/3 m-auto subscribeCTA"
           >
-            <div className="bg-white p-10 relative m-auto w-full rounded-lg">
+            <div className="bg-white lg:p-10 relative m-auto w-full rounded-lg">
 
             <h2
-                className="text-[2rem] py-1"
+                className="text-[1.3rem] lg:text-[2rem] px-6 lg:p-1"
             >
 
                 Donate now and help us save more lives

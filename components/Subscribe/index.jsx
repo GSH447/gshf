@@ -55,7 +55,7 @@ const SubscribeForm = () => {
             whileInView="visible"
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
-            className=" p-1 animate_right"
+            className="p-1 animate_right"
         >
             <div className=" p-1 relative grid gap-[2em]">
 
