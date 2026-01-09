@@ -78,11 +78,11 @@ const Feedback = () => {
                   className=" rounded-xl w-full mx-auto bg-[#4966AA] flex flex-col lg:flex-row gap-8 items-center px-2 lg:px-10"
                 >
                   {/* Left Content */}
-                  <div className=" lg:w-1/2 flex flex-col justify-between h-full lg:gap-[5em]">
+                  <div className="lg:w-1/2 flex flex-col justify-between h-full lg:gap-[5em]">
                    
                     {/* Content */}
-                    <div className=" ">
-                      <h3 className="text-[1.3rem] lg:text-[2.5rem] font-bold text-white mb-2 text-left lg:w-[70%]">
+                    <div className="p-2">
+                      <h3 className="text-[1.7rem] lg:text-[2.5rem] font-bold text-white mb-2 text-left w-[90%] lg:w-[70%]">
                         {feature.title}
                       </h3>
       

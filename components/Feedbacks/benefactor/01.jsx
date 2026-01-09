@@ -24,11 +24,11 @@ const Benefactor01 = () => {
       >
         
         {/* Left Content */}
-        <div className=" lg:w-2/3 flex flex-col justify-between h-full gap-[1em] p-10">
+        <div className=" lg:w-2/3 flex flex-col justify-between h-full gap-[1em] lg:p-10">
         
             {/* Content */}
             <div className="">
-                <h3 className=" lg:text-[35px] text-[20px] font-bold text-white mb-2 text-left lg:w-[100%]">
+                <h3 className="text-[1.7rem] lg:text-[35px] font-bold text-white mb-2 text-left lg:w-[100%]">
                 “As a patient who is currently benefitting from a clinical trial, it gives me so much hope for the future that we have this pioneering work going on.”
                 </h3>
 
@@ -36,7 +36,7 @@ const Benefactor01 = () => {
 
             {/* Content */}
             <div className=" text-left">
-                <p className=" text-sm text-white">
+                <p className="text-md font-bold text-white">
                 Mandy
                 </p>
                 
@@ -57,7 +57,7 @@ const Benefactor01 = () => {
             width={1000}
             height={1000}
             alt="ok"
-            className=" w-[15%] lg:w-[40%] h-full object-cover"
+            className="w-[25%] lg:w-[40%] h-full object-cover"
             />
         </div>
         </div>

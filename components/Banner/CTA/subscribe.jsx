@@ -32,16 +32,16 @@ const SubscribeCTA = () => {
           />
         </svg>
 
-         <div className=" lg:w-2/3 flex flex-col justify-between h-full gap-[1em] p-10 my-auto">
+         <div className="lg:w-2/3 flex flex-col justify-between h-full gap-[1em] lg:p-10 my-auto">
         
           {/* Content */}
-          <div className=" text-left">
+          <div className="text-left pt-2">
             <Image
                 src="/assets/icons/megaphone.png"
                 width={1000}
                 height={1000}
                 alt="ok"
-                className="w-[20%] lg:w-[10%] h-full object-cover"
+                className="w-[30%] lg:w-[20%] h-full object-cover"
             />
           </div>
 
@@ -66,39 +66,21 @@ const SubscribeCTA = () => {
             viewport={{ once: true }}
             className="animate_right lg:w-1/3 m-auto subscribeCTA"
           >
-            <div className="bg-white lg:p-10 relative m-auto w-full rounded-lg">
+            <div className="bg-white py-10 lg:p-10 relative m-auto w-full rounded-lg">
 
-            <h2
-                className="text-[1.3rem] lg:text-[2rem] px-6 lg:p-1"
-            >
+              <h2
+                  className="text-[1.3rem] lg:text-[2rem] px-6 lg:p-1"
+              >
 
-                Donate now and help us save more lives
+                  Donate now and help us save more lives
 
-            </h2>
+              </h2>
 
               <DonationCard />
 
             </div>
 
           </motion.div>
-
-          {/* <svg
-            viewBox="0 0 1440 160"
-            className="absolute top-0 left-0 w-full"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#FDF2EB"
-              d="
-                M0,80
-                C360,40 720,40 1080,80
-                S1440,120 1440,80
-                L1440,0
-                L0,0
-                Z
-              "
-            />
-          </svg> */}
 
       </div>
 

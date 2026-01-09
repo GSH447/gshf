@@ -85,7 +85,7 @@ export const save_a_life = [
   bg:"#df8a2fff",
   image: "/assets/images/donation/001.svg" || null,
   title: "Find an event",
-  description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Royal Marsden.", 
+  description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Gracespring Hospitals Foundation.", 
   btnText: "Find an event",
   url: "#",
   alt: "#GracespringHospitalsFoundation"

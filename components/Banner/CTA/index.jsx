@@ -42,7 +42,7 @@ const CTA = () => {
                   className=""
                 >
                   <h1 
-                      className="relative text-2xl lg:text-6xl text-[#4966AA] "
+                      className="relative text-4xl lg:text-6xl text-[#4966AA] "
                       style={{fontFamily: 'AvenirBold'}}
                   >
                     Saving the <i>lives</i> of children born with heart conditions <i>everywhere</i>
@@ -53,7 +53,7 @@ const CTA = () => {
                   className=""
                 >
                   
-                  <h3 className="text-[#2A157C ] text-[11px] lg:text-[15px] font-extrabold text-justify">
+                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.5rem] font-extrabold">
                     Your donations directly fund life-saving heart surgeries, strengthen pediatric cardiac care, and give Nigerian children born with heart conditions a chance to live full, healthy lives.
                   </h3>
 
@@ -81,7 +81,7 @@ const CTA = () => {
             viewport={{ once: true }}
             className=" animate_right lg:w-1/2 m-auto subscribeCTA"
           >
-            <div className=" relative m-auto lg:w-[70%] w-full">
+            <div className="relative m-auto lg:w-[70%] w-full">
 
 
               <DonationCard />
