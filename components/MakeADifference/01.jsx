@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import DonationCard from "../Donation/DonationCard";
+import LoveSymbol from "../Curves/love";
 const MakeADifference = () => {
 
 
@@ -11,6 +12,12 @@ const MakeADifference = () => {
      <div
        className=" relative w-full overflow-hidden bg-[#d77dbf] pb-[4rem] lg:py-[12vh] px-2 lg:px-10 flex lg:flex-row flex-col justify-between lg:gap-[2em]"
      >
+
+      
+      <LoveSymbol
+         size="love-lg"
+         position="love-top-left"
+       />
 
          <div className="lg:w-2/3 flex flex-col justify-between h-full gap-[1em] p-10 my-auto">
         

@@ -122,7 +122,7 @@ export default function StepPayment({
     if (gateway === "manual") return; // stop redirect
 
     else if (gateway == "paystack" || gateway == "flutterwave") {
-      return alert("Payment gateway currently not available. Please choose Manual Bank Transfer.");
+      return alert("Payment gateway currently not available. Please choose Zenith Bank Direct Transfer.");
     }
 
     setLoading(true);

@@ -104,13 +104,14 @@ const Feedback = () => {
                   </div>
 
                   {/* Right Image Blob */}
-                  <div className=" lg:w-1/2 flex flex-col justify-between h-full lg:gap-[5em]">
+                  <div className="border-2 border-[red] lg:w-1/2 
+                  flex flex-col justify-between h-full lg:gap-[5em]">
                    
                     {/* Content */}
                     <div>
 
                       <div
-                        className="border-[0.8rem] border-primary lg:px-3 py-2 lg:w-[80%]  overflow-hidden flex mx-auto"
+                        className="border-[0.2rem] border-primary lg:px-3 py-2 w-full overflow-hidden flex mx-auto"
                         style={{ borderRadius: shape }}
                       >
                         <Image
@@ -118,8 +119,8 @@ const Feedback = () => {
                           width={1000}
                           height={1000}
                           alt={feature.title}
-                          className="w-full h-[17rem] object-cover"
-                          style={{ borderRadius: shape }}
+                          className="w-full h-[10rem] lg:h-[17rem] object-cover object-top"
+                          style={{ borderRadius: shape, objectPosition: "50% 20%" }}
                         />
                       </div>
 

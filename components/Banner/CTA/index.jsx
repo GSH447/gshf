@@ -2,16 +2,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import DonationCard from "../../Donation/DonationCard";
+import LoveSymbol from "../../Curves/love";
 const CTA = () => {
 
 
   return (
     <>
 
-      <section className=" rounded-[32px] shadow-lg gradient-bg mx-2">
+      <section className="rounded-[32px] shadow-lg gradient-bg mx-2">
+
 
         <div className=" container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 custom-bg">
 
+
+      <LoveSymbol
+         size="love-xxl"
+         position="love-center"
+       />
           {/* <div className="right-circle" ></div> */}
 
           <motion.div

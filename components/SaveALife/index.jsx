@@ -40,7 +40,8 @@ const SaveALife = ({ save_a_life = [] }) => {
                     width={1000}
                     height={1000}
                     alt={item.alt || item.title}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover object-top rounded-lg"
+                    style={{ objectPosition: "50% 20%" }}
                   />
                 </div>
               </div>

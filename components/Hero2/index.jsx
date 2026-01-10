@@ -28,7 +28,7 @@ const Hero2 = () => {
       className="relative w-full h-screen overflow-hidden flex items-center justify-center"
     >
       {/* ================= BACKGROUND IMAGES ================= */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         <motion.div
           key={currentImage}
           className="absolute inset-0 bg-cover bg-center"
@@ -40,7 +40,26 @@ const Hero2 = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
-      </AnimatePresence>
+      </AnimatePresence> */}
+
+<AnimatePresence>
+  <motion.div
+    key={currentImage}
+    className="
+      absolute inset-0
+      bg-cover
+      bg-[position:50%_20%]
+      sm:bg-center
+    "
+    style={{
+      backgroundImage: `url(${heroImages[currentImage]})`,
+    }}
+    initial={{ opacity: 0, scale: 1.05 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 1.5, ease: "easeInOut" }}
+  />
+</AnimatePresence>
 
       {/* ================= OVERLAY (Opacity Control) ================= */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />

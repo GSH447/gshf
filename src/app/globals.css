@@ -126,42 +126,105 @@ html, body {
   overflow: hidden;
 }
 
-/* Left Side - Parent Circle */
-/* .custom-bg::before {
+
+/* ❤️ Love / Heart Symbol */
+.love-symbol {
+  position: absolute;
+  width: var(--size, 180px);
+  height: var(--size, 180px);
+  opacity: 0.14;
+  animation: loveFloat 28s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* Heart Shape */
+.love-symbol::before,
+.love-symbol::after {
   content: "";
   position: absolute;
-  width: 39%;
-  height: 120%;
-  top: -10%;
-  left: -15%;
-  border-radius: 15rem;
-  background: linear-gradient(to right,  rgba(255, 255, 255, 0.15), #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF, #DBE1EF);
-  
-} */
+  width: 50%;
+  height: 75%;
+  background: linear-gradient(
+    180deg,
+    rgba(64, 124, 226, 0.9),
+    rgba(64, 124, 226, 0.35)
+  );
+  border-radius: 50% 50% 0 0;
+  top: 0;
+}
 
-/* Left Side - Child Circle */
-/* .custom-bg::after {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  top: 0%;
-  left: -15%;
-  border-radius: 50%;
-  background: #DBE1EF;
-} */
+.love-symbol::before {
+  left: 50%;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
 
-/* Right Side - Large Circle */
-/* .right-circle {
-  position: absolute;
-  width: 96%;
-  height: 120%;
-  top: -10%;
-  right: -20%;
-  border-radius: 15rem;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.042),#EDEDF7, );
-  z-index: -1;
-} */
+.love-symbol::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Floating motion */
+@keyframes loveFloat {
+  0% {
+    transform: translate(0, 0) rotateX(10deg) rotateY(-10deg);
+  }
+  40% {
+    transform: translate(40px, -50px) rotateX(18deg) rotateY(12deg);
+  }
+  70% {
+    transform: translate(-30px, 20px) rotateX(6deg) rotateY(-16deg);
+  }
+  100% {
+    transform: translate(0, 0) rotateX(10deg) rotateY(-10deg);
+  }
+}
+
+/* Size presets */
+.love-sm {
+  --size: 120px;
+}
+
+.love-md {
+  --size: 180px;
+}
+
+.love-lg {
+  --size: 280px; /* BIG ONE */
+}
+
+.love-xl {
+  --size: 480px; /* EXTRA BIG ONE */
+}
+
+.love-xxl {
+  --size: 700px; /* DOUBLE EXTRA BIG ONE */
+}
+
+
+/* Position helpers */
+.love-top-right {
+  top: 8%;
+  right: 8%;
+}
+
+.love-bottom-left {
+  bottom: 6%;
+  left: 10%;
+}
+
+.love-center {
+  top: 15%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.love-bottom-right {
+  top: 25%;
+  right: 10%;
+}
+
 
 
 

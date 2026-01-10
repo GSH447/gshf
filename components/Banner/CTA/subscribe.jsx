@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import LoveSymbol from "../../Curves/love";
 import Image from "next/image";import { motion } from "framer-motion";
 import DonationCard from "../../Donation/DonationCard";
 import SubscribeForm from "../../Subscribe";
@@ -32,6 +32,15 @@ const SubscribeCTA = () => {
           />
         </svg>
 
+       <LoveSymbol
+         size="love-lg"
+         position="love-top-right"
+       />
+       
+             <LoveSymbol
+                size="love-xxl"
+                position="love-bottom-right"
+              />
          <div className="lg:w-2/3 flex flex-col justify-between h-full gap-[1em] lg:p-10 my-auto">
         
           {/* Content */}
@@ -48,7 +57,11 @@ const SubscribeCTA = () => {
           <SubscribeForm/>
 
          </div>
-
+       <LoveSymbol
+         size="love-sm"
+         position="love-top-left"
+         className="hidden lg:block"
+       />
           <motion.div
             variants={{
               hidden: {

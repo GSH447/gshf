@@ -45,7 +45,7 @@ const Product_Services = ({ product_services = [] }) => {
                     width={800}
                     height={800}
                     alt={item.alt || item.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
