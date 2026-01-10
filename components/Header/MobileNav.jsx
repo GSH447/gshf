@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
+
 export default function MobileNav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function MobileNav() {
 
 
       
-      <div className="lg:hidden mr-2">
+      <div className=" lg:hidden mr-2">
         <motion.button
           className="bg-primary hover:bg-black text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
           whileHover={{ scale: 1.05 }}
@@ -52,7 +53,7 @@ export default function MobileNav() {
         </motion.button>
       </div>
 
-      <div className="flex gap-2">
+      <div className=" flex gap-2">
 
 
         <button
@@ -68,13 +69,13 @@ export default function MobileNav() {
 
       <div
         className={cn(
-          "flex overflow-y-auto flex-col px-6 pt-12 h-full min-h-screen fixed left-0 top-0 z-50 bg-background md:hidden border-r border-accent w-[75%] transition-all duration-300 ease-in-out bg-white",
+          "flex overflow-y-auto flex-col p-2 h-full min-h-screen fixed left-0 top-0 z-50 bg-background md:hidden border-r border-accent w-full transition-all duration-300 ease-in-out bg-[#DBE1EF]  gap-4 ",
           menuOpen ? "translate-x-0" : "-translate-x-full"
         )}
 
         
       >
-        <div className="flex items-center justify-between bg-white">
+        <div className=" flex items-center justify-between bg-[#DBE1EF]">
 
           <div>
             <div className=" justify-center items-center w-fit">
@@ -92,18 +93,20 @@ export default function MobileNav() {
             </div>
           </div>
 
-          <div>        
+          <div
+            className=" flex items-center justify-center p-2"
+          >        
             <button
               className="hover:text-accent transition ease-in-out"
               onClick={() => setMenuOpen(false)}
             >
-              <X className="w-6 h-6" />
+              <X className="w-10 h-6 font-bold text-primary" />
             </button>
           </div>
 
         </div>
         
-        <nav className="flex flex-col gap-4 pt-12 overflow-y-auto bg-white">
+        <nav className=" flex flex-col gap-4 overflow-y-auto bg-[#DBE1EF]">
           {links.map((link, index) => (
             <div key={link.label + index}>
               <Link
@@ -134,7 +137,7 @@ export default function MobileNav() {
                     <React.Fragment key={idx}>
                       {subLink.header && (
                         <div className="space-y-2">
-                          <div className="text-primary font-bold mt-1 text-sm">
+                          <div className="text-primary font-bold mt-1 mb-2">
                             {subLink.header}
                           </div>
                           {subLink.subMenu && (
@@ -143,7 +146,7 @@ export default function MobileNav() {
                                 <Link
                                   href={subItem.href}
                                   key={subItem.label}
-                                  className="text-muted block text-xs hover:text-accent transition pl-4"
+                                  className="text-muted block text-lg hover:text-accent transition pl-4"
                                 >
                                   {subItem.label}
                                 </Link>
@@ -167,17 +170,17 @@ export default function MobileNav() {
         <Link
           href="/auth/signup"
 
-          className="flex items-center justify-center rounded-full bg-primary px-3.5 py-0.5 text-[12px] text-white duration-300 ease-in-out hover:bg-primaryblack hover:text-white lg:hidden"
+          className="w-[50%] mx-auto flex items-center justify-center rounded-full bg-primary p-3 text-white text-lg duration-300 ease-in-out hover:bg-primaryblack lg:hidden"
         >
-          Donate
+          Donate today
         </Link>
 
-        {/* <Link
+        <Link
           href="/tele"
-          className="flex items-center justify-center rounded-full bg-primary px-3.5 py-0.5 text-[12px] text-white duration-300 ease-in-out hover:bg-primaryblack hover:text-white lg:hidden"
+          className="flex items-center justify-center text-lg text-black   lg:hidden"
         >
-          Find an Ambulance
-        </Link> */}
+          Contact us?
+        </Link>
         </nav>
 
       </div>
