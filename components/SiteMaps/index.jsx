@@ -35,11 +35,13 @@ export const navLinks = [
     subLinks: [
       {
         header: " About us",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Find out more about who we are and why we exist",
-            href: "/who-we-are/about-us",
+            
+    href: "#",
           },
         ],
       },
@@ -81,7 +83,8 @@ export const navLinks = [
     subLinks: [
       {
         header: "Making breakthroughs happen",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
 
           {
@@ -92,7 +95,8 @@ export const navLinks = [
       },
       {
         header: "Cardiac-leading treatment and care",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Discover how your support is helping people to live well from diagnosis, throughout treatment and beyond",
@@ -103,7 +107,8 @@ export const navLinks = [
  
       {
         header: "Paediatric-leading treatment and care",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Discover how your support is helping children to live well from diagnosis, throughout treatment and beyond",
@@ -129,7 +134,8 @@ export const navLinks = [
     subLinks: [
       {
         header: "Ways to donate",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Donate online",
@@ -151,7 +157,8 @@ export const navLinks = [
       },
       {
         header: "More ways to get involved",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Special Occasion giving",
@@ -190,7 +197,8 @@ export const navLinks = [
       },
       {
         header: "Fundraise for us",
-        href: "/who-we-are/about-us",
+        
+    href: "#",
         subMenu: [
           {
             label: "Find an event to take part in",

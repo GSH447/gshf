@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 // import Link from "next/link";
 
 const blobShapes = [
-  "65% 35% 60% 40% / 60% 65% 35% 40%",
+  "65% 80% 50% 100% / 50% 50% 50% 4%",
   // "68% 32% 57% 43% / 55% 45% 55% 45%",
 ];
 
 
 
 
-const PRIMARY_BG = "#0b7154";
+const PRIMARY_BG = "#4a4a63";
 
 const Aboutus = () => {
 
@@ -92,7 +92,7 @@ const Aboutus = () => {
                   width={1000}
                   height={1000}
                   alt="about-us-at-gracespring-health-foundation"
-                  className="w-full h-[10rem] lg:h-[17rem] object-cover object-top"
+                  className="w-full h-[10rem] lg:h-[33rem] object-cover object-top"
                   style={{ borderRadius: blobShapes, objectPosition: "50% 20%" }}
                 />
               </div>
