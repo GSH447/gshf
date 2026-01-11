@@ -14,8 +14,8 @@ html, body {
 
 @font-face {
   font-family: "Avenir";
-  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype'),
-       url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype');
+  src: url('/assets/fonts/Besley/Besley.ttf') format('truetype'),
+       url('/assets/fonts/Besley/Besley.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block; /* Ensures text is hidden until font loads */
@@ -23,8 +23,8 @@ html, body {
 
 @font-face {
   font-family: "AvenirBold";
-  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype'),
-       url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype');
+  src: url('/assets/fonts/Besley/Besley.ttf') format('truetype'),
+       url('/assets/fonts/Besley/Besley.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block; /* Ensures text is hidden until font loads */

@@ -35,21 +35,23 @@ export const navLinks = [
     subLinks: [
       {
         header: " About us",
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Find out more about who we are and why we exist",
-            href: "/about",
+            href: "/who-we-are/about-us",
           },
         ],
       },
       
       {
         header: "Our people",
+        href: "/who-we-are/our-people",
         subMenu: [
 
           {
             label: "Meet our Joint Patrons, Trustees and our leadership team",
-            href: "/team",
+            href: "/who-we-are/our-people",
           },
 
         ],
@@ -57,11 +59,12 @@ export const navLinks = [
       
       {
         header: "Careers with us",
+        href: "/who-we-are/join-our-team",
         subMenu: [
 
           {
             label: "Find out more about working at The Gracespring Health Foundation",
-            href: "/careers",
+            href: "/who-we-are/join-our-team",
           },
 
         ],
@@ -78,6 +81,7 @@ export const navLinks = [
     subLinks: [
       {
         header: "Making breakthroughs happen",
+        href: "/who-we-are/about-us",
         subMenu: [
 
           {
@@ -88,6 +92,7 @@ export const navLinks = [
       },
       {
         header: "Cardiac-leading treatment and care",
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Discover how your support is helping people to live well from diagnosis, throughout treatment and beyond",
@@ -98,6 +103,7 @@ export const navLinks = [
  
       {
         header: "Paediatric-leading treatment and care",
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Discover how your support is helping children to live well from diagnosis, throughout treatment and beyond",
@@ -123,6 +129,7 @@ export const navLinks = [
     subLinks: [
       {
         header: "Ways to donate",
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Donate online",
@@ -144,6 +151,7 @@ export const navLinks = [
       },
       {
         header: "More ways to get involved",
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Special Occasion giving",
@@ -182,8 +190,7 @@ export const navLinks = [
       },
       {
         header: "Fundraise for us",
-
-        
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Find an event to take part in",

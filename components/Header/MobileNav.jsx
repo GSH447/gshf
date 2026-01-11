@@ -137,16 +137,19 @@ export default function MobileNav() {
                     <React.Fragment key={idx}>
                       {subLink.header && (
                         <div className="space-y-2">
-                          <div className="text-primary font-bold mt-1 mb-2">
+                          <Link 
+                            href={subLink.href}
+                            className=" text-primary font-bold mt-1 mb-2"
+                          >
                             {subLink.header}
-                          </div>
+                          </Link>
                           {subLink.subMenu && (
                             <>
                               {subLink.subMenu.map((subItem) => (
                                 <Link
                                   href={subItem.href}
                                   key={subItem.label}
-                                  className="text-muted block text-lg hover:text-accent transition pl-4"
+                                  className=" w-[80%] text-muted block text-sm hover:text-accent transition pl-4"
                                 >
                                   {subItem.label}
                                 </Link>

@@ -1,13 +1,16 @@
 "use client";
 import About from "./About";
+import Aboutus from "./Aboutus";
 import AboutImage from "./AboutImage";
-import Portfolio from "./Portfolio";
+// import Portfolio from "./Portfolio";
 
 export default function AboutPage() {
   return (
 
     <>
     
+      <Aboutus/>
+
       <div className="container flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between mx-auto lg:space-x-10 nine20" id="about">
           
         {/* Contact Image Section */}
@@ -22,9 +25,9 @@ export default function AboutPage() {
 
       </div>
     
-      <div className="flex lg:flex-row items-center lg:items-start justify-between mx-auto nine20" id="portfolios">
+      {/* <div className="flex lg:flex-row items-center lg:items-start justify-between mx-auto nine20" id="portfolios">
         <Portfolio/>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -12,9 +12,9 @@ const About = () => {
 
     <>
 
-    <div className="w-[fit] mb-9">
+    <div className="w-[fit] my-[2.9rem] lg:my-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center">
       
-      <div className="lg:w-[691px] lg:w-[90%]">
+      <div className="border-2 border-[red] lg:w-[691px] lg:w-[90%]">
         <h1 className="text-[x-large] lg:text-[48px] about" style={{fontFamily:"AvenirBold"}}>About Us</h1>
         
         <p className="text-[small] lg:text-[15px] text-justify">

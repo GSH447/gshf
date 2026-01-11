@@ -154,9 +154,12 @@ export default function Navbar() {
                     <React.Fragment key={index}>
                       {subLink.header && (
                         <div className="space-y-2">
-                          <div className="text-primary font-bold pb-1">
+                          <Link 
+                            className="text-primary font-bold pb-1"
+                            href={subLink.href}
+                          >
                             {subLink.header}
-                          </div>
+                          </Link>
                           {subLink.subMenu && (
                             <>
                               {subLink.subMenu.map((menuItem) => (
