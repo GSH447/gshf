@@ -12,9 +12,41 @@ const About = () => {
 
     <>
 
-    <div className="w-[fit] my-[2.9rem] lg:my-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center">
+    <div className="border-2 border-[red] w-full my-[2.9rem] lg:my-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center">
       
-      <div className="border-2 border-[red] lg:w-[691px] lg:w-[90%]">
+
+      <div
+        className='border-2 border[red] flex justify-between w-full'
+      >
+
+        <div
+          className='border-2 border-[red] w-1/2'
+        >
+          <div className='bg-black h-[39px] rounded-lg flex'>
+            <h1 
+              className=' text-white font-bold my-auto h-fit ml-7'>
+              Today, in the Nigeria, someone is diagnosed with cancer every 90 seconds
+            </h1>
+          </div>
+        </div>
+        
+        <div
+          className='border-2 border-[red] w-1/2'
+        >
+          <h1 
+            className="about" 
+          >
+            That’s more than 1,000 people, every day, hearing the devastating news they have cancer. 
+            We believe that through funding life-saving research and supporting world-leading treatment and care at The Royal Marsden, we can save the lives of people with cancer everywhere.
+            One in two of us will likely receive a diagnosis in our lifetime. Cancer touches every family, every generation, and every community, which means we need breakthroughs in cancer research more than ever before.
+          </h1>
+        </div>
+
+      </div>
+
+
+
+      {/* <div className="border-2 border-[red] lg:w-[691px] lg:w-[90%]">
         <h1 className="text-[x-large] lg:text-[48px] about" style={{fontFamily:"AvenirBold"}}>About Us</h1>
         
         <p className="text-[small] lg:text-[15px] text-justify">
@@ -22,7 +54,7 @@ const About = () => {
         As a growing, bootstrapped private equity company, Heelheid is driven by a passion for entrepreneurship and a commitment to fostering sustainable growth. We believe that every business has the potential to thrive, and we're dedicated to helping founders achieve their vision.
 
         </p>
-      </div>
+      </div> */}
       
       <br/>
 

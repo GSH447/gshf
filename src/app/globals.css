@@ -14,6 +14,25 @@ html, body {
 
 @font-face {
   font-family: "Avenir";
+  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype'),
+       url('/assets/fonts/AvenirLTStd/AvenirLTStd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Ensures text is hidden until font loads */
+}
+
+@font-face {
+  font-family: "AvenirBold";
+  src: url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype'),
+       url('/assets/fonts/AvenirLTStd/AvenirLTStd95Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; /* Ensures text is hidden until font loads */
+}
+
+
+@font-face {
+  font-family: "Besley";
   src: url('/assets/fonts/Besley/Besley.ttf') format('truetype'),
        url('/assets/fonts/Besley/Besley.ttf') format('truetype');
   font-weight: normal;
@@ -22,7 +41,7 @@ html, body {
 }
 
 @font-face {
-  font-family: "AvenirBold";
+  font-family: "BesleyBold";
   src: url('/assets/fonts/Besley/Besley.ttf') format('truetype'),
        url('/assets/fonts/Besley/Besley.ttf') format('truetype');
   font-weight: normal;
@@ -30,6 +49,9 @@ html, body {
   font-display: block; /* Ensures text is hidden until font loads */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BesleyBold' !important;
+}
 /* .container-1420 {
   border: 1px solid blue;
   width: 98% !important;

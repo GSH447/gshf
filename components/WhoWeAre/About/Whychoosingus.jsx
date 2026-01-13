@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { whychoosingus } from "../SiteMaps/data";
+import { whychoosingus } from "../../SiteMaps/data";
 import { motion } from "framer-motion";
 
 const Whychoosingus = () => {
