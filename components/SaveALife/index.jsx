@@ -61,7 +61,7 @@ const SaveALife = ({ save_a_life = [] }) => {
               <div className="text-left">
                 <Link
                   href={item.url}
-                  className="inline-block border-2 border-primary hover:bg-[#FFC000] px-5 py-2 rounded-full text-[15px] text-primary hover:text-white font-extrabold transition-colors duration-300"
+                  className="inline-block border-2 border-primary hover:bg-primary px-5 py-2 rounded-full text-[15px] text-primary hover:text-white font-extrabold transition-colors duration-300"
                 >
                   {item.btnText || "Learn More"}
                 </Link>

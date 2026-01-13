@@ -139,7 +139,7 @@ export default function MobileNav() {
                         <div className="space-y-2">
                           <Link 
                             href={subLink.href}
-                            className=" text-primary font-bold mt-1 mb-2"
+                            className="flex text-primary mt-1 mb-3 gap-2"
                           >
                             {subLink.header}
                           </Link>
@@ -149,7 +149,7 @@ export default function MobileNav() {
                                 <Link
                                   href={subItem.href}
                                   key={subItem.label}
-                                  className=" w-[80%] text-muted block text-sm hover:text-accent transition pl-4"
+                                  className="hidden w-[80%] text-muted block text-sm hover:text-accent transition pl-4"
                                 >
                                   {subItem.label}
                                 </Link>

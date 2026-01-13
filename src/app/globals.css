@@ -252,6 +252,61 @@ html, body {
   z-index: 100;
 }
 
+
+/** dots for swiper pagination
+ */
+
+ /* .swiper-pagination {
+  display: block !important;
+  bottom: 10px !important;
+  text-align: center !important;
+  width: 100% !important;
+  z-index: 10 !important;
+ }
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #6a0505 !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #407CE2 !important;
+  width: 16px !important;
+  height: 16px !important;
+} */
+
+
+
+.swiper-pagination {
+  position: static !important;
+  width: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #407CE2 !important;
+  opacity: 0.6 !important;
+  margin: 0 4px !important;
+  transition: all 0.25s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000000 !important;
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 1 !important;
+}
+
+
+
 /* #donation-card-container {
   z-index: -100;
 } */
@@ -361,7 +416,11 @@ html, body {
 
    
   .gshf-Logo {
-    min-height:100px;
+    min-height:50px;
+  }
+
+  .footer-gsfh-Logo {
+    width: 5rem;
   }
 
   .hero-section {

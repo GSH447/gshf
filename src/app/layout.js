@@ -2,6 +2,7 @@
 import "./globals.css";
 import Header from "../../components/Header"; //Header components
 import Footer from "../../components/Footer";
+import FooterCurves from "../../components/Curves/footer-curves";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
           
       <Header />
           {children}
+      <FooterCurves/>
       <Footer />
       </body>
     </html>

@@ -8,7 +8,6 @@ import MakeADifference from "../../components/MakeADifference/01";
 import SaveALife from "../../components/SaveALife";
 import { save_a_life } from "../../components/SiteMaps/data";
 import SubscribeCTA from "../../components/Banner/CTA/subscribe";
-import FooterCurves from "../../components/Curves/footer-curves";
 // import WorkwithUs from "../../components/Team/i/WrokWitUs";//Work with us choose us components
 // import AboutPage from "../../components/About"; //About us components
 // import TeamPage from "../../components/Team"; //Our Team components
@@ -26,7 +25,7 @@ export default function Home() {
         <CTA/>
       </div>
       <Product_ServicesPage/>
-      {/* <Feedback/> */}
+      <Feedback/>
       <Benefactor01/>
       <MakeADifference/>
       <SaveALife
@@ -34,7 +33,7 @@ export default function Home() {
       />
       <SubscribeCTA/>
 
-      <FooterCurves/>
+      {/* <FooterCurves/> */}
 
       {/* <AboutPage/>
 

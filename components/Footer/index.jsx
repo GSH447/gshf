@@ -61,7 +61,6 @@ const Footer = () => {
                 <Section links={FooterLinks.company} />
                 <Section links={FooterLinks.link1} />
                 <Section links={FooterLinks.link2} />
-                {/* <NewsletterSection email={email} setEmail={setEmail} handleSubscribe={handleSubscribe} loading={loading} message={message} error={error} /> */}
             </div>
             <FooterBottom currentYear={currentYear} />
         </footer>
@@ -91,7 +90,7 @@ const ContactSection = ({ contacts }) => (
                         width={100} 
                         height={100} 
                         alt="Contact-Icons" 
-                        className=" w-[1.5rem]" 
+                        className=" w-[1rem]" 
                     />
                     <Link href={item.url} className=" hover:text-primary transition duration-300 lg:text-[14px] text-left">{item.name}</Link>
                 </li>
@@ -103,16 +102,9 @@ const ContactSection = ({ contacts }) => (
 const FooterBottom = ({ currentYear }) => {
 
     return (
-        <div className="border-t border-gray-300 lg:mt-6 py-6 flex flex-col sm:flex-row justify-between container mx-auto text-gray-600  ">
+        <div className="border-t border-gray-300   lg:mt-6 py-6 flex flex-col sm:flex-row justify-between mx-auto text-gray-600  ">
 
-            <div className="flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto sm:order-last ">
-
-
-            </div>
-
-
-
-            <div className="grid gap-4 lg:items-center lg:justify-center signatureBottomLinks ">
+            <div className=" flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto">
 
                 <Link href="/">
                     <Image 
@@ -120,14 +112,22 @@ const FooterBottom = ({ currentYear }) => {
                     width={1000} 
                     height={1000}
                     alt="Gracespring Hospitals Foundation" 
-                    className="gshf-Logo"
+                    className=" gshf-Logo footer-gsfh-Logo"
                     priority
                     id="logo"
                     />
                 </Link>
+
+            </div>
+
+
+
+            <div className=" grid gap-4 lg:items-center lg:justify-center signatureBottomLinks ">
+
+           
                 
                 <div
-                    className="w-[90%]"
+                    className="w-full lg:w-[70%] xl:w-[60%]"
                 >
 
                     The Gracespring Health Foundation is a not for-profit and non-political registered foundation in Nigeria,The aims and objective of the association are locate the Child born with heart condition, provide free surgical care for children born with heart conditions requiring surgery, work in partnerships with local, regional, national and international organisations. Our address is Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Lekki, Lagos, Nigeria.

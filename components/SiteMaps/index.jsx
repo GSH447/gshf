@@ -34,9 +34,8 @@ export const navLinks = [
     caption: "#bookcolonoscopy #colonoscopy #colonscreening",
     subLinks: [
       {
-        header: " About us",
-        
-    href: "#",
+        header: " About us",    
+        href: "/who-we-are/about-us",
         subMenu: [
           {
             label: "Find out more about who we are and why we exist",

@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 // import Link from "next/link";
 
 const blobShapes = [
-  "65% 80% 50% 100% / 50% 50% 50% 4%",
+  "74% 26% 63% 37% / 45% 36% 64% 55% ",
+  // "65% 80% 50% 100% / 50% 50% 50% 4%",
   // "68% 32% 57% 43% / 55% 45% 55% 45%",
 ];
 
@@ -20,7 +21,7 @@ const Aboutus = () => {
 
   return (
     <div
-      className="border-2 border-[red] relative w-full overflow-hidden  my-[2.9rem] lg:py-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
+      className=" relative w-full overflow-hidden  my-[2.9rem] py-[6rem] lg:py-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
       style={{ backgroundColor: PRIMARY_BG }}
     >
 
@@ -32,7 +33,7 @@ const Aboutus = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="border-2 border-[red] relative z-10 mx-auto pt-[10vh] lg:pt-[11rem] lg:pb-[5rem]"
+        className=" relative z-10 mx-auto px-2 pt-[8rem] lg:pt-[11rem] lg:pb-[5rem]"
       >
         
         <motion.div
@@ -40,10 +41,10 @@ const Aboutus = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="border-2 border-[red] rounded-xl w-full mx-auto flex flex-col lg:flex-row gap-8 items-center px-2 lg:px-10"
+          className=" rounded-xl w-full mx-auto flex flex-col lg:flex-row gap-[4.5rem] lg:gap-8 items-center px-2 lg:px-10"
         >
           {/* Left Content */}
-          <div className="border-2 border-[red] lg:w-1/2 flex flex-col justify-between h-full lg:gap-[1.2rem]">
+          <div className=" lg:w-1/2 flex flex-col justify-between h-full lg:gap-[1.2rem] -mt-[7rem]">
             
             {/* Content */}
 
@@ -68,7 +69,7 @@ const Aboutus = () => {
             <div className=" text-left">
               <a
                 href="/what-we-do"
-                className="inline-block bg-white hover:bg-primary px-5 lg:px-7 py-2 lg:py-3 rounded-full text-md text-primary hover:text-white font-extrabold transition-colors duration-300"
+                className="inline-block bg-white hover:bg-primary px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-primary hover:text-white font-extrabold transition-colors duration-300"
               >
                 What we do
               </a>
@@ -77,14 +78,14 @@ const Aboutus = () => {
           </div>
 
           {/* Right Image Blob */}
-          <div className="border-2 border-[red] lg:w-1/2 
+          <div className="lg:w-1/2 
           flex flex-col justify-between">
             
             {/* Content */}
             <div>
 
               <div
-                className="border-[0.2rem] border-primary lg:px-3 py-2 w-full overflow-hidden flex mx-auto"
+                className="border-[0.4rem] border-primary w-full overflow-hidden flex ml-[0.5rem] py-2 mx-auto"
                 style={{ borderRadius: blobShapes }}
               >
                 <Image
@@ -92,8 +93,8 @@ const Aboutus = () => {
                   width={1000}
                   height={1000}
                   alt="about-us-at-gracespring-health-foundation"
-                  className="w-full h-[10rem] lg:h-[33rem] object-cover object-top"
-                  style={{ borderRadius: blobShapes, objectPosition: "50% 20%" }}
+                  className="lg:w-full h-[17rem] lg:h-[27rem] object-cover object-top"
+                  style={{ borderRadius: blobShapes, objectPosition: "50% 10%" }}
                 />
               </div>
 
