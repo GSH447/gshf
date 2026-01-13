@@ -164,9 +164,6 @@ const Feedback = () => {
               </SwiperSlide>
             );
           })}
-
-
-          
       
           {/* CTA */}
           <div
