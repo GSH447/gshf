@@ -28,7 +28,7 @@ const ContactsUsHero = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-10 mx-auto py-[2.5rem] lg:p-10 my-[5rem]"
+        className="relative z-10 mx-auto py-[2.5rem] lg:p-10 mt-[5rem]"
         style={{backgroundColor: PRIMARY_BG}}
       >
         
@@ -37,7 +37,7 @@ const ContactsUsHero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className=" w-full mx-auto grid gap-[4.5rem] gap-8 items-center px-2 px-10 my-[5rem]"
+          className=" w-full mx-auto grid gap-[4.5rem] gap-8 items-center px-2 px-10 mt-[5rem]"
         >
 
           
@@ -103,7 +103,7 @@ const ContactsUsHero = () => {
             {/* CTA */}
             <div className=" m-auto">
                 <Link
-                href="/what-we-do"
+                href="#contact-form"
                 className="inline-block bg-primary hover:bg-white px-7 py-4  rounded-full text-lg text-white hover:text-primary font-bold transition-colors duration-300 border-2 border-primary"
                 >
                     Send a message

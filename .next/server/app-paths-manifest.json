@@ -1,7 +1,7 @@
 {
   "/who-we-are/our-people/page": "app/who-we-are/our-people/page.js",
-  "/who-we-are/join-our-team/page": "app/who-we-are/join-our-team/page.js",
   "/page": "app/page.js",
+  "/who-we-are/join-our-team/page": "app/who-we-are/join-our-team/page.js",
   "/who-we-are/about-us/page": "app/who-we-are/about-us/page.js",
   "/contact-us/page": "app/contact-us/page.js"
 }

@@ -1,7 +1,7 @@
 "use client";
 import ContactsUsHero from './Contacts';
 import ContactForm from './ContactForm';
-import ContactImage from './ContactImage';
+import ContactInformation from './ContactInformation';
 import SubscribeCTA from '../Banner/CTA/subscribe';
 
 export default function ContactPage() {
@@ -10,7 +10,7 @@ export default function ContactPage() {
     <>
 
       <ContactsUsHero/>
-      <ContactImage/>
+      <ContactInformation/>
       <ContactForm />
       <SubscribeCTA/>
     </>

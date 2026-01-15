@@ -14,9 +14,9 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false); //set loading
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
   const [selectedCountry, setSelectedCountry] = useState({
-    code: "+250",
+    code: "+234",
     flag: "",
-    name: "Rwanda",
+    name: "Nigeria",
   }); //selectedCountry variables
 
   const [formData, setFormData] = useState({
@@ -27,34 +27,56 @@ export default function ContactForm() {
     message: ""
   }); //form variables
 
-  //fetchCountry function
+
+  /* ---------------- FETCH COUNTRIES ---------------- */
   useEffect(() => {
-    // Fetch country data from the API
-    fetch("https://restcountries.com/v3.1/all")
+    fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
       .then((res) => res.json())
       .then((data) => {
         const countryData = data
-          .filter(
-            (country) =>
-              country.idd?.root && country.idd.suffixes && country.flags?.png
-          )
-          .map((country) => ({
-            code: country.idd.root + (country.idd.suffixes?.[0] || ""),
-            flag: country.flags.png,
-            name: country.name.common,
+          .filter((c) => c.idd?.root && c.flags?.png)
+          .map((c) => ({
+            code: c.idd.root + (c.idd.suffixes?.[0] || ""),
+            flag: c.flags.png,
+            name: c.name.common,
           }));
+
         setCountries(countryData);
-        // Set default selected country
-        const rwanda = countryData.find((c) => c.code === "+250");
-        if (rwanda) setSelectedCountry(rwanda);
-      });
+        const nigeria = countryData.find((c) => c.code === "+234");
+        if (nigeria) setSelectedCountry(nigeria);
+      })
+      .catch((err) =>
+        console.error("Country fetch error:", err.message)
+      );
   }, []);
 
-  // CountryChange function
+  /* ---------------- HANDLERS ---------------- */
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
     setShowDropdown(false);
   };
+
+
+
+
+  /* ---------------- VALIDATION ---------------- */
+  const validate = () => {
+    const e = {};
+
+    if (!data.title) e.title = "Title is required";
+    if (!data.firstName.trim()) e.firstName = "First name required";
+    if (!data.lastName.trim()) e.lastName = "Last name required";
+
+    if (!/^\S+@\S+\.\S+$/.test(data.email))
+      e.email = "Invalid email address";
+
+    if (!data.phone || data.phone.length < 7)
+      e.phone = "Valid phone number required";
+
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  };
+
 
   // textarea function 
   const handleChange = (e) => {
@@ -122,11 +144,12 @@ export default function ContactForm() {
   return (
 
     <div
-      className="lg:bg-primary p-10 w-fit mx-auto rounded-lg shadow-md"
+      id="contact-form"
+      className="lg:bg-primary lg:p-10 w-fit mx-auto rounded-lg shadow-md"
     >
 
       
-        <div className=" w-fit m-auto lg:p-10 bg-white shadow-lg rounded-lg">
+        <div className="lg:w-fit m-auto p-10 bg-white shadow-xl rounded-lg">
 
           <div className=" w-fit mb-5">
 
