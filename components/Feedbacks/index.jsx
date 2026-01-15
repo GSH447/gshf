@@ -113,7 +113,7 @@ const Feedback = () => {
                         {feature.title}
                       </h3>
       
-                      <p className="text-md lg:text-xl text-white text-left mb-5 lg:w-[80%] leading-3">
+                      <p className="text-md lg:text-xl text-white text-left mb-5 lg:w-[80%]">
                         {feature.description}
                       </p>
                     </div>

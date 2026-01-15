@@ -40,7 +40,7 @@ const Aboutdifference = () => {
             <div className=" lg:w-[70%] m-auto">
 
               
-              <div className="">
+              <div className="mb-2">
                 <h1
                   className="text-primary text-center text-lg font-bold"
                 >
@@ -62,7 +62,7 @@ const Aboutdifference = () => {
             <div className=" lg:w-[70%] m-auto">
 
               
-              <div className="">
+              <div className="mb-2">
                 <h1
                   className="text-primary text-center text-lg font-bold"
                 >
@@ -90,7 +90,7 @@ const Aboutdifference = () => {
               id="about_difference_image"
               src={"/assets/images/about/vmo.svg"}
               alt="about"
-              className="rounded-xl object-contain transition-opacity duration-500 my-auto"
+              className="lg:rounded-xl object-contain transition-opacity duration-500 my-auto"
               width={1000}
               height={1000}
               priority
@@ -105,7 +105,7 @@ const Aboutdifference = () => {
             <div className=" lg:w-[70%] m-auto">
 
               
-              <div className="">
+              <div className="mb-2">
                 <h1
                   className="text-primary text-center text-lg font-bold"
                 >
@@ -127,7 +127,7 @@ const Aboutdifference = () => {
             <div className=" lg:w-[70%] m-auto">
 
               
-              <div className="">
+              <div className="mb-2">
                 <h1
                   className="text-primary text-center text-lg font-bold"
                 >
@@ -155,7 +155,7 @@ const Aboutdifference = () => {
               id="about_difference_image"
               src={"/assets/images/about/vmo.svg"}
               alt="about"
-              className="rounded-xl object-contain transition-opacity duration-500 my-auto"
+              className="lg:rounded-xl object-contain transition-opacity duration-500 my-auto"
               width={1000}
               height={1000}
               priority

@@ -32,6 +32,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/who-we-are/about-us/page.js"
+    ],
+    "/contact-us/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact-us/page.js"
     ]
   }
 }

@@ -72,7 +72,7 @@ const Vmo = () => {
               <Image
                 src={"/assets/images/donation/011.svg"}
                 alt="about"
-                className="rounded-lg object-contain transition-opacity duration-500"
+                className="lg:rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
                 height={1000}
                 priority
@@ -181,7 +181,7 @@ const Vmo = () => {
               <Image
                 src={"/assets/images/donation/012.svg"}
                 alt="about"
-                className="rounded-lg object-contain transition-opacity duration-500"
+                className="lg:rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
                 height={1000}
                 priority
@@ -199,7 +199,7 @@ const Vmo = () => {
               <Image
                 src={"/assets/images/donation/010.svg"}
                 alt="about"
-                className="rounded-lg object-contain transition-opacity duration-500"
+                className="lg:rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
                 height={1000}
                 priority

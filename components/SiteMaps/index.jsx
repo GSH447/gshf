@@ -233,7 +233,7 @@ export const navLinks = [
 
   {
     label: "Contact us",
-    href: "#",
+    href: "/contact-us",
     // icon: FaEnvelope,
     caption: "#excerise #stayhealthy",
 
