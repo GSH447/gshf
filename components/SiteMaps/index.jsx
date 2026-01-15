@@ -223,14 +223,21 @@ export const navLinks = [
 
 
 
+  // {
+  //   label: "News and stories",
+  //   href: "#",
+  //   // icon: FaEnvelope,
+  //   caption: "#excerise #stayhealthy",
+
+  // },
+
   {
-    label: "News and stories",
+    label: "Contact us",
     href: "#",
     // icon: FaEnvelope,
     caption: "#excerise #stayhealthy",
 
   },
-
 
   
 ];

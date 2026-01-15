@@ -2,9 +2,9 @@
 import About from "./About";
 import Aboutus from "./Aboutus";
 import AboutImage from "./AboutImage";
+import Aboutdifference from "./Aboutdifference";
 import SubscribeCTA from "../../Banner/CTA/subscribe";
-import Whychoosingus from "./Whychoosingus";
-// import Portfolio from "./Portfolio";
+import Vmo from "./vmo";
 
 export default function AboutPage() {
   return (
@@ -14,8 +14,8 @@ export default function AboutPage() {
       <Aboutus/>
       <About/>
       <AboutImage/>
-      <Whychoosingus/>
-
+      <Aboutdifference/>
+      <Vmo/>
     
       <SubscribeCTA/>
     </>

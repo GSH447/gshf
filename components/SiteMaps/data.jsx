@@ -117,143 +117,241 @@ export const save_a_life = [
 
 //team links/sitemaps
 export const team = {
-
-// management: [
-
-//   { 
-//     id: 1, 
-//     image: "/assets/images/team/Wale+Adebayo.svg" || null,
-//     title: "Wale Adebayo",
-//     description: "Founder/CEO", 
-//     url: "#",
-//     alt: "Wale Adebayo",
-//   },
-//   { 
-//     id: 2, 
-//     image: "/assets/images/team/Martha+Awoniyi.svg" || null,
-//     title: "Martha Awoniyi",
-//     description: "Operations Manager", 
-//     url: "#",
-//     alt: "Martha Awoniyi",
-//   },
-
-  
-// ],
-
-management: [
-  [
+  management: [
     { 
-      id: 1, 
-      image: "/assets/images/team/Wale+Adebayo+pic.svg" || null,
-      title: "Wale Adebayo",
-      description: "Founder/CEO", 
+      id: 1,
+      image: "/assets/images/team/augustine+olugbemi-nobg.jpeg",
+      title: " Dr. Augustine J. Olugbemi",
+      description: "Founder/ Cardiacthoracic and Vascular Surgeon",
       url: "#",
-      alt: "Founder and CEO",
-      about: `
-Wale Adebayo is a visionary entrepreneur and business leader with over 14 years of experience in founding and growing multiple businesses. As a seasoned expert in bootstrapping and self-funding, Wale has a proven track record of driving innovation and growth in the companies he has founded.
+      alt: "Founder/ Cardiacthoracic and Vascular Surgeon",
+      about: `Dr Augustine Jeremai Olugbemi is a seasoned Nigerian and South African trained Cardiothoracic and Vascular surgeon, with a wealth of experience from Lagos University Teaching Hospital (LUTH), the Inkosi Albert Luthuli Central Hospital (IALCH), Durban, South Africa; a leading South African Quartenary hospital; National Cardiothoracic Centre, Korle-Bu Teaching hospital, Accra, Ghana and Duke University (Division of Thoracic Surgery), Durham, North Carolina, USA.
+      He is proficient in Cardiac, Thoracic and Vascular procedures, including Video Assisted Thoracoscopic Surgery (VATS) and one of the very few Cardiac surgeons in Nigeria, proficient in both adult and paediatric cardiac cases (Both congenital and acquired).
+      He has been involved in many medical missions by Family Care Association, an American based medical hospitality group, with leading roles in the surgical division and worked as Consultant Cardiothoracic and Vascular Surgeon at the Lagos University Teaching Hospital, (LUTH), Babcock University Teaching Hospital (BUTH). He set up the Cardiothoracic and vascular surgery programme at the Nigerian Navy Reference Hospital (NNRH) Ojo, Lagos, Nigeria in 2017. He also pioneered open heart surgery programme in Reddington hospital Lagos, Nigeria in 2021, Evercare hospital Lekki (with another surgeon), Lagos, Nigeria in 2022, and Federal Medical Centre, (FMC) Abeokuta, Ogun State, Nigeria in 2024 where he also serves as the head of the Cardiac team and programme. 
+      Dr Augustine Olugbemi is a founding member of the Association of Cardiovascular and Thoracic Surgeons of Nigeria (ACTSON) and have served in the executive as Assistant Secretary General of the association (2017-2020). He’s been involved in the organization of many conferences. He is a choice speaker at both national and international conferences.
+      He is also a passionate teacher, lecturer and trainer. He is a Senior lecturer at the Eko University of Medicine and Health Sciences, Ijanikin, Lagos, Nigeria; and have written many papers and articles. `,
 
-Under his leadership, Gracespring Hospitals Foundation Acquisition And Management Company has become a leading voice in the entrepreneurial finance space, providing innovative solutions and support to entrepreneurs and businesses around the world. Wale's unique approach to empowering entrepreneurs and business leaders has earned him recognition as a respected and sought-after voice in the entrepreneurial community.
-
-Wale's success as a leader derives from his ability to create lasting relationships, his customer-first approach, and his passion for inspiring and empowering entrepreneurs to achieve their goals. Despite facing multiple failures throughout his entrepreneurial journey, Wale has persevered and continued to innovate and grow.
-
-Wale's vision is to create a world where startup founders and entrepreneurs have access to the resources and support they need to succeed, without being hindered by financial constraints. He believes that by providing innovative financial solutions and strategic guidance, entrepreneurs can build sustainable, scalable, and impactful businesses that drive economic growth and create lasting value. Leading the team at Gracespring Hospitals Foundation Acquisition And Management Company is a key part of Wale's strategy to achieve this vision, and he is committed to creating a lasting and generational sustainable impact in the entrepreneurial ecosystem.
-
-In addition to his professional endeavors, Wale prioritizes community engagement and personal development, recognizing the importance of balance and continuous learning in achieving long-term success. He is also an avid golfer and values the opportunities for networking and reflection that the sport provides.
-
-      `,
-    }, 
-  1],
-
-  [
-    { 
-      id: 2, 
-      image: "/assets/images/team/olivia+chester+svg.svg" || null,
-      title: "Olivia Chester",
-      description: "Global Forsight Advisor", 
-      url: "#",
-      alt: "Global Foresight Advisor",
-      about: `
-Olivia Chester serves as Global Foresight Advisor at Gracespring Hospitals Foundation Acquisition And Management Company, providing strategic guidance on global trends, technologies, and market dynamics to support the company's investment strategies and portfolio growth.
-
-With a unique ability to anticipate and analyze emerging opportunities and challenges, Olivia helps Gracespring Hospitals Foundation stay ahead of the curve and achieve sustainable growth. Her expertise spans multiple industries and geographies, enabling her to provide nuanced and informed guidance on global strategy and innovation.
-
-As a trusted advisor to the Gracespring Hospitals Foundation leadership team, Olivia brings a wealth of expertise in global strategy, innovation, and sustainability. Her insights and recommendations are informed by a deep understanding of global economic, political, and social trends, as well as emerging technologies and their potential impact on business and society.
-
-Olivia's approach is characterized by her ability to think critically and creatively, cutting through complexity to identify key opportunities and challenges. Her commitment to excellence, combined with her unique blend of strategic expertise and global perspective, makes her an invaluable asset to the Gracespring Hospitals Foundation team.
-
-Through her work at Gracespring Hospitals Foundation, Olivia is driven by a passion to empower entrepreneurs and business leaders to achieve their goals and create lasting impact.
-      `,
-    }, 
-  2]
-],
-
-operations: [
-  
- 
-
-  { 
-    id: 3, 
-    image: "/assets/images/team/Martha+Awoniyi+pic.svg" || null,
-    title: "Martha Awoniyi",
-    description: "Operations Manager", 
-    url: "#",
-    alt: "Operations Manager, Gracespring Hospitals Foundation",
-    about: `
-Martha is a strategic and results-driven operations manager with a proven track record of driving business growth and optimizing operational efficiency. With over five years of experience in operations and business administration, Martha brings a unique blend of expertise and passion to her role.
-
-Holding a Bachelor's degree in Business Management and a Master's degree in International Business Management, Martha possesses a deep understanding of global business practices, strategic planning, and organizational leadership.
-
-As Operations Manager at Gracespring Hospitals Foundation, Martha oversees daily operations, streamlines processes, and ensures the seamless execution of strategic objectives. Her expertise spans financial analysis, project management, and cross-functional collaboration, with a proven ability to lead teams toward achieving organizational goals.
-
-Martha's leadership style is characterized by effective communication, attention to detail, and a commitment to fostering a productive and positive work environment. With a passion for continuous improvement, Martha thrives in dynamic environments that require adaptability, strategic thinking, and problem-solving.
-
-Dedicated to driving business success and sustainability, Martha aligns operational excellence with business objectives, making her an invaluable asset to the Gracespring Hospitals Foundation team.
-    `,
+      
+      clinical_Interests: [
+  {
+    title: "General Procedures",
+    items: [
+      "Cardiopulmonary resuscitation",
+      "Advanced trauma life support",
+      "Central line insertion",
+      "Arterial line insertions",
+      "Pleural aspiration",
+      "Pericardial aspiration",
+      "Insertion of chest tubes (Closed tube thoracostomy drainage – CTTD)",
+      "Endotracheal intubation",
+      "Tracheostomy",
+      "Pleurodesis",
+      "CT guided lung biopsies",
+      "Percutaneous pleural biopsies"
+    ]
   },
 
-  { 
-    id: 4, 
-    image: "/assets/images/team/Femi+Ayedogbon+pic.svg" || null,
-    title: "Femi Ayedogbon",
-    description: "Product Manager/CTO", 
-    url: "#",
-    alt: "Chief Technology Officer (CTO)",
-    about: `
-Oluwafemi Emmanuel Ayedogbon is a visionary technology leader who spearheads the organization's technological infrastructure as Chief Technology Officer (CTO). With a keen focus on innovation and strategic alignment, he oversees technology deployment, network and system management, integration testing, and technical talent development.
-
-A passionate advocate for cutting-edge solutions, Oluwafemi drives operational excellence and business growth through his relentless pursuit of innovation. He cultivates a collaborative environment where technology fuels success, empowering teams to thrive in a dynamic landscape.
-
-Recognized for his unwavering dedication, Oluwafemi consistently strives for excellence, embracing a mantra that embodies his commitment to innovation: "The future belongs to those who innovate without limits."
-
-With a unique blend of technical expertise and business acumen, Oluwafemi has established himself as a respected thought leader in the tech industry. He leverages his expertise to develop and implement forward-thinking strategies that drive business success and foster a culture of innovation.
-
-Beyond his professional endeavors, Oluwafemi explores emerging technologies, mentors aspiring tech professionals, and tackles complex challenges that require creative solutions. His commitment to innovation, excellence, and community development makes him an invaluable asset to the organization.
-
-    `,
+  {
+    title: "Endoscopic Procedures",
+    items: [
+      "Bronchoscopy – diagnostic and therapeutic",
+      "Oesophagoscopy – diagnostic and therapeutic",
+      "Thoracoscopy (pleural biopsies, pleurodesis, pleural fluid drainage)",
+      "Mediastinoscopy (mediastinal lymph node biopsies)",
+      "VATS – diagnostic procedures",
+      "VATS – therapeutic procedures"
+    ]
   },
 
-  { 
-    id: 5, 
-    image: "/assets/images/team/Bernice+Kanene+pic.svg" || null,
-    title: "Bernice Kanene",
-    description: "Corporate Legal Adviser", 
-    url: "#",
-    alt: "Legal Counsel",
-    about: `
-Bernice Kanene is a seasoned legal expert who serves as the Legal Counsel, providing expert guidance on international business matters. With a specialization in legal research and recommendations, Bernice possesses a deep understanding of cross-border transactions, intellectual property protection, and global data protection regulations.
-
-As a trusted advisor, Bernice's expertise spans drafting and reviewing international legal documents, including service agreements, NDAs, and software licensing contracts. She provides legal support for international mergers, acquisitions, and strategic partnerships, ensuring seamless compliance with global regulations.
-
-Bernice's expertise extends to risk management, where she identifies and mitigates potential legal risks, ensuring the organization's operations are aligned with regulatory requirements. Her strong negotiation skills enable her to effectively collaborate with external partners, vendors, and stakeholders.
-
-With a strong foundation in legal analysis and problem-solving, Bernice excels in providing strategic legal counsel, supporting business growth and development while ensuring compliance with applicable laws and regulations. Her professional approach is characterized by integrity, confidentiality, and a commitment to delivering high-quality legal services.
-
-As a dedicated and results-driven legal professional, Bernice remains up-to-date with evolving regulatory landscapes, ensuring the organization remains compliant and competitive. Her expertise and guidance enable the organization to navigate complex legal issues, drive business success, and maintain a strong reputation in the global marketplace.
-    `,
+  {
+    title: "VATS – Diagnostic",
+    items: [
+      "Pleural effusion evaluation",
+      "Biopsy of pleural lesions",
+      "Biopsy of peripheral lung masses and other lung lesions"
+    ]
   },
 
+  {
+    title: "VATS – Therapeutic",
+    items: [
+      "Drainage of pericardial effusion",
+      "Excision of pericardial mass or lesion",
+      "Thoracic endometriosis syndrome treatment (TES)",
+      "Excision of pleural-based tumours or lesions",
+      "Thymectomy",
+      "Excision of retrosternal goitre",
+      "Drainage of mediastinal abscess",
+      "Lung biopsy",
+      "Lobectomy",
+      "Pneumonectomy",
+      "Decortication",
+      "Lung reduction surgery",
+      "Diaphragm plication for eventration",
+      "Repair of diaphragmatic or hiatal hernia",
+      "Repair of oesophageal perforation",
+      "Repair of bronchial injuries",
+      "Ligation of Patent Ductus Arteriosus (PDA)",
+      "Ligation of thoracic duct"
+    ]
+  },
+
+  {
+    title: "Open Thoracic Procedures",
+    items: [
+      "Exploratory thoracotomy for trauma",
+      "Emergency thoracotomy",
+      "Repair of tracheal or bronchial lacerations",
+      "Control of pulmonary haemorrhage",
+      "Repair of diaphragmatic injuries",
+      "Repair of great vessel injuries",
+      "Repair of oesophageal injuries",
+      "Open lung biopsy",
+      "Thoracotomy",
+      "Chest wall resection",
+      "Rib resection",
+      "Thoracoplasty",
+      "Eloesser window",
+      "Modified Clagett procedure"
+    ]
+  },
+
+  {
+    title: "Neck Surgeries",
+    items: [
+      "Repair of cervical oesophageal perforations",
+      "Drainage of neck abscesses",
+      "Neck exploration following trauma",
+      "Repair of tracheal lacerations",
+      "Debridement and repair of cervical oesophageal anastomotic leaks"
+    ]
+  },
+
+  {
+    title: "Tracheal Surgeries",
+    items: [
+      "Tracheal resection for post-intubation strictures",
+      "Sleeve resections",
+      "Repair of tracheal injuries"
+    ]
+  },
+
+  {
+    title: "Vascular Surgeries",
+    items: [
+      "Creation of arterio-venous fistulae",
+      "Exploration and repair of vascular injuries",
+      "Aneurysm repairs",
+      "Thromboembolectomy",
+      "Carotid endarterectomy",
+      "Vascular bypass grafting",
+      "EVAR (Endovascular Aneurysm Repair)",
+      "TEVAR (Thoracic Endovascular Aneurysm Repair)",
+      "IVC filter placement and removal",
+      "Removal of foreign bodies from heart or blood vessels"
+    ]
+  },
+
+  {
+    title: "Pericardial Procedures",
+    items: [
+      "Pericardiostomy",
+      "Pericardial window",
+      "Pericardiectomy"
+    ]
+  },
+
+  {
+    title: "Cardiac Procedures",
+    items: [
+      "Modified Blalock–Taussig shunt (MBTS)",
+      "Glenn shunt",
+      "Pulmonary artery banding",
+      "PDA ligation",
+      "ASD closure",
+      "VSD closure",
+      "Coarctation repair",
+      "Tetralogy of Fallot correction",
+      "Permanent pacemaker insertion",
+      "AICD implantation",
+      "Cardiac resynchronization therapy",
+      "Mitral valve replacement",
+      "Aortic valve replacement",
+      "Double valve replacement",
+      "Coronary artery bypass grafting (CABG)",
+      "Bentall procedure",
+      "Replacement of ascending aorta"
+    ]
+  }
 ]
-}
+
+    },
+
+    { 
+      id: 2,
+      image: "/assets/images/team/jola+olugbemi.png",
+      title: "Dr (Mrs) Mojolaoluwa Olugbemi",
+      description: "General Surgeon (Robotics and Laparoscopic)",
+      url: "#",
+      alt: "Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon",
+      about: `Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon is a top colorectal and general surgeon with dual specialist registration from both Nigeria and the United Kingdom. Her advanced training and extensive experience in open and minimal access surgeries (laparoscopic, TAMIS and robotic) as well as endoscopic procedures make her a prememinent surgeon delivering global best standards of care to our patients.`,
+
+      clinical_Interests: [
+      "Laparoscopic and Open Colorectal Surgery (including colon and rectal resections)",
+      "Laparoscopic and Open General Surgery (including diagnostic laparoscopy, laparoscopic appendicectomy, laparoscopic adhesiolysis)",
+      "Gallstones and Gallbladder removal (laparoscopic cholecystectomy)",
+      "Bowel Cancer (Colon, rectal and anal cancer)",
+      "Hernia Surgery (laparoscopic and open hernia repair)",
+      "General Surgery",
+      {
+        title: "Proctology including",
+        items: [
+          "Anal skin tags",
+          "Anal fissures (fissurectomy and anal advancement flap operations)",
+          "Anal fistula treatment (fistulotomy, fistulectomy, seton management, VAAFT)",
+          "Haemorrhoids (haemorrhoidectomy, haemorrhoidal artery ligation)"
+        ]
+      },
+      "Pilonidal sinus disease treatment (Bascoms, Karydakis flap, Rhomboid flap)",
+      "Transanal Minimally Invasive Surgery (TAMIS)",
+      "Diverticular disease surgery",
+      "Pelvic floor disorders (rectal prolapse, faecal incontinence, chronic constipation)",
+      "Endoscopy (Upper GI endoscopy, Colonoscopy, Flexible sigmoidoscopy)"
+    ]
+
+    }
+  ],
+
+  // operations: [
+  //   {
+  //     id: 3,
+  //     image: "/assets/images/team/Martha+Awoniyi+pic.svg",
+  //     title: "Martha Awoniyi",
+  //     description: "Operations Manager",
+  //     url: "#",
+  //     alt: "Operations Manager",
+  //     about: `Martha is a strategic and results-driven operations manager...`
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/assets/images/team/Femi+Ayedogbon+pic.svg",
+  //     title: "Femi Ayedogbon",
+  //     description: "Product Manager / CTO",
+  //     url: "#",
+  //     alt: "CTO",
+  //     about: `Oluwafemi Emmanuel Ayedogbon is a visionary technology leader...`
+  //   },
+  //   {
+  //     id: 5,
+  //     image: "/assets/images/team/Bernice+Kanene+pic.svg",
+  //     title: "Bernice Kanene",
+  //     description: "Corporate Legal Adviser",
+  //     url: "#",
+  //     alt: "Legal Counsel",
+  //     about: `Bernice Kanene is a seasoned legal expert...`
+  //   }
+  // ]
+};
 
 //feedback links/sitemaps
 export const feedback = [

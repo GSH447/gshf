@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const blobShapes = [
   "74% 26% 63% 37% / 45% 36% 64% 55% ",
@@ -12,14 +11,15 @@ const blobShapes = [
 
 
 
-const PRIMARY_BG = "#4a4a63";
+// const PRIMARY_BG = "#4a635a";
+const PRIMARY_BG = "#ffffff";
 
-const Aboutus = () => {
+const People = () => {
 
 
   return (
     <div
-      className=" relative w-full overflow-hidden  my-[2.9rem] py-[6rem] lg:py-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
+      className=" relative w-full overflow-hidden  mx-auto flex flex-col gap-2 lg:gap-10 items-center"
       style={{ backgroundColor: PRIMARY_BG }}
     >
 
@@ -39,45 +39,39 @@ const Aboutus = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className=" rounded-xl w-full mx-auto flex flex-col lg:flex-row gap-[4.5rem] lg:gap-8 items-center px-2 lg:px-10"
+          className=" rounded-xl w-full mx-auto flex flex-col lg:flex-row  lg:gap-8 items-center px-2 lg:px-10"
         >
           {/* Left Content */}
-          <div className=" lg:w-1/2 flex flex-col justify-between h-full lg:gap-[1.2rem] -mt-[7rem]">
+          <div className=" lg:w-1/2 flex flex-col justify-between h-full lg:gap-[1.2rem]">
             
             {/* Content */}
 
               <div >
 
-                <h3 className="text-[1.7rem] lg:text-[2.5rem] font-bold text-white mb-2 text-left w-[90%] lg:w-full">
-                  We’re The Gracespring Health Foundation
+                <h3 className="text-[1.7rem] lg:text-[2.5rem] font-bold text-primary mb-2 text-left w-[90%] lg:w-full">
+                  Our People
                 </h3>
               </div>
 
-              <div>
+              <div
+                className="grid gap-y-5"
+              >
 
-                <p className="text-md lg:text-xl text-white text-left mb-5 lg:w-[80%]">
-                  We raise money for The Gracespring Hospitals, to save the lives of people affected by cardiac conditions, everywhere.
+                <p className="text-md lg:text-xl text-primary text-left mb-5 lg:w-[80%]">
+                  We are a registered charity, governed by an independent Board of Trustees and a Managing Director. 
                 </p>
+
+                <p className="text-md lg:text-xl text-primary text-left mb-5 lg:w-[80%]">
+                  Together, we raise over £30 million every year to support groundbreaking research into life-saving cardiac treatments at The Gracespring Health Foundation.
+                </p>
+
               </div>
 
-
-           
-
-            {/* CTA */}
-            <div className=" text-left">
-              <Link
-                href="/what-we-do"
-                className="inline-block bg-white hover:bg-primary px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-primary hover:text-white font-extrabold transition-colors duration-300"
-              >
-                What we do
-              </Link>
-            </div>
 
           </div>
 
           {/* Right Image Blob */}
-          <div className="lg:w-1/2 
-          flex flex-col justify-between">
+          <div className="lg:w-1/2 flex flex-col justify-between">
             
             {/* Content */}
             <div>
@@ -109,4 +103,4 @@ const Aboutus = () => {
   );
 };
 
-export default Aboutus;
+export default People;
