@@ -6,7 +6,7 @@ const Vmo = () => {
 
 
   return (
-    <div className=" lg:w-fit lg:m-auto relative grid gap-y-[5rem]">
+    <div className="py-10 lg:w-fit lg:m-auto relative grid gap-y-[5rem]">
 
 
         <div
@@ -26,9 +26,9 @@ const Vmo = () => {
             
             <div className="">
                 <h1
-                className="text-primary text-xl lg:text-[2.3rem] font-extrabold leading-[1.5rem] lg:leading-[3rem]"
+                className="text-primary text-[1.8rem] lg:text-[2.3rem] font-extrabold leading-[2.2rem] lg:leading-[3rem]"
                 >
-                Our vision, values and our commitment to you
+                  Our vision, values and our commitment to you
                 </h1>
             </div>
             
@@ -52,7 +52,7 @@ const Vmo = () => {
             >
              <Link
                 href="/what-we-do"
-                className="inline-block bg-primary  px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300"
+                className="inline-block bg-primary  px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300 hover:bg-transparent hover:text-primary hover:border-2 hover:border-primary"
               >
                 What we do
               </Link>
@@ -70,7 +70,7 @@ const Vmo = () => {
               className=""
             >
               <Image
-                src={"/assets/images/about/col3/1.svg"}
+                src={"/assets/images/donation/011.svg"}
                 alt="about"
                 className="rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
@@ -153,7 +153,7 @@ const Vmo = () => {
             >
              <Link
                 href="/how-your-support-makes-a-difference"
-                className="inline-block bg-primary  px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300"
+                className="inline-block bg-primary  px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300 hover:bg-transparent hover:text-primary hover:border-2 hover:border-primary"
               >
                 How your support makes a difference
               </Link>
@@ -179,7 +179,7 @@ const Vmo = () => {
               className=""
             >
               <Image
-                src={"/assets/images/about/col3/1.svg"}
+                src={"/assets/images/donation/012.svg"}
                 alt="about"
                 className="rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
@@ -197,7 +197,7 @@ const Vmo = () => {
               className=" mt-10 lg:mt-[5rem]"
             >
               <Image
-                src={"/assets/images/about/col3/1.svg"}
+                src={"/assets/images/donation/010.svg"}
                 alt="about"
                 className="rounded-lg object-contain transition-opacity duration-500"
                 width={1000}

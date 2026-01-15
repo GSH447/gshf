@@ -182,7 +182,7 @@ export default function MobileNav() {
           href="/tele"
           className="flex items-center justify-center text-lg text-black   lg:hidden"
         >
-          Contact us?
+          Need to get in touch?
         </Link>
         </nav>
 

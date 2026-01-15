@@ -56,7 +56,7 @@ const Aboutus = () => {
               <div>
 
                 <p className="text-md lg:text-xl text-white text-left mb-5 lg:w-[80%]">
-                  We raise money for The Gracespring Hospitals, to save the lives of people affected by cardiac conditions, everywhere.
+                  We raise money for The Gracespring Health Foundation, Gracespring Hospitals and other Hospitals, to save the lives of people affected by cardiac conditions, everywhere.
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ const Aboutus = () => {
                 style={{ borderRadius: blobShapes }}
               >
                 <Image
-                  src="/assets/images/donation/001.svg"
+                  src="/assets/images/about/vmo.svg"
                   width={1000}
                   height={1000}
                   alt="about-us-at-gracespring-health-foundation"

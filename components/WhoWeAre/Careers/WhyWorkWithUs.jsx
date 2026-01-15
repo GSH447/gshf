@@ -6,7 +6,7 @@ const WhyWorkWithUs = () => {
 
 
   return (
-    <div className=" lg:w-fit lg:m-auto relative grid gap-y-[5rem]">
+    <div className="py-10 lg:w-fit lg:m-auto relative grid gap-y-[5rem]">
 
 
         <div
@@ -21,9 +21,9 @@ const WhyWorkWithUs = () => {
               className=""
             >
               <Image
-                src={"/assets/images/about/col3/1.svg"}
+                src={"/assets/images/about/vmo.svg"}
                 alt="about"
-                className="rounded-lg object-contain transition-opacity duration-500"
+                className="lg:rounded-lg object-contain transition-opacity duration-500"
                 width={1000}
                 height={1000}
                 priority

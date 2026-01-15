@@ -41,7 +41,7 @@ const Benefactor01 = () => {
                 </p>
                 
                 <p className=" text-sm text-white">
-                Patient at The Gracespring Hospitals Foundation
+                Patient at The Gracespring Health Foundation
                 </p>
             </div>
 

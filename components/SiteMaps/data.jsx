@@ -57,7 +57,7 @@ export const product_services = [
   bg:"#4aa0dfff",
   image: "/assets/images/donation/002.svg" || null,
   title: "Discover how your support is changing lives",
-  description: "Your donations ensure The Gracespring Hospitals Foundation's world-leading nurses, doctors and research teams can provide the very best care and develop life-saving treatments.", 
+  description: "Your donations ensure The Gracespring Health Foundation's world-leading nurses, doctors and research teams can provide the very best care and develop life-saving treatments.", 
   btnText: "What we do",
   url: "#",
   alt: "#GracespringHospitalsFoundation"
@@ -85,7 +85,7 @@ export const save_a_life = [
   bg:"#df8a2fff",
   image: "/assets/images/donation/001.svg" || null,
   title: "Find an event",
-  description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Gracespring Hospitals Foundation.", 
+  description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Gracespring Health Foundation.", 
   btnText: "Find an event",
   url: "#",
   alt: "#GracespringHospitalsFoundation"
@@ -93,7 +93,7 @@ export const save_a_life = [
 { 
   id: 2, 
   bg:"#4aa0dfff",
-  image: "/assets/images/donation/002.svg" || null,
+  image: "/assets/images/donation/014.svg" || null,
   title: "Give your time",
   description: "Our volunteers are vital. Find a volunteer role to suit you.", 
   btnText: "Volunteer with us",
@@ -103,9 +103,9 @@ export const save_a_life = [
 { 
   id: 3, 
   bg:"#f3bc4dff",
-  image: "/assets/images/donation/003.svg" || null,
+  image: "/assets/images/donation/015.svg" || null,
   title: "Fundraise for us",
-  description: "Together, we're developing new, better treatment for people with cardiac disease at The Gracespring Hospitals Foundation and beyond.", 
+  description: "Together, we're developing new, better treatment for people with cardiac disease at The Gracespring Health Foundation and beyond.", 
   btnText: "Ways to fundraise",
   url: "#",
   alt: "#GracespringHospitalsFoundation"
@@ -289,7 +289,7 @@ export const team = {
 
     { 
       id: 2,
-      image: "/assets/images/team/jola+olugbemi.png",
+      image: "/assets/images/team/jola+olugbemi.svg",
       title: "Dr (Mrs) Mojolaoluwa Olugbemi",
       description: "General Surgeon (Robotics and Laparoscopic)",
       url: "#",

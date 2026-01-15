@@ -109,11 +109,11 @@ const Feedback = () => {
                    
                     {/* Content */}
                     <div className=" p-2">
-                      <h3 className=" text-[1.7rem] lg:text-[2.5rem] font-bold text-white mb-2 text-left w-[90%] lg:w-full">
+                      <h3 className=" text-[1.7rem] lg:text-[2.5rem] font-bold text-white mb-2 text-left w-[70%] lg:w-full ">
                         {feature.title}
                       </h3>
       
-                      <p className=" text-md lg:text-xl text-white text-left mb-5 lg:w-[80%]">
+                      <p className="text-md lg:text-xl text-white text-left mb-5 lg:w-[80%] leading-3">
                         {feature.description}
                       </p>
                     </div>

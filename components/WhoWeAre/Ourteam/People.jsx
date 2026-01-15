@@ -12,7 +12,7 @@ const blobShapes = [
 
 
 // const PRIMARY_BG = "#4a635a";
-const PRIMARY_BG = "#ffffff";
+const PRIMARY_BG = "#FDF2EB";
 
 const People = () => {
 
@@ -62,7 +62,7 @@ const People = () => {
                 </p>
 
                 <p className="text-md lg:text-xl text-primary text-left mb-5 lg:w-[80%]">
-                  Together, we raise over £30 million every year to support groundbreaking research into life-saving cardiac treatments at The Gracespring Health Foundation.
+                  Together, we raise over ₦500 million every year to support groundbreaking research into life-saving cardiac treatments at The Gracespring Health Foundation.
                 </p>
 
               </div>

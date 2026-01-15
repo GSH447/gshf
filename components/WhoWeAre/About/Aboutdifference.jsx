@@ -5,15 +5,15 @@ const Aboutdifference = () => {
 
 
   return (
-    <div className=" lg:w-fit lg:m-auto relative bg-[#FDF2EB] lg:pt-[3rem] lg:pb-[5rem]">
+    <div className="py-10 lg:w-fit lg:m-auto relative bg-[#FDF2EB] lg:pt-[3rem] lg:pb-[5rem]">
 
 
         <div 
-          className=" grid lg:gap-7 py-5 lg:py-10 "
+          className=" grid gap-3 lg:gap-7 py-5 lg:py-10 "
         >
 
           
-          <div className=" w-fit m-auto">
+          <div className=" w-fit m-auto p-2">
             <h1
               className="text-primary text-center text-xl lg:text-[2.3rem] font-extrabold"
             >
@@ -21,7 +21,7 @@ const Aboutdifference = () => {
             </h1>
           </div>
           
-          <div className=" lg:w-[50%] m-auto">
+          <div className=" lg:w-[50%] m-auto p-2">
             <p
               className="text-primary text-center font-bold"
             >
@@ -35,7 +35,7 @@ const Aboutdifference = () => {
           className=" grid gap-y-10 lg:flex p-3 lg:p-10"
         >
 
-          <div className=" grid gap-y-2">
+          <div className=" grid gap-y-[3rem]">
             
             <div className=" lg:w-[70%] m-auto">
 
@@ -88,7 +88,7 @@ const Aboutdifference = () => {
 
             <Image
               id="about_difference_image"
-              src={"/assets/images/about/col4/2.svg"}
+              src={"/assets/images/about/vmo.svg"}
               alt="about"
               className="rounded-xl object-contain transition-opacity duration-500 my-auto"
               width={1000}
@@ -100,7 +100,7 @@ const Aboutdifference = () => {
           </div>
 
 
-          <div className=" grid gap-y-2">
+          <div className=" grid gap-y-[3rem]">
             
             <div className=" lg:w-[70%] m-auto">
 
@@ -117,7 +117,7 @@ const Aboutdifference = () => {
                 <p 
                   className="text-primary text-center"
                 >
-                  We're a team of dedicated staff, dedicated to raising over £50 million every year for The Gracespring Health Foundation.   
+                  We're a team of dedicated staff, dedicated to raising over ₦500 million every year for The Gracespring Health Foundation.   
                 </p>
               </div>
 
@@ -153,7 +153,7 @@ const Aboutdifference = () => {
 
             <Image
               id="about_difference_image"
-              src={"/assets/images/about/col4/2.svg"}
+              src={"/assets/images/about/vmo.svg"}
               alt="about"
               className="rounded-xl object-contain transition-opacity duration-500 my-auto"
               width={1000}
