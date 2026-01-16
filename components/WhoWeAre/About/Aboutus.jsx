@@ -19,7 +19,7 @@ const Aboutus = () => {
 
   return (
     <div
-      className=" relative w-full overflow-hidden  my-[2.9rem] py-[6rem] lg:py-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
+      className=" relative w-full overflow-hidden  mt-[2.9rem] py-[6rem] lg:py-[3.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
       style={{ backgroundColor: PRIMARY_BG }}
     >
 

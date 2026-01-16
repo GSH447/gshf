@@ -1,6 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/who-we-are/our-people/page": "app/who-we-are/our-people/page.js",
   "/who-we-are/join-our-team/page": "app/who-we-are/join-our-team/page.js",
   "/page": "app/page.js",
