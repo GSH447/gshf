@@ -209,7 +209,17 @@ const ContactInformation = () => {
                 >
 
                     <p className="text-md text-primary text-center font-bold">
-                        Get in touch with our supporter care team on +234 808-255-0192 Monday - Friday between 9am- 5pm.
+                        Get in touch with our supporter care team
+                    </p>
+
+                    
+                    <p className="text-md text-primary text-center font-bold">
+                        on <Link href={"tel:+2348082550192"}>+234 808-255-0192</Link>  
+                    </p>
+
+                    
+                    <p className="text-md text-primary text-center font-bold">
+                        Monday - Friday between 9am- 5pm.
                     </p>
 
                 </div>

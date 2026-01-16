@@ -53,7 +53,7 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#2619df" // primary color
+                        fill="#FFE08A" // primary color
                         />
                     </svg>
 
@@ -134,7 +134,7 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#921010" // primary color
+                        fill="#6B5B95" // primary color
                         />
                     </svg>
 
@@ -282,7 +282,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
-                        text={"Start now"}
+                        text={"Join"}
                     />
                 </div>
          
@@ -320,7 +320,7 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#ec3120" // primary color
+                        fill="#C7B299" // primary color
                         />
                     </svg>
 
@@ -404,7 +404,7 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#db6952" // primary color
+                        fill="#e77e69" // primary color
                         />
                     </svg>
 
@@ -488,7 +488,7 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#8ae293" // primary color
+                        fill="#F4B183" // primary color
                         />
                     </svg>
 
