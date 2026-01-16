@@ -1,5 +1,6 @@
 "use client";
 import About from "./About";
+import AboutFoundation from "./AboutFoundation";
 import Aboutus from "./Aboutus";
 import AboutImage from "./AboutImage";
 import Aboutdifference from "./Aboutdifference";
@@ -12,6 +13,7 @@ export default function AboutPage() {
     <>
     
       <Aboutus/>
+      <AboutFoundation/>
       <About/>
       <AboutImage/>
       <Aboutdifference/>

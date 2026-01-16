@@ -58,6 +58,19 @@ export const navLinks = [
         ],
       },
       
+      // {
+      //   header: "Our Cardiac Team",
+      //   href: "/who-we-are/our-people",
+      //   subMenu: [
+
+      //     {
+      //       label: "Our Cardiac Team consists of the cardiothoracic and vascular Surgeons, paediatric cardiologists, adult cardiologists, cardiac anaesthetists e.t.c",
+      //       href: "/who-we-are/our-people",
+      //     },
+
+      //   ],
+      // },
+      
       {
         header: "Careers with us",
         href: "/who-we-are/join-our-team",
@@ -86,7 +99,7 @@ export const navLinks = [
         subMenu: [
 
           {
-            label: "We will conduct outreach through events such as walks/runs, seminars etc",
+            label: "We will conduct outreach through events such as walks/runs, seminars e.t.c",
             href: "/cardiac-diagnosis-and-treatment",
           },
         ],
@@ -98,7 +111,7 @@ export const navLinks = [
         href: "#",
         subMenu: [
           {
-            label: "We establish a grant system to provide support to families facing medical bills etc",
+            label: "We establish a grant system to provide support to families facing medical bills e.t.c",
             href: "/cardiac-leading-treatment-and-care",
           },
         ],
@@ -125,6 +138,33 @@ export const navLinks = [
         subMenu: [
           {
             label: "Regular support group meetings for parents and caregivers will be facilitated.",
+            href: "/paediatric-leading-treatment-and-care",
+          },
+        ],
+      },
+
+ 
+      {
+        header: "Research Initiatives",
+        
+        href: "#",
+        subMenu: [
+          {
+            label: "Conducting research on the prevalence, outcomes, and effective treatment strategies for congenital heart disease within the Nigerian.",
+            href: "/paediatric-leading-treatment-and-care",
+          },
+        ],
+      },
+
+      
+ 
+      {
+        header: "Educational Resources",
+        
+        href: "#",
+        subMenu: [
+          {
+            label: "Informative resources, including brochures, created to provide detailed information on CHD types, care strategies e.t.c.",
             href: "/paediatric-leading-treatment-and-care",
           },
         ],
