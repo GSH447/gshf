@@ -74,47 +74,63 @@ export const navLinks = [
   },
 
   {
-    label: "What we do",
+    label: "Our Programs and Services",
     href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
     caption: "#charity #donation #giveback",
     subLinks: [
       {
-        header: "Making breakthroughs happen",
-        
-    href: "#",
+        header: "Public Awareness Initiatives",
+        href: "#",
         subMenu: [
 
           {
-            label: "Discover how your support is revolutionising cardiac diagnosis and treatment, everywhere",
+            label: "We will conduct outreach through events such as walks/runs, seminars etc",
             href: "/cardiac-diagnosis-and-treatment",
           },
         ],
       },
+
       {
-        header: "Cardiac-leading treatment and care",
+        header: "Financial Assistance Program",
         
-    href: "#",
+        href: "#",
         subMenu: [
           {
-            label: "Discover how your support is helping people to live well from diagnosis, throughout treatment and beyond",
+            label: "We establish a grant system to provide support to families facing medical bills etc",
             href: "/cardiac-leading-treatment-and-care",
           },
         ],
       },
+      
  
       {
-        header: "Paediatric-leading treatment and care",
+        header: "Research Funding",
         
-    href: "#",
+        href: "#",
         subMenu: [
           {
-            label: "Discover how your support is helping children to live well from diagnosis, throughout treatment and beyond",
+            label: "We will collaborate with universities and medical institutions to fund research",
             href: "/paediatric-leading-treatment-and-care",
           },
         ],
       },
+
+ 
+      {
+        header: "Support Groups and Counselling Services",
+        
+        href: "#",
+        subMenu: [
+          {
+            label: "Regular support group meetings for parents and caregivers will be facilitated.",
+            href: "/paediatric-leading-treatment-and-care",
+          },
+        ],
+      },
+
+ 
 
     ],
   },
@@ -133,8 +149,7 @@ export const navLinks = [
     subLinks: [
       {
         header: "Ways to donate",
-        
-    href: "#",
+        href: "#",
         subMenu: [
           {
             label: "Donate online",
@@ -156,8 +171,7 @@ export const navLinks = [
       },
       {
         header: "More ways to get involved",
-        
-    href: "#",
+        href: "#",
         subMenu: [
           {
             label: "Special Occasion giving",
@@ -223,13 +237,13 @@ export const navLinks = [
 
 
 
-  // {
-  //   label: "News and stories",
-  //   href: "#",
-  //   // icon: FaEnvelope,
-  //   caption: "#excerise #stayhealthy",
+  {
+    label: "News and stories",
+    href: "/blog",
+    // icon: FaEnvelope,
+    caption: "#excerise #stayhealthy",
 
-  // },
+  },
 
   {
     label: "Contact us",
