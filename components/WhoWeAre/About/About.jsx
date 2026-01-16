@@ -109,7 +109,7 @@ const About = () => {
           <div>
             
             <SaveALife
-              text={"Get Started"}
+              text={"Donate now and save a lives"}
             />
 
           </div>

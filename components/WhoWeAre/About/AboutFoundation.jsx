@@ -53,13 +53,13 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e28ad2" // primary color
+                        fill="#2619df" // primary color
                         />
                     </svg>
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/office-building.png"
+                        src="/assets/icons/shared-vision.png"
                         width={1000}
                         height={1000}
                         alt="chat icon"
@@ -134,13 +134,13 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e29a8a" // primary color
+                        fill="#921010" // primary color
                         />
                     </svg>
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/telephone.png"
+                        src="/assets/icons/mission.png"
                         width={1000}
                         height={1000}
                         alt="chat icon"
@@ -188,8 +188,11 @@ export default function AboutFoundation() {
 
         </div>
 
-             {/* ================= OBJECTIVES ================= */}
-        <motion.div {...fadeUp}>
+        {/* ================= OBJECTIVES ================= */}
+        <motion.div
+            className="my-10"
+            {...fadeUp}
+        >
           <h2 className="text-3xl font-extrabold text-primary text-center mb-6">
             Our Objectives (PATH)
           </h2>
@@ -232,13 +235,13 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#8ae293" // primary color
+                        fill="#8adbe2" // primary color
                         />
                     </svg>
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/mailbox.png"
+                        src="/assets/icons/public-health.png"
                         width={1000}
                         height={1000}
                         alt="chat icon"
@@ -254,7 +257,7 @@ export default function AboutFoundation() {
                 {/* Content */}
 
                 <div
-                    className=""
+                    className="w-fit mx-auto"
                 >
 
                 <div className="flex items-center gap-3">
@@ -279,7 +282,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
-                        text={"Save a life"}
+                        text={"Start now"}
                     />
                 </div>
          
@@ -317,13 +320,13 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e28ad2" // primary color
+                        fill="#ec3120" // primary color
                         />
                     </svg>
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/office-building.png"
+                        src="/assets/icons/assistance.png"
                         width={1000}
                         height={1000}
                         alt="chat icon"
@@ -339,7 +342,7 @@ export default function AboutFoundation() {
                 {/* Content */}
 
                 <div
-                    className=""
+                    className="w-fit mx-auto"
                 >
 
                 <div className="flex items-center gap-3">
@@ -364,7 +367,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
-                        text={"Save a life"}
+                        text={"Donate"}
                     />
                 </div>
          
@@ -401,13 +404,13 @@ export default function AboutFoundation() {
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e29a8a" // primary color
+                        fill="#db6952" // primary color
                         />
                     </svg>
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/telephone.png"
+                        src="/assets/icons/technology.png"
                         width={1000}
                         height={1000}
                         alt="chat icon"
@@ -423,7 +426,7 @@ export default function AboutFoundation() {
                 {/* Content */}
 
                 <div
-                    className=""
+                    className="w-fit mx-auto"
                 >
 
                 <div className="flex items-center gap-3">
@@ -448,7 +451,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
-                        text={"Save a life"}
+                        text={"Research"}
                     />
                 </div>
          
@@ -491,10 +494,10 @@ export default function AboutFoundation() {
 
                     {/* Icon on top */}
                     <Image
-                        src="/assets/icons/mailbox.png"
+                        src="/assets/icons/assistance.png"
                         width={1000}
                         height={1000}
-                        alt="chat icon"
+                        alt="Hope and Support icon"
                         className="relative z-10 w-[5rem] h-[4rem]"
                     />
 
@@ -507,7 +510,7 @@ export default function AboutFoundation() {
                 {/* Content */}
 
                 <div
-                    className=""
+                    className="w-fit mx-auto"
                 >
 
                 <div className="flex items-center gap-3">
@@ -531,7 +534,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
-                        text={"Save a life"}
+                        text={"Support"}
                     />
                 </div>
          
