@@ -47,8 +47,8 @@
     "/donate/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/donate/page.js",
-      "static/css/app/donate/page.css"
+      "static/css/app/donate/page.css",
+      "static/chunks/app/donate/page.js"
     ]
   }
 }

@@ -43,12 +43,12 @@ export default function MobileNav() {
           className="my-auto ml-2"
         />
 
-        <a 
-          href="#portfolios"
+        <Link 
+          href="/donate"
           className="text-white text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
         >
           Donate
-        </a>
+        </Link>
 
         </motion.button>
       </div>
@@ -171,7 +171,7 @@ export default function MobileNav() {
           ))}
 
         <Link
-          href="/auth/signup"
+          href="/donate"
 
           className="w-[50%] mx-auto flex items-center justify-center rounded-full bg-primary p-3 text-white text-lg duration-300 ease-in-out hover:bg-primaryblack lg:hidden"
         >
@@ -179,7 +179,7 @@ export default function MobileNav() {
         </Link>
 
         <Link
-          href="/tele"
+          href="/contact-us"
           className="flex items-center justify-center text-lg text-black   lg:hidden"
         >
           Need to get in touch?
