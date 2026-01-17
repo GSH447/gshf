@@ -426,5 +426,56 @@ export const workwithus = [
     url: "#",
   },
   
-  ]
-  
+]
+
+// programs and services
+export const programs_services = [
+  {
+    id: 0,
+    image: "/images/s_d/symptoms/abdominal-pain.png",
+    name: "Public Awareness Initiatives",
+    link: "#PublicAwarenessInitiatives",
+  },
+  {
+    id: 1,
+    image: "/images/s_d/symptoms/bloating.png",
+    name: "Financial Assistance Program",
+    link: "#FinancialAssistanceProgram",
+  },
+  {
+    id: 2,
+    image: "/images/s_d/symptoms/diarrhea-main.png",
+    name: "Research Funding",
+    link: "#ResearchFunding",
+  },
+  {
+    id: 3,
+    image: "/images/s_d/symptoms/constipation.png",
+    name: "Support Groups and Counselling Services",
+    link: "#SupportGroupsandCounsellingServices",
+  },
+  {
+    id: 4,
+    image: "/images/s_d/symptoms/heartburn.png",
+    name: "Research Initiatives",
+    link: "#ResearchInitiatives",
+  },
+  {
+    id: 5,
+    image: "/images/s_d/symptoms/nausea.png",
+    name: "Educational Resources",
+    link: "#EducationalResources",
+  },
+  {
+    id: 6,
+    image: "/images/s_d/symptoms/nausea.png",
+    name: "Donate now and save a life",
+    link: "/contact-us/#contact-form",
+  },
+  {
+    id: 7,
+    image: "/images/s_d/symptoms/nausea.png",
+    name: "Contact us",
+    link: "/contact-us/#contact-form",
+  }
+];

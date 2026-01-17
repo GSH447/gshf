@@ -217,7 +217,7 @@ export default function Navbar() {
         />
 
         <a 
-          href="#portfolios"
+          href="/donate"
           className="text-white text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
         >
           Donate today
