@@ -623,3 +623,421 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   HERO IMAGE GRID SLIDER
+================================ */
+
+.hero-grid-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+/* Gradient edge fade */
+.hero-grid-fade-left,
+.hero-grid-fade-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 6rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-grid-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.hero-grid-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+/* Sliding track */
+.hero-grid-track {
+  display: flex;
+  width: max-content;
+  animation: hero-grid-scroll 40s linear infinite;
+}
+
+.hero-grid-track:hover {
+  animation-play-state: paused;
+}
+
+/* Grid block */
+.hero-grid-block {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Columns */
+.hero-grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.hero-grid-column.offset {
+  margin-top: 1.5rem;
+}
+
+/* Images */
+.hero-grid-image {
+  border-radius: 1rem;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-grid-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Animation */
+@keyframes hero-grid-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================================
+   RESPONSIVE SIZES
+================================ */
+
+@media (max-width: 640px) {
+  .hero-grid-image {
+    width: 130px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .hero-grid-image {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid-image {
+    width: 220px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**==========
+
+  VERTICAL SLIDE
+
+=====**/
+
+
+/* ================================
+   HERO IMAGE GRID — VERTICAL SLIDER
+================================ */
+
+.hero-grid-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 80vh; /* hero height */
+}
+
+/* Top & bottom gradient fade */
+.hero-grid-fade-top,
+.hero-grid-fade-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-grid-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+}
+
+.hero-grid-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, #ffffff, transparent);
+}
+
+/* Vertical track */
+.hero-grid-track {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Each column scrolls independently */
+.hero-grid-column-track {
+  display: flex;
+  flex-direction: column;
+  animation: hero-grid-vertical 35s linear infinite;
+}
+
+.hero-grid-column-track.reverse {
+  animation-direction: reverse;
+}
+
+.hero-grid-column-track:hover {
+  animation-play-state: paused;
+}
+
+/* Images */
+.hero-grid-image {
+  width: 160px;
+  margin-bottom: 0.15rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-grid-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Animation */
+@keyframes hero-grid-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 640px) {
+  .hero-grid-wrapper {
+    height: 60vh;
+  }
+
+  .hero-grid-image {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid-wrapper {
+    height: 80vh;
+  }
+
+  .hero-grid-image {
+    width: 200px;
+  }
+}
