@@ -88,19 +88,21 @@ export const navLinks = [
 
   {
     label: "Our Programs and Services",
-    href: "/programs-and-services",
+    // href: "/programs-and-services",
+    href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
     caption: "#charity #donation #giveback",
     subLinks: [
       {
         header: "Public Awareness Initiatives",
-        href: "#",
+        // href: "#",
+        href: "/programs-and-services#PublicAwarenessInitiatives",
         subMenu: [
 
           {
             label: "We will conduct outreach through events such as walks/runs, seminars e.t.c",
-            href: "/cardiac-diagnosis-and-treatment",
+            href: "/programs-and-services#PublicAwarenessInitiatives",
           },
         ],
       },

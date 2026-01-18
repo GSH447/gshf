@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const PublicAwarenessInitiative = () => {
+const ResearchFunding = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const PublicAwarenessInitiative = () => {
     <>
 
     <div 
-        id="PublicAwarenessInitiatives"
+        id="ResearchFunding"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const PublicAwarenessInitiative = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Public Awareness Initiatives
+                    Research Funding
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
                 
-                    We conduct outreach through events such as walks/runs, seminars, and social media campaigns to educate the public about Congenital Heart Disease (CHD).
+                    We will actively collaborate with universities, teaching hospitals, and medical research institutions to fund and support research focused on innovative treatments, early diagnosis, and long-term management of Congenital Heart Disease (CHD).
                 
                 </p>
 
@@ -60,7 +60,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
 
-                These efforts are designed to increase public understanding of Congenital Heart Disease (CHD), promote early detection, and encourage timely medical intervention.
+                By investing in evidence-based research and emerging medical technologies, we aim to improve treatment outcomes, reduce mortality rates, and contribute to global advancements in pediatric cardiac care.
                 </p>
 
                 </div>
@@ -72,7 +72,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
 
-                By bringing accurate information directly to people where they live, work, and interact online, we aim to break misinformation, reduce stigma, and inspire collective action toward saving children’s lives.
+                These collaborations will also promote knowledge sharing, capacity building, and the development of locally relevant solutions.
                 </p>
 
                 </div>
@@ -84,7 +84,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
                     <b>
-                    we like you to partner with us, volunteer, sponsor an outreach event, or learn how you can support this mission, click <span className='text-[red]'>"complete the form"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+                    we like you to partner with us, volunteer, sponsor a Congenital heart disease research, or learn how you can support this mission, click <span className='text-[red]'>"Sponsor a research"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
                     </b>
                 </p>
 
@@ -139,6 +139,6 @@ const PublicAwarenessInitiative = () => {
   );
 }
 
-export default PublicAwarenessInitiative
+export default ResearchFunding
 
 

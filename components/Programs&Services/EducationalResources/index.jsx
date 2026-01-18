@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const PublicAwarenessInitiative = () => {
+const EducationalResources = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const PublicAwarenessInitiative = () => {
     <>
 
     <div 
-        id="PublicAwarenessInitiatives"
+        id="EducationalResources"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const PublicAwarenessInitiative = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Public Awareness Initiatives
+                Educational Resources
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
                 
-                    We conduct outreach through events such as walks/runs, seminars, and social media campaigns to educate the public about Congenital Heart Disease (CHD).
+                  We will develop accessible and reliable educational resources, including printed brochures, digital materials, and a dedicated website, to provide comprehensive information on CHD.
                 
                 </p>
 
@@ -60,23 +60,13 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
 
-                These efforts are designed to increase public understanding of Congenital Heart Disease (CHD), promote early detection, and encourage timely medical intervention.
+                These resources will cover different types of congenital heart conditions, treatment options, post-surgery care, and practical coping strategies for families. By empowering caregivers with accurate knowledge, we aim to improve decision-making, promote early intervention, and enhance overall quality of care.
                 </p>
 
                 </div>
 
 
-                <div>
-                
-                <p 
-                className="about" 
-                >
-
-                By bringing accurate information directly to people where they live, work, and interact online, we aim to break misinformation, reduce stigma, and inspire collective action toward saving children’s lives.
-                </p>
-
-                </div>
-
+               
 
                 <div>
                 
@@ -139,6 +129,6 @@ const PublicAwarenessInitiative = () => {
   );
 }
 
-export default PublicAwarenessInitiative
+export default EducationalResources
 
 

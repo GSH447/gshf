@@ -11,16 +11,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/loading.js"
     ],
-    "/who-we-are/our-people/page": [
+    "/programs-and-services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/who-we-are/our-people/page.css",
-      "static/chunks/app/who-we-are/our-people/page.js"
+      "static/css/app/programs-and-services/page.css",
+      "static/chunks/app/programs-and-services/page.js"
     ],
-    "/who-we-are/join-our-team/page": [
+    "/who-we-are/about-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/who-we-are/join-our-team/page.js"
+      "static/chunks/app/who-we-are/about-us/page.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
@@ -28,32 +28,10 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/who-we-are/about-us/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/who-we-are/about-us/page.js"
-    ],
     "/contact-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/contact-us/page.js"
-    ],
-    "/programs-and-services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/programs-and-services/page.css",
-      "static/chunks/app/programs-and-services/page.js"
-    ],
-    "/donate/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/donate/page.css",
-      "static/chunks/app/donate/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

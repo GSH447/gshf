@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const PublicAwarenessInitiative = () => {
+const FinancialAssistanceProgram = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const PublicAwarenessInitiative = () => {
     <>
 
     <div 
-        id="PublicAwarenessInitiatives"
+        id="FinancialAssistanceProgram"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const PublicAwarenessInitiative = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Public Awareness Initiatives
+                Financial Assistance Program
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
                 
-                    We conduct outreach through events such as walks/runs, seminars, and social media campaigns to educate the public about Congenital Heart Disease (CHD).
+                    We established a grant system to provide support to families facing medical bills, diagnostic tests, medications, surgical procedures, travel expenses, and accommodation costs related to treatment of children with Congenital Heart Disease (CHD) who are burdened by the high cost of care.
                 
                 </p>
 
@@ -60,7 +60,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
 
-                These efforts are designed to increase public understanding of Congenital Heart Disease (CHD), promote early detection, and encourage timely medical intervention.
+                By easing these financial barriers, the program ensures that no child is denied life-saving care due to economic hardship.
                 </p>
 
                 </div>
@@ -72,7 +72,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
 
-                By bringing accurate information directly to people where they live, work, and interact online, we aim to break misinformation, reduce stigma, and inspire collective action toward saving children’s lives.
+                Our goal is to reduce the emotional and financial strain on families, allowing them to focus fully on their child’s recovery while promoting equitable access to quality cardiac care for all.
                 </p>
 
                 </div>
@@ -84,7 +84,7 @@ const PublicAwarenessInitiative = () => {
                 className="about" 
                 >
                     <b>
-                    we like you to partner with us, volunteer, sponsor an outreach event, or learn how you can support this mission, click <span className='text-[red]'>"complete the form"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+                    we like you to partner with us, volunteer, sponsor a cogential heart disease treatment, or learn how you can support this mission, click <span className='text-[red]'>"support Congenital heart disease treatment"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
                     </b>
                 </p>
 
@@ -98,7 +98,7 @@ const PublicAwarenessInitiative = () => {
             >
                 
                 <SaveALife
-                text={"Complete the form"}
+                text={"Support Congenital heart disease treatment"}
                 />
 
             </div>
@@ -139,6 +139,6 @@ const PublicAwarenessInitiative = () => {
   );
 }
 
-export default PublicAwarenessInitiative
+export default FinancialAssistanceProgram
 
 
