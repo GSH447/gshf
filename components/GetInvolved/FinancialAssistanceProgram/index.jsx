@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const SupportGroupsCounsellingServices = () => {
+const FinancialAssistanceProgram = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const SupportGroupsCounsellingServices = () => {
     <>
 
     <div 
-        id="SupportGroupsCounsellingServices"
+        id="FinancialAssistanceProgram"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const SupportGroupsCounsellingServices = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Support Groups & Counselling Services
+                Financial Assistance Program
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                 
-                    We will facilitate regular support group meetings for parents, caregivers, and families affected by CHD, providing a safe and supportive environment to share experiences, challenges, and coping strategies.
+                    We established a grant system to provide support to families facing medical bills, diagnostic tests, medications, surgical procedures, travel expenses, and accommodation costs related to treatment of children with Congenital Heart Disease (CHD) who are burdened by the high cost of care.
                 
                 </p>
 
@@ -60,7 +60,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                In addition, families will have access to trained mental health professionals specializing in chronic illness and caregiver stress.
+                By easing these financial barriers, the program ensures that no child is denied life-saving care due to economic hardship.
                 </p>
 
                 </div>
@@ -72,7 +72,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                These services are designed to address emotional well-being, reduce isolation, and strengthen resilience throughout the treatment and recovery journey.
+                Our goal is to reduce the emotional and financial strain on families, allowing them to focus fully on their child’s recovery while promoting equitable access to quality cardiac care for all.
                 </p>
 
                 </div>
@@ -84,7 +84,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                     <b>
-                    we like you to be part of our support groups and couselling services, sponsor a group, or learn how you can support this mission, click <span className='text-[red]'>"complete the form"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+                    we like you to partner with us, volunteer, sponsor a cogential heart disease treatment, or learn how you can support this mission, click <span className='text-[red]'>"support Congenital heart disease treatment"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
                     </b>
                 </p>
 
@@ -98,8 +98,7 @@ const SupportGroupsCounsellingServices = () => {
             >
                 
                 <SaveALife
-                  link="/contact-us#contact-form"
-                  text={"Complete the form"}
+                text={"Support Congenital heart disease treatment"}
                 />
 
             </div>
@@ -140,6 +139,6 @@ const SupportGroupsCounsellingServices = () => {
   );
 }
 
-export default SupportGroupsCounsellingServices
+export default FinancialAssistanceProgram
 
 

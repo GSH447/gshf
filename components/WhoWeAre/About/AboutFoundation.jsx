@@ -282,6 +282,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
+                        link="#save_a_life_now"
                         text={"Join"}
                     />
                 </div>
@@ -367,6 +368,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
+                        link="#save_a_life_now"
                         text={"Donate"}
                     />
                 </div>
@@ -451,6 +453,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
+                        link="#save_a_life_now"
                         text={"Research"}
                     />
                 </div>
@@ -534,6 +537,7 @@ export default function AboutFoundation() {
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <SaveALife
+                        link="#save_a_life_now"
                         text={"Support"}
                     />
                 </div>

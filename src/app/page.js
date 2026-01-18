@@ -27,7 +27,11 @@ export default function Home() {
       <Product_ServicesPage/>
       <Feedback/>
       <Benefactor01/>
-      <MakeADifference/>
+      <MakeADifference
+        bgColor={"#d77dbf"}
+        title={"Make a difference today"}
+        description={"Every donation takes us a step closer to another life-saving breakthrough."}
+      />
       <SaveALife
         save_a_life={save_a_life}
       />

@@ -88,7 +88,8 @@ const EducationalResources = () => {
             >
                 
                 <SaveALife
-                text={"Complete the form"}
+                  link={"/contact-us#contact-form"}
+                  text={"Complete the form"}
                 />
 
             </div>

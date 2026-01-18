@@ -3,14 +3,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import DonationCard from "../Donation/DonationCard";
 import LoveSymbol from "../Curves/love";
-const MakeADifference = () => {
+const MakeADifference = ({
+  title,
+  description,
+  bgColor
+}) => {
 
 
   return (
     <>
 
      <div
-       className=" relative w-full overflow-hidden bg-[#d77dbf] pb-[4rem] lg:py-[12vh] px-2 lg:px-10 flex lg:flex-row flex-col justify-between lg:gap-[2em]"
+       className=" relative w-full overflow-hidden  pb-[4rem] lg:py-[12vh] px-2 lg:px-10 flex lg:flex-row flex-col justify-between lg:gap-[2em]"
+       style={{backgroundColor: bgColor}}
      >
 
       
@@ -25,7 +30,8 @@ const MakeADifference = () => {
           {/* Content */}
           <div className="">
               <h3 className="text-[1.6rem] lg:text-[4rem] font-bold text-black mb-2 text-left lg:w-[100%]">
-              Make a difference today
+              
+              {title}
               </h3>
 
           </div>
@@ -33,7 +39,8 @@ const MakeADifference = () => {
           {/* Content */}
           <div className="text-left">
             <p className="lg:text-[1.5rem] text-black">
-            Every donation takes us a step closer to another life-saving breakthrough. 
+            
+            {description}
             </p>
           </div>
 

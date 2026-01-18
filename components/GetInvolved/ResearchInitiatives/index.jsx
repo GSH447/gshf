@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const SupportGroupsCounsellingServices = () => {
+const ResearchInitiatives = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const SupportGroupsCounsellingServices = () => {
     <>
 
     <div 
-        id="SupportGroupsCounsellingServices"
+        id="ResearchInitiatives"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const SupportGroupsCounsellingServices = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Support Groups & Counselling Services
+                  Research Initiatives
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                 
-                    We will facilitate regular support group meetings for parents, caregivers, and families affected by CHD, providing a safe and supportive environment to share experiences, challenges, and coping strategies.
+                  Our research initiatives are designed to advance knowledge, improve clinical outcomes, and drive innovation in the prevention, diagnosis, and treatment of Congenital Heart Disease (CHD). We will work closely with universities, teaching hospitals, and medical research institutions to support studies that address critical gaps in pediatric cardiac care, particularly in low-resource settings.
                 
                 </p>
 
@@ -60,7 +60,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                In addition, families will have access to trained mental health professionals specializing in chronic illness and caregiver stress.
+                These initiatives will focus on early detection, improved surgical techniques, post-operative care, and long-term quality of life for CHD patients.
                 </p>
 
                 </div>
@@ -72,7 +72,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                These services are designed to address emotional well-being, reduce isolation, and strengthen resilience throughout the treatment and recovery journey.
+                By supporting data-driven research, clinical trials, and capacity-building programs, we aim to translate scientific findings into practical, life-saving solutions. Our commitment to research ensures continuous improvement in care delivery, informs policy development, and contributes to sustainable, locally relevant healthcare advancements.
                 </p>
 
                 </div>
@@ -84,7 +84,9 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                     <b>
-                    we like you to be part of our support groups and couselling services, sponsor a group, or learn how you can support this mission, click <span className='text-[red]'>"complete the form"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+
+                      Join us in transforming lives through research and innovation. Whether you’d like to partner, volunteer, or sponsor a research initiative, click <span className='text-[red]'>"complete the form"</span> below. Our team will connect with you to explore how we can make a meaningful impact—together.
+
                     </b>
                 </p>
 
@@ -98,8 +100,7 @@ const SupportGroupsCounsellingServices = () => {
             >
                 
                 <SaveALife
-                  link="/contact-us#contact-form"
-                  text={"Complete the form"}
+                text={"Complete the form"}
                 />
 
             </div>
@@ -140,6 +141,6 @@ const SupportGroupsCounsellingServices = () => {
   );
 }
 
-export default SupportGroupsCounsellingServices
+export default ResearchInitiatives
 
 

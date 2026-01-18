@@ -3,7 +3,7 @@ import React from 'react';
 import SaveALife from '../../Buttons/SaveALife';
 import HeroImageGridSlider from './HeroImageGridSlider';
 
-const SupportGroupsCounsellingServices = () => {
+const ResearchFunding = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const SupportGroupsCounsellingServices = () => {
     <>
 
     <div 
-        id="SupportGroupsCounsellingServices"
+        id="ResearchFunding"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       
@@ -32,7 +32,7 @@ const SupportGroupsCounsellingServices = () => {
 
             <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
                 <h1 className="font-bold my-auto h-fit ml-7">
-                Support Groups & Counselling Services
+                    Research Funding
                 </h1>
 
             </div>
@@ -48,7 +48,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                 
-                    We will facilitate regular support group meetings for parents, caregivers, and families affected by CHD, providing a safe and supportive environment to share experiences, challenges, and coping strategies.
+                    We will actively collaborate with universities, teaching hospitals, and medical research institutions to fund and support research focused on innovative treatments, early diagnosis, and long-term management of Congenital Heart Disease (CHD).
                 
                 </p>
 
@@ -60,7 +60,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                In addition, families will have access to trained mental health professionals specializing in chronic illness and caregiver stress.
+                By investing in evidence-based research and emerging medical technologies, we aim to improve treatment outcomes, reduce mortality rates, and contribute to global advancements in pediatric cardiac care.
                 </p>
 
                 </div>
@@ -72,7 +72,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
 
-                These services are designed to address emotional well-being, reduce isolation, and strengthen resilience throughout the treatment and recovery journey.
+                These collaborations will also promote knowledge sharing, capacity building, and the development of locally relevant solutions.
                 </p>
 
                 </div>
@@ -84,7 +84,7 @@ const SupportGroupsCounsellingServices = () => {
                 className="about" 
                 >
                     <b>
-                    we like you to be part of our support groups and couselling services, sponsor a group, or learn how you can support this mission, click <span className='text-[red]'>"complete the form"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+                    we like you to partner with us, volunteer, sponsor a Congenital heart disease research, or learn how you can support this mission, click <span className='text-[red]'>"Sponsor a research"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
                     </b>
                 </p>
 
@@ -98,8 +98,7 @@ const SupportGroupsCounsellingServices = () => {
             >
                 
                 <SaveALife
-                  link="/contact-us#contact-form"
-                  text={"Complete the form"}
+                text={"Complete the form"}
                 />
 
             </div>
@@ -140,6 +139,6 @@ const SupportGroupsCounsellingServices = () => {
   );
 }
 
-export default SupportGroupsCounsellingServices
+export default ResearchFunding
 
 

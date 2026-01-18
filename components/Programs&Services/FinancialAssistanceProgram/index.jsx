@@ -98,7 +98,8 @@ const FinancialAssistanceProgram = () => {
             >
                 
                 <SaveALife
-                text={"Support Congenital heart disease treatment"}
+                  text={"Support Congenital heart disease treatment"}
+                  link="/contact-us#contact-form"
                 />
 
             </div>

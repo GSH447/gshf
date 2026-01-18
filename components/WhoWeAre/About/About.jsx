@@ -109,6 +109,7 @@ const About = () => {
           <div>
             
             <SaveALife
+              link="#save_a_life_now"
               text={"Donate now and save a lives"}
             />
 

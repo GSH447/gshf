@@ -30,8 +30,8 @@ export const navLinks = [
     label: "Who we are",
     href: "#",
     // icon: FaStethoscope,
-    // navImage: "/bookcolonoscopy.jpeg",
-    caption: "#bookcolonoscopy #colonoscopy #colonscreening",
+    // navImage: "/*** */.jpeg",
+    caption: "#",
     subLinks: [
       {
         header: " About us",    
@@ -183,7 +183,7 @@ export const navLinks = [
 
 
   {
-    label: "Get involved",
+    label: "Make a Donation",
     href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
@@ -194,82 +194,96 @@ export const navLinks = [
         href: "#",
         subMenu: [
           {
-            label: "Donate online",
-            href: "/donate-online",
+            label: "Make a donation",
+            href: "/donate",
           },
           {
-            label: "Make a monthly donation",
-            href: "/make-monthly-donation",
-          },
-          {
-            label: "Donate in memory",
-            href: "/donate-in-memory",
+            label: "Donate in memory or Honour",
+            href: "/#",
           },
           {
             label: "Leave a gift in your Will",
-            href: "/leave-a-gift-in-your-will",
+            href: "/#",
+          },
+          {
+            label: "Special Occasion Giving",
+            href: "/#",
           },
         ],
       },
+      
       {
         header: "More ways to get involved",
         href: "#",
         subMenu: [
+          
+          
           {
-            label: "Special Occasion giving",
-            href: "/special-occasion-giving",
+            label: "Sponsor a Day of Care",
+            href: "/#",
           },
+          
           {
-            label: "Sponsor a Day",
-            href: "/sponsor-a-day",
+            label: "Celebrate a Life",
+            href: "/#",
           },
-          {
-            label: "Fundraise for us",
-            href: "/fundraise-for-us",
-          },
-          {
-            label: "Volunteer with us",
-            href: "/volunteer-with-us",
-          },
-          {
-            label: "Corporate Partnerships",
-            href: "/corporate-partnerships",
-          },
-          {
-            label: "Community Fundraising",
-            href: "/community-fundraising",
-          },
-          {
-            label: "Events",
-            href: "/events",
-          },
+          
           {
             label: "Payroll Giving",
-            href: "/payroll-giving",
-          }
-
+            href: "/#",
+          },
+          
+          {
+            label: "Corporate Partnerships",
+            href: "/#",
+          },
+          
+          
+          
+          {
+            label: "Philanthropic Giving",
+            href: "/#",
+          },
+          
         ],
       },
+
       {
         header: "Fundraise for us",
-        
-    href: "#",
+        href: "#",
         subMenu: [
           {
-            label: "Find an event to take part in",
+            label: "Fundraise for Us",
             href: "/find-an-event-to-take-part-in",
           },
           {
-            label: "Do your own fundraising",
+            label: "Find or Join an Event",
             href: "/do-your-own-fundraising",
           },
+   
+        ],
+      },
+      
+
+      {
+        header: "Get Involved",
+        href: "#",
+        subMenu: [
           {
-            label: "Fundraising ideas",
-            href: "/fundraising-ideas",
+            label: "Volunteer With Us",
+            href: "/#",
           },
           {
-            label: "Pay in your fundraising",
-            href: "/pay-in-your-fundraising",
+            label: "Share Your Story",
+            href: "/#",
+          },
+          {
+            label: "Become a Community Advocate",
+            href: "/#",
+          },
+          {
+            label: "Contact & Support",
+            href: "/contact-us",
           },
         ],
       },

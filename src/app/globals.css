@@ -874,7 +874,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Images */
 .hero-grid-image {
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   object-fit: cover;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }

@@ -98,6 +98,7 @@ const PublicAwarenessInitiative = () => {
             >
                 
                 <SaveALife
+                link="/contact-us#contact-form"
                 text={"Complete the form"}
                 />
 
