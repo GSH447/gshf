@@ -13,7 +13,7 @@ const SupportGroupsCounsellingServices = () => {
     <>
 
     <div 
-        id="SupportGroupsCounsellingServices"
+        id="SupportGroupsandCounsellingServices"
         className=" w-full  lg:my-[7.15rem] mx-auto flex flex-col gap-6 lg:gap-10 items-center"
     >
       

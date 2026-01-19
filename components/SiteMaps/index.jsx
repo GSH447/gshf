@@ -110,7 +110,7 @@ export const navLinks = [
       {
         header: "Financial Assistance Program",
         
-        href: "#",
+        href: "/programs-and-services#FinancialAssistanceProgram",
         subMenu: [
           {
             label: "We establish a grant system to provide support to families facing medical bills e.t.c",
@@ -123,7 +123,7 @@ export const navLinks = [
       {
         header: "Research Funding",
         
-        href: "#",
+        href: "/programs-and-services#ResearchFunding",
         subMenu: [
           {
             label: "We will collaborate with universities and medical institutions to fund research",
@@ -136,7 +136,7 @@ export const navLinks = [
       {
         header: "Support Groups and Counselling Services",
         
-        href: "#",
+        href: "/programs-and-services#SupportGroupsandCounsellingServices", 
         subMenu: [
           {
             label: "Regular support group meetings for parents and caregivers will be facilitated.",
@@ -149,7 +149,7 @@ export const navLinks = [
       {
         header: "Research Initiatives",
         
-        href: "#",
+        href: "/programs-and-services#ResearchInitiatives",
         subMenu: [
           {
             label: "Conducting research on the prevalence, outcomes, and effective treatment strategies for congenital heart disease within the Nigerian.",
@@ -163,7 +163,7 @@ export const navLinks = [
       {
         header: "Educational Resources",
         
-        href: "#",
+        href: "/programs-and-services#EducationalResources",
         subMenu: [
           {
             label: "Informative resources, including brochures, created to provide detailed information on CHD types, care strategies e.t.c.",
