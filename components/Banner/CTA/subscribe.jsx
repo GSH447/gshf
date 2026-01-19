@@ -83,7 +83,7 @@ const SubscribeCTA = () => {
             <div className="bg-white py-10 lg:p-10 relative m-auto w-full rounded-lg">
 
               <h2
-                  className="text-[1.3rem] lg:text-[2rem] px-6 lg:p-1"
+                  className="text-[1.3rem] lg:text-[2rem] px-6 lg:p-1 font-bold lg:font-extrabold"
               >
 
                   Donate now and help us save more lives

@@ -12,8 +12,12 @@ const ProgramsAndServicesSwiper = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+
   return (
-    <section className="relative w-full px-4 sm:px-6 lg:px-12 my-10">
+    // <section className="border-2 border-[red] sticky top-[3.5rem] relative w-full px-4 sm:px-6 lg:px-12 my-10">
+
+    <section className="relative w-full px-4 sm:px-6 lg:px-12 my-10 ">
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,6 +29,40 @@ const ProgramsAndServicesSwiper = () => {
           max-w-7xl
         "
       >
+        
+       {/* SWIPER with PICTURE */}
+       {/* <Swiper
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        spaceBetween={24}
+        slidesPerView={1.1}
+        breakpoints={{
+          768: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="px-4 sm:px-6 lg:px-12"
+      >
+        {programs_services.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div
+              className="rounded-xl p-6 h-full shadow-md"
+              style={{ backgroundColor: item.color }}
+            >
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-14 h-14 mb-4"
+              />
+
+              <h3 className="font-semibold text-lg">
+                {item.name}
+              </h3>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper> */}
+
+      
+       <div className="bg-primary fixed left-0 right-0 bottom-0 z-50 flex justify-center gap-3 px-4 py-2">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -48,6 +86,7 @@ const ProgramsAndServicesSwiper = () => {
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.25 }}
+                  // style={{ "--btn-bg": item.color }}
                   className="
                     flex
                     items-center
@@ -57,20 +96,30 @@ const ProgramsAndServicesSwiper = () => {
                     rounded-full
                     border
                     border-primary/30
-                    bg-white
-                    text-primary
-                    font-semibold
+                    text-white
                     text-sm
                     whitespace-nowrap
-                    hover:bg-primary
-                    hover:text-white
+                    hover:text-primary
                     hover:border-primary
                     transition-all
                     duration-300
                     shadow-sm
-                  "
+                    bg-[var(--btn-bg)]
+                    hover:bg-transparent
+                    "
+                  
+                  style={{backgroundColor: item.color}}
                 >
                   {item.name}
+                  {/* <span
+                    className="
+                      absolute inset-0
+                      bg-white
+                      opacity-0
+                      hover:opacity-100
+                      transition-opacity duration-300
+                    "
+                  /> */}
                 </motion.div>
               </Link>
             </SwiperSlide>
@@ -139,6 +188,8 @@ const ProgramsAndServicesSwiper = () => {
             <path d="M8 4L14 10L8 16" />
           </svg>
         </button>
+      </div>
+
       </motion.div>
     </section>
   );

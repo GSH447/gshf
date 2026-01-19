@@ -435,47 +435,110 @@ export const programs_services = [
     image: "/images/s_d/symptoms/abdominal-pain.png",
     name: "Public Awareness Initiatives",
     link: "#PublicAwarenessInitiatives",
+    color: "#407CE2", // blue
   },
   {
     id: 1,
     image: "/images/s_d/symptoms/bloating.png",
     name: "Financial Assistance Program",
     link: "#FinancialAssistanceProgram",
+    color: "#16A34A", // green
   },
   {
     id: 2,
     image: "/images/s_d/symptoms/diarrhea-main.png",
     name: "Research Funding",
     link: "#ResearchFunding",
+    color: "#F59E0B", // amber
   },
   {
     id: 3,
     image: "/images/s_d/symptoms/constipation.png",
     name: "Support Groups and Counselling Services",
     link: "#SupportGroupsandCounsellingServices",
+    color: "#9333EA", // purple
   },
   {
     id: 4,
     image: "/images/s_d/symptoms/heartburn.png",
     name: "Research Initiatives",
     link: "#ResearchInitiatives",
+    color: "#DC2626", // red
   },
   {
     id: 5,
     image: "/images/s_d/symptoms/nausea.png",
     name: "Educational Resources",
     link: "#EducationalResources",
+    color: "#0EA5E9", // sky
   },
   {
     id: 6,
     image: "/images/s_d/symptoms/nausea.png",
     name: "Donate now and save a life",
     link: "/contact-us/#contact-form",
+    color: "#15803D", // dark green
   },
   {
     id: 7,
     image: "/images/s_d/symptoms/nausea.png",
     name: "Contact us",
     link: "/contact-us/#contact-form",
-  }
+    // color: "#334155", // slate
+    color: "#F59E0B", // amber
+  },
 ];
+
+
+
+
+// export const programs_services = [
+//   {
+//     id: 0,
+//     image: "/images/s_d/symptoms/abdominal-pain.png",
+//     name: "Public Awareness Initiatives",
+//     link: "#PublicAwarenessInitiatives",
+//   },
+//   {
+//     id: 1,
+//     image: "/images/s_d/symptoms/bloating.png",
+//     name: "Financial Assistance Program",
+//     link: "#FinancialAssistanceProgram",
+//   },
+//   {
+//     id: 2,
+//     image: "/images/s_d/symptoms/diarrhea-main.png",
+//     name: "Research Funding",
+//     link: "#ResearchFunding",
+//   },
+//   {
+//     id: 3,
+//     image: "/images/s_d/symptoms/constipation.png",
+//     name: "Support Groups and Counselling Services",
+//     link: "#SupportGroupsandCounsellingServices",
+//   },
+//   {
+//     id: 4,
+//     image: "/images/s_d/symptoms/heartburn.png",
+//     name: "Research Initiatives",
+//     link: "#ResearchInitiatives",
+//   },
+//   {
+//     id: 5,
+//     image: "/images/s_d/symptoms/nausea.png",
+//     name: "Educational Resources",
+//     link: "#EducationalResources",
+//   },
+//   {
+//     id: 6,
+//     image: "/images/s_d/symptoms/nausea.png",
+//     name: "Donate now and save a life",
+//     link: "/contact-us/#contact-form",
+//   },
+//   {
+//     id: 7,
+//     image: "/images/s_d/symptoms/nausea.png",
+//     name: "Contact us",
+//     link: "/contact-us/#contact-form",
+//   }
+// ];

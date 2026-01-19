@@ -6,7 +6,9 @@ import LoveSymbol from "../Curves/love";
 const MakeADifference = ({
   title,
   description,
-  bgColor
+  bgColor,
+  textColor,
+  subTextColor
 }) => {
 
 
@@ -29,7 +31,10 @@ const MakeADifference = ({
      
           {/* Content */}
           <div className="">
-              <h3 className="text-[1.6rem] lg:text-[4rem] font-bold text-black mb-2 text-left lg:w-[100%]">
+              <h3 
+                className="text-[1.6rem] lg:text-[4rem] font-bold mb-2 text-left lg:w-[100%]"
+                style={{color: textColor || "black"}}
+              >
               
               {title}
               </h3>
@@ -38,7 +43,10 @@ const MakeADifference = ({
 
           {/* Content */}
           <div className="text-left">
-            <p className="lg:text-[1.5rem] text-black">
+            <p 
+              className="lg:text-[1.5rem]"
+              style={{color: subTextColor || "black"}}
+            >
             
             {description}
             </p>
