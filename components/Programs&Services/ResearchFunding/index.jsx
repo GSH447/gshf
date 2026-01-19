@@ -27,82 +27,82 @@ const ResearchFunding = () => {
         >
 
             <div
-                className=' grid gap-y-[1.7rem]'
+              className=' grid gap-y-[1.7rem]'
             >
 
-            <div className=" grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
-                <h1 className="font-bold my-auto h-fit ml-7">
-                    Research Funding
-                </h1>
+              <div className="grid gap-3 py-3 px-2 w-fit m-auto text-[1.2rem] lg:text-[2.3rem]">
+                  <h1 className="font-bold my-auto h-fit ml-7">
+                      Research Funding
+                  </h1>
 
-            </div>
+              </div>
 
-            <div
-                className=' px-3 grid gap-y-[1.7rem] w-[80%] mx-auto'
-            >
+              <div
+                  className=' px-3 grid gap-y-[1.7rem] w-[80%] mx-auto'
+              >
+                  
+                  <div>
+
+          
+                  <p 
+                  className="about" 
+                  >
+                  
+                      We will actively collaborate with universities, teaching hospitals, and medical research institutions to fund and support research focused on innovative treatments, early diagnosis, and long-term management of Congenital Heart Disease (CHD).
+                  
+                  </p>
+
+                  </div>
+
+                  <div>
+                  
+                  <p 
+                  className="about" 
+                  >
+
+                  By investing in evidence-based research and emerging medical technologies, we aim to improve treatment outcomes, reduce mortality rates, and contribute to global advancements in pediatric cardiac care.
+                  </p>
+
+                  </div>
+
+
+                  <div>
+                  
+                  <p 
+                  className="about" 
+                  >
+
+                  These collaborations will also promote knowledge sharing, capacity building, and the development of locally relevant solutions.
+                  </p>
+
+                  </div>
+
+
+                  <div>
+                  
+                  <p 
+                  className="about" 
+                  >
+                      <b>
+                      we like you to partner with us, volunteer, sponsor a Congenital heart disease research, or learn how you can support this mission, click <span className='text-[red]'>"Sponsor a research"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
+                      </b>
+                  </p>
+
+                  </div>
+
+              </div>
+
                 
-                <div>
+              <div
+                  className='ml-5'
+              >
+                  
+                  <SaveALife
+                    link="/contact-us#contact-form"
+                    text={"Complete the form"}
+                  />
 
-        
-                <p 
-                className="about" 
-                >
-                
-                    We will actively collaborate with universities, teaching hospitals, and medical research institutions to fund and support research focused on innovative treatments, early diagnosis, and long-term management of Congenital Heart Disease (CHD).
-                
-                </p>
-
-                </div>
-
-                <div>
-                
-                <p 
-                className="about" 
-                >
-
-                By investing in evidence-based research and emerging medical technologies, we aim to improve treatment outcomes, reduce mortality rates, and contribute to global advancements in pediatric cardiac care.
-                </p>
-
-                </div>
-
-
-                <div>
-                
-                <p 
-                className="about" 
-                >
-
-                These collaborations will also promote knowledge sharing, capacity building, and the development of locally relevant solutions.
-                </p>
-
-                </div>
-
-
-                <div>
-                
-                <p 
-                className="about" 
-                >
-                    <b>
-                    we like you to partner with us, volunteer, sponsor a Congenital heart disease research, or learn how you can support this mission, click <span className='text-[red]'>"Sponsor a research"</span> below. Our team will reach out to you to explore how we can make a meaningful impact together.
-                    </b>
-                </p>
-
-                </div>
-
-            </div>
-
-               
-            <div
-                className='ml-5'
-            >
-                
-                <SaveALife
-                  link="/contact-us#contact-form"
-                  text={"Complete the form"}
-                />
-
-            </div>
+              </div>
             
             </div>
 
@@ -116,7 +116,7 @@ const ResearchFunding = () => {
 
 
           <div
-            className=' grid lg:gap-7 lg:py-[2rem] px-2 w-[90%]  text-[0.8rem] lg:text-[1rem] text-justify m-auto '
+            className=' grid lg:gap-7 lg:py-[2rem] lg:px-2 lg:w-[90%]  text-[0.8rem] lg:text-[1rem] text-justify m-auto '
           >
         
           

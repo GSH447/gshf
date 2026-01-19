@@ -116,7 +116,7 @@ const FinancialAssistanceProgram = () => {
 
 
           <div
-            className=' grid lg:gap-7 lg:py-[2rem] px-2 w-[90%]  text-[0.8rem] lg:text-[1rem] text-justify m-auto '
+            className=' grid lg:gap-7 lg:py-[2rem] lg:px-2 lg:w-[90%]  text-[0.8rem] lg:text-[1rem] text-justify m-auto '
           >
         
           

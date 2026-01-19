@@ -1,7 +1,4 @@
 {
-  "/programs-and-services/page": "app/programs-and-services/page.js",
   "/page": "app/page.js",
-  "/who-we-are/about-us/page": "app/who-we-are/about-us/page.js",
-  "/who-we-are/our-people/page": "app/who-we-are/our-people/page.js",
-  "/contact-us/page": "app/contact-us/page.js"
+  "/programs-and-services/page": "app/programs-and-services/page.js"
 }

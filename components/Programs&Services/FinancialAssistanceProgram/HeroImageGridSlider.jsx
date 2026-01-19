@@ -85,7 +85,7 @@ const HeroImageGridSlider = () => {
         className=" bg-primary rounded-b-lg shadow-lg"
       >
 
-      <div className="bg-primary rounded-b-lg shadow-lg">
+      <div className="bg-primary lg:rounded-b-lg shadow-lg">
             
             <button
               onClick={() => setOpen(!open)}
