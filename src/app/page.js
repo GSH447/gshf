@@ -8,11 +8,6 @@ import MakeADifference from "../../components/MakeADifference/01";
 import SaveALife from "../../components/SaveALife";
 import { save_a_life } from "../../components/SiteMaps/data";
 import SubscribeCTA from "../../components/Banner/CTA/subscribe";
-// import WorkwithUs from "../../components/Team/i/WrokWitUs";//Work with us choose us components
-// import AboutPage from "../../components/About"; //About us components
-// import TeamPage from "../../components/Team"; //Our Team components
-// import FAQs from "../../components/Faq";  //Frequently asked questions components
-// import ContactPage from "../../components/Contact"; //Contact us components
 
 export default function Home() {
   return (
