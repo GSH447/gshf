@@ -336,6 +336,42 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 15rem !important;
 }
 
+
+/* Main Button Styling */
+.accessibility {
+  position: fixed;
+  bottom: 10rem;
+  left: 1px;
+  background-color: #223A5C; /* WhatsApp Green */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  /* border-radius: 50px; */
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  border-bottom-right-radius: 0.3cm;
+  border-top-right-radius: 0.3cm;
+}
+
+
+.accessibilityOptions {
+  position: fixed;
+  bottom: 120px;
+  right: 1px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
 /* #donation-card-container {
   z-index: -100;
 } */
