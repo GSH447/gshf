@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import DonationCard from "../../../Donation/DonationCard";
 import LoveSymbol from "../../../Curves/love";
+import Link from 'next/link';
 
 const WaysToDonateSubsHero = ({
   bgImages,
@@ -23,7 +24,7 @@ const WaysToDonateSubsHero = ({
     
       <section
         id="hero"
-        className="border-2 border-[red] relative w-full h-screen overflow-hidden flex items-center justify-center !min-h-[10rem]"
+        className="relative w-full h-screen overflow-hidden flex items-center justify-center !min-h-[10rem]"
       >
 
       <motion.div className="absolute inset-0">
@@ -74,7 +75,7 @@ const WaysToDonateSubsHero = ({
           >
 
               <div
-                className="border-2 border-[red] grid gap-2"
+                className="grid gap-10"
               >
 
                 <div
@@ -92,7 +93,7 @@ const WaysToDonateSubsHero = ({
                   className=""
                 >
                   
-                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.5rem] font-extrabold">
+                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
                     {WDTitle1 || "Donating for your loved one life, and supports people with cardiac at The Gracespring Health Foundation."}
                   </h3>
 
@@ -100,23 +101,23 @@ const WaysToDonateSubsHero = ({
                   <br/>
 
                   
-                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.5rem] font-extrabold">
+                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
                     {WDTitle2 || "If you’re planning a funeral or memorial for a loved one, we can support you to collect donations in their memory, or set up a tribute page for your loved one."}
                   </h3>
 
                 </div>
                 
                 <div
-                  className="border-2 border-[red] flex"
+                  className="flex"
                 >
              
                   <Link
                   // href="#save_a_life_now"
                   href={WDctalink}
-                  className="inline-block bg-primary mx-[2rem] px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300 hover:bg-transparent hover:text-primary hover:border-2 hover:border-primary w-fit"
+                  className="inline-block bg-primary px-5 lg:px-7 py-4 lg:py-3 rounded-full text-md text-white font-extrabold transition-colors duration-300 hover:bg-transparent hover:text-primary hover:border-2 hover:border-primary w-fit"
                   >
                   <h1>
-                    {WDcatText || "Read More"}
+                    {WDcatText || "Get Started"}
                   </h1>
                   </Link>
 

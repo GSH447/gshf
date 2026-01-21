@@ -3,7 +3,7 @@ import MDHero from '../MDHero';
 import SubscribeCTA from '../../Banner/CTA/subscribe';
 import MakeADifference from '../../MakeADifference/01';
 
-export default function FundraiseforUs() {
+export default function FundraiseandEvents() {
   return (
 
     <>

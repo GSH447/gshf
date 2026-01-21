@@ -49,7 +49,7 @@ export const product_services = [
   title: "Donate now",
   description: "Our work is only possible with your support. Every donation takes us a step closer to another life-saving breakthrough.", 
   btnText: "Donate Today",
-  url: "#",
+  url: "/donate",
   alt: "#GracespringHospitalsFoundation"
 },
 { 
@@ -59,7 +59,7 @@ export const product_services = [
   title: "Discover how your support is changing lives",
   description: "Your donations ensure The Gracespring Health Foundation's world-leading nurses, doctors and research teams can provide the very best care and develop life-saving treatments.", 
   btnText: "What we do",
-  url: "#",
+  url: "/who-we-are/about-us",
   alt: "#GracespringHospitalsFoundation"
 },
 { 
@@ -69,7 +69,7 @@ export const product_services = [
   title: "Fundraise for us",
   description: "Help us raise money to make a difference to people with cardiac diseases and arrest everywhere. Find a way to fundraise that suits you.", 
   btnText: "Ways to fundraise",
-  url: "#",
+  url: "/make-a-donation/fundraise-for-us",
   alt: "#GracespringHospitalsFoundation"
 },
 
@@ -360,7 +360,7 @@ export const feedback = [
   id: 0,
   title: "Every 60 seconds, we help save a life",
   description:"Saving lives is at the heart of everything we do. Every minute, our dedicated teams work tirelessly to provide life-saving care and support to those in need. With your help, we can continue to make a difference and save even more lives.",
-  url: "#",
+  url: "/donate",
   btnText: "Save a Life",
   image: "/assets/images/donation/001.svg" || null,
 },
@@ -368,7 +368,7 @@ export const feedback = [
   id: 1,
   title: "Every 90 seconds, someone is diagnosed with a cardiac disease",
   description:" Heart disease is the leading cause of death globally, accounting for nearly 18 million deaths each year. Our mission is to change this statistic by funding groundbreaking research, providing life-saving treatments, and raising awareness about prevention and early detection.",
-  url: "#",
+  url: "/donate",
   btnText: "Find out more",
   image: "/assets/images/donation/005.svg" || null,
 },

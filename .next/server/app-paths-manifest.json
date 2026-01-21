@@ -1,8 +1,7 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/contact-us/page": "app/contact-us/page.js",
+  "/make-a-donation/events/page": "app/make-a-donation/events/page.js",
   "/make-a-donation/page": "app/make-a-donation/page.js",
-  "/make-a-donation/ways-to-donate/page": "app/make-a-donation/ways-to-donate/page.js",
+  "/page": "app/page.js",
   "/make-a-donation/fundraise-for-us/page": "app/make-a-donation/fundraise-for-us/page.js",
-  "/page": "app/page.js"
+  "/who-we-are/about-us/page": "app/who-we-are/about-us/page.js"
 }
