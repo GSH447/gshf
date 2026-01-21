@@ -2,22 +2,20 @@
 import MDHero from '../MDHero';
 import SubscribeCTA from '../../Banner/CTA/subscribe';
 import MakeADifference from '../../MakeADifference/01';
-// import DonateinmemoryorHonour from './DonateMemoryHonour';
 
-export default function GrantsFoundations() {
+export default function CorporateSupport() {
   return (
 
     <>
 
         <MDHero
-            MDTextTitle={"Grants and Foundation"}
+            MDTextTitle={"Corporate Support"}
         />
 
-        {/* <DonateinmemoryorHonour/> */}
 
         <MakeADifference
         bgColor={"#ffffff"}
-        title={"“I hope our fundraising will help young cardiac patients.”"}
+        title={"“Our fundraising will help young cardiac patients.”"}
         description={"'Courtney'"}
         textColor={"#223A5C"}
         subTextColor={"#223A5C"}

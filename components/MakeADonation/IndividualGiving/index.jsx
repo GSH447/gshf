@@ -4,13 +4,13 @@ import SubscribeCTA from '../../Banner/CTA/subscribe';
 import MakeADifference from '../../MakeADifference/01';
 import DonateinmemoryorHonour from './DonateMemoryHonour';
 
-export default function WaysToDonate() {
+export default function IndividualGiving() {
   return (
 
     <>
 
         <MDHero
-            MDTextTitle={"Ways to Donate"}
+            MDTextTitle={"Individual Giving"}
         />
 
         <DonateinmemoryorHonour/>

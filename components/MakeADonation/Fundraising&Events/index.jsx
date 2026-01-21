@@ -3,13 +3,13 @@ import MDHero from '../MDHero';
 import SubscribeCTA from '../../Banner/CTA/subscribe';
 import MakeADifference from '../../MakeADifference/01';
 
-export default function FundraiseandEvents() {
+export default function FundraisingEvents() {
   return (
 
     <>
 
         <MDHero
-            MDTextTitle={"Fundraise for us"}
+            MDTextTitle={"Fundraising & Events"}
         />
 
 

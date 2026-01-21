@@ -103,6 +103,35 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/who-we-are/about-us/page.js"
+    ],
+    "/make-a-donation/fundraising-events/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/fundraising-events/page.css",
+      "static/chunks/app/make-a-donation/fundraising-events/page.js"
+    ],
+    "/make-a-donation/individual-giving/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/individual-giving/page.css",
+      "static/chunks/app/make-a-donation/individual-giving/page.js"
+    ],
+    "/make-a-donation/corporate-support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/corporate-support/page.css",
+      "static/chunks/app/make-a-donation/corporate-support/page.js"
+    ],
+    "/make-a-donation/grants-foundations/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/grants-foundations/page.css",
+      "static/chunks/app/make-a-donation/grants-foundations/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
