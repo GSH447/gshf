@@ -14,7 +14,15 @@ const blobShapes = [
 
 const PRIMARY_BG = "#FDF2EB";
 
-const ContactInformation = () => {
+const ContactInformation = ({
+    contactInformationBg,
+    contactInformationHeader,
+    cihTextColor,
+    cihTextSize,
+    cihOfficeText,
+    cihPhoneText,
+    cihPostText
+}) => {
 
 
   return (
@@ -29,9 +37,22 @@ const ContactInformation = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
         className="relative z-10 mx-auto py-[2.5rem] lg:p-10 mb-[5rem]"
-        style={{backgroundColor: PRIMARY_BG}}
+        style={{backgroundColor: contactInformationBg || PRIMARY_BG}}
       >
         
+
+        <div
+            className="w-fit mx-auto"
+        >
+            <h2
+                style={{
+                    color: cihTextColor || "#223A5C",
+                    fontSize: cihTextSize || "2.5rem",
+                }}
+            >
+                
+                {contactInformationHeader || "Other ways to contact us"}</h2>
+        </div>
 
         <div
           className=" grid gap-10 lg:grid-cols-3 p-10"
@@ -89,7 +110,7 @@ const ContactInformation = () => {
                 >
 
                     <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
-                        Visit our Office
+                        {cihOfficeText || "Visit our Office"}
                     </h2>
 
                 </div>
@@ -199,7 +220,7 @@ const ContactInformation = () => {
                 >
 
                     <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
-                        By phone
+                        {cihPhoneText || "By phone"}
                     </h2>
 
                 </div>
@@ -303,7 +324,7 @@ const ContactInformation = () => {
                 >
 
                     <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
-                        By post or mail
+                        {cihPostText || "By post or mail"}
                     </h2>
 
                 </div>

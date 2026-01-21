@@ -340,8 +340,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Main Button Styling */
 .accessibility {
   position: fixed;
-  bottom: 10rem;
-  left: 1px;
+  bottom: 50%;
+  right: 1px;
   background-color: #223A5C; /* WhatsApp Green */
   color: white;
   border: none;
@@ -355,8 +355,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
-  border-bottom-right-radius: 0.3cm;
-  border-top-right-radius: 0.3cm;
+  border-bottom-left-radius: 0.3cm;
+  border-top-left-radius: 0.3cm;
 }
 
 

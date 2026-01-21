@@ -88,8 +88,8 @@ export const navLinks = [
 
   {
     label: "Our Programs and Services",
-    // href: "/programs-and-services",
-    href: "#",
+    href: "/programs-and-services",
+    // href: "#",
     // icon: FaEnvelope,
     // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
     caption: "#charity #donation #giveback",
@@ -179,127 +179,174 @@ export const navLinks = [
 
 
   
+{
+  label: "Make a Donation",
+  href: "/make-a-donation",
+  caption: "#donate #fundraise #partner",
+  subLinks: [
+    {
+      header: "Individual Giving",
+      href: "/make-a-donation/individual-giving",
+      subMenu: [
+        { label: "Make a Donation", href: "/donate" },
+        { label: "Monthly Giving", href: "/monthly-giving" },
+        { label: "Donate in Memory or Honour", href: "/memory-honour" },
+        { label: "Special Occasion Giving", href: "/special-occasion-giving" },
+      ],
+    },
+    {
+      header: "Corporate Support",
+      href: "/make-a-donation/corporate-support",
+      subMenu: [
+        { label: "Corporate Sponsorships", href: "/corporate-sponsorships" },
+        { label: "Payroll Giving", href: "/payroll-giving" },
+        { label: "Corporate Partnerships", href: "/corporate-partnerships" },
+        { label: "Sponsor a Day of Care", href: "/sponsor-a-day" },
+      ],
+    },
+    {
+      header: "Grants & Foundations",
+      href: "/make-a-donation/grants-foundations",
+      subMenu: [
+        { label: "Government Grants", href: "/government-grants" },
+        { label: "Philanthropic Foundations", href: "/philanthropic-foundations" },
+        { label: "Grant Applications", href: "/grant-applications" },
+        { label: "Grant Enquiries", href: "/grant-enquiries" },
+      ],
+    },
+    {
+      header: "Fundraising & Events",
+      href: "/make-a-donation/fundraising-events",
+      subMenu: [
+        { label: "Fundraise for Us", href: "/fundraise-for-us" },
+        { label: "Charity Runs & Walks", href: "/charity-runs-walks" },
+        { label: "Community Events", href: "/community-events" },
+        { label: "Find or Join an Event", href: "/events" },
+      ],
+    },
+  ],
+},
 
 
 
-  {
-    label: "Make a Donation",
-    href: "#",
-    // icon: FaEnvelope,
-    // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
-    caption: "#donate #fundraise #volunteer",
-    subLinks: [
-      {
-        header: "Ways to donate",
-        href: "#",
-        subMenu: [
-          {
-            label: "Make a donation",
-            href: "/donate",
-          },
-          {
-            label: "Donate in memory or Honour",
-            href: "/#",
-          },
-          {
-            label: "Leave a gift in your Will",
-            href: "/#",
-          },
-          {
-            label: "Special Occasion Giving",
-            href: "/#",
-          },
-        ],
-      },
-      
-      {
-        header: "More ways to get involved",
-        href: "#",
-        subMenu: [
-          
-          
-          {
-            label: "Sponsor a Day of Care",
-            href: "/#",
-          },
-          
-          {
-            label: "Celebrate a Life",
-            href: "/#",
-          },
-          
-          {
-            label: "Payroll Giving",
-            href: "/#",
-          },
-          
-          {
-            label: "Corporate Partnerships",
-            href: "/#",
-          },
-          
-          
-          
-          {
-            label: "Philanthropic Giving",
-            href: "/#",
-          },
-          
-        ],
-      },
+  // {
+  //   label: "Make a Donation",
+  //   href: "/make-a-donation",
+  //   // icon: FaEnvelope,
+  //   // navImage: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJ1NGZ6OXh6NDI3eGk0enFvc2R3ZzNhNHNqMG12dTlwNWtxM3F0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4clECditSu7IBveUS/giphy.webp",
+  //   caption: "#donate #fundraise #volunteer",
+  //   subLinks: [
+  //     {
+  //       header: "Ways to donate",
+  //       href: "/make-a-donation/ways-to-donate",
+  //       subMenu: [
+  //         {
+  //           label: "Make a donation",
+  //           href: "/donate",
+  //         },
+  //         {
+  //           label: "Donate in memory or Honour",
+  //           href: "#DonateinmemoryorHonour",
+  //         },
+  //         {
+  //           label: "Leave a gift in your Will",
+  //           href: "#LeaveagiftinyourWill",
+  //         },
+  //         {
+  //           label: "Special Occasion Giving",
+  //           href: "#Special Occasion Giving",
+  //         },
+  //       ],
+  //     },
 
-      {
-        header: "Fundraise for us",
-        href: "#",
-        subMenu: [
-          {
-            label: "Fundraise for Us",
-            href: "/find-an-event-to-take-part-in",
-          },
-          {
-            label: "Find or Join an Event",
-            href: "/do-your-own-fundraising",
-          },
+  //     {
+  //       header: "Fundraise for us",
+  //       href: "/make-a-donation/fundraise-for-us",
+  //       subMenu: [
+  //         {
+  //           label: "Fundraise for Us",
+  //           href: "#FundraiseforUs",
+  //         },
+  //         {
+  //           label: "Find or Join an Event",
+  //           href: "#FindorJoinanEvent",
+  //         },
    
-        ],
-      },
+  //       ],
+  //     },
+
+  //     {
+  //       header: "Get Involved",
+  //       href: "/make-a-donation/get-involved",
+  //       subMenu: [
+  //         {
+  //           label: "Volunteer With Us",
+  //           href: "/#",
+  //         },
+  //         {
+  //           label: "Share Your Story",
+  //           href: "/#",
+  //         },
+  //         {
+  //           label: "Become a Community Advocate",
+  //           href: "/#",
+  //         },
+  //         {
+  //           label: "Contact & Support",
+  //           href: "/contact-us",
+  //         },
+  //       ],
+  //     },
       
+      
+  //     {
+  //       header: "More ways to get involved",
+  //       href: "/make-a-donation/more-ways-to-get-involved",
+  //       subMenu: [
+          
+          
+  //         {
+  //           label: "Sponsor a Day of Care",
+  //           href: "/#",
+  //         },
+          
+  //         {
+  //           label: "Celebrate a Life",
+  //           href: "/#",
+  //         },
+          
+  //         {
+  //           label: "Payroll Giving",
+  //           href: "/#",
+  //         },
+          
+  //         {
+  //           label: "Corporate Partnerships",
+  //           href: "/#",
+  //         },
+          
+          
+          
+  //         {
+  //           label: "Philanthropic Giving",
+  //           href: "/#",
+  //         },
+          
+  //       ],
+  //     },
 
-      {
-        header: "Get Involved",
-        href: "#",
-        subMenu: [
-          {
-            label: "Volunteer With Us",
-            href: "/#",
-          },
-          {
-            label: "Share Your Story",
-            href: "/#",
-          },
-          {
-            label: "Become a Community Advocate",
-            href: "/#",
-          },
-          {
-            label: "Contact & Support",
-            href: "/contact-us",
-          },
-        ],
-      },
-
-    ],
-  },
+  //   ],
+  // },
 
 
 
-  {
-    label: "News and stories",
-    href: "/blog",
-    // icon: FaEnvelope,
-    caption: "#excerise #stayhealthy",
+  // {
+  //   label: "News and stories",
+  //   href: "/blog",
+  //   // icon: FaEnvelope,
+  //   caption: "#excerise #stayhealthy",
 
-  },
+  // },
 
   {
     label: "Contact us",

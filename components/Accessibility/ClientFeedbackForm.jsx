@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 
+
+
 const sentiments = [
-  { key: "angry", emoji: "😡", label: "Very unhappy" },
-  { key: "confused", emoji: "😕", label: "Not satisfied" },
-  { key: "neutral", emoji: "😐", label: "Okay" },
-  { key: "happy", emoji: "🙂", label: "Satisfied" },
   { key: "love", emoji: "😍", label: "Very happy" },
+  { key: "happy", emoji: "🙂", label: "Satisfied" },
+  { key: "neutral", emoji: "😐", label: "Okay" },
+  { key: "confused", emoji: "😕", label: "Not satisfied" },
+  { key: "angry", emoji: "😡", label: "Very unhappy" },
 ];
 
 export default function ClientFeedbackForm() {
@@ -143,68 +145,68 @@ export default function ClientFeedbackForm() {
         />
 
         
-              <div>
-                <div className="flex items-center border rounded-md p-2 space-x-2">
-                  <div className="relative">
-                    <button
-                      type="button"
-                      className="flex items-center space-x-2 p-2 focus:outline-none"
-                      // onClick={() => {
-                      //   /* Optional: Add a modal/dropdown to select the country */
-                      // }}
+        <div>
+          <div className="flex items-center border rounded-md p-2 space-x-2">
+            <div className="relative">
+              <button
+                type="button"
+                className="flex items-center space-x-2 p-2 focus:outline-none"
+                // onClick={() => {
+                //   /* Optional: Add a modal/dropdown to select the country */
+                // }}
 
-                    onClick={() => setShowDropdown(!showDropdown)}
+              onClick={() => setShowDropdown(!showDropdown)}
+              >
+                <img
+                  src={selectedCountry.flag || '/logo.svg'}
+                  alt="Flag"
+                  className="w-6 h-4 rounded-md"
+                />
+                
+                <span className="text-[small] lg:text-[15px]">{selectedCountry.code}</span>
+              </button>
+
+              {showDropdown && (
+              <div className="absolute top-12 left-0 bg-white border shadow-md max-h-60 overflow-y-auto w-44 z-10">
+                <input
+                  type="text"
+                  placeholder="Search country..."
+                  className="w-full p-2 border-b lg:text-[15px]"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+            {countries
+                  .filter((c) =>
+                    c.name.toLowerCase().includes(search.toLowerCase())
+                  )
+                  .map((country) => (
+                    <div
+                      key={`${country.code}-${country.name}`}
+                      className="flex items-center p-2 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleCountryChange(country)}
                     >
                       <img
-                        src={selectedCountry.flag || '/logo.svg'}
-                        alt="Flag"
-                        className="w-6 h-4 rounded-md"
+                        src={country.flag}
+                        alt={country.name}
+                        className="w-6 h-4 mr-2"
                       />
-                      
-                      <span className="text-[small] lg:text-[15px]">{selectedCountry.code}</span>
-                    </button>
-
-                    {showDropdown && (
-                    <div className="absolute top-12 left-0 bg-white border shadow-md max-h-60 overflow-y-auto w-44 z-10">
-                      <input
-                        type="text"
-                        placeholder="Search country..."
-                        className="w-full p-2 border-b lg:text-[15px]"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                      />
-                  {countries
-                        .filter((c) =>
-                          c.name.toLowerCase().includes(search.toLowerCase())
-                        )
-                        .map((country) => (
-                          <div
-                            key={`${country.code}-${country.name}`}
-                            className="flex items-center p-2 hover:bg-gray-200 cursor-pointer"
-                            onClick={() => handleCountryChange(country)}
-                          >
-                            <img
-                              src={country.flag}
-                              alt={country.name}
-                              className="w-6 h-4 mr-2"
-                            />
-                            <span>{country.name} ({country.code})</span>
-                          </div>
-                        ))}
+                      <span>{country.name} ({country.code})</span>
                     </div>
-                  )}
-                    </div>
-
-                    <input
-                      type="tel"
-                      placeholder="8143516481"
-                      className="flex-1 p-2 focus:ring focus:outline-none lg:text-[15px]"
-                      name="phone"
-                      onChange={handleChange}
-                      required
-                    />
-                </div>
+                  ))}
               </div>
+            )}
+              </div>
+
+              <input
+                type="tel"
+                placeholder="8143516481"
+                className="flex-1 p-2 focus:ring focus:outline-none lg:text-[15px]"
+                name="phone"
+                onChange={handleChange}
+                required
+              />
+          </div>
+        </div>
 
         {/* Type */}
         <select
@@ -221,23 +223,41 @@ export default function ClientFeedbackForm() {
         {/* Emoji sentiment */}
         <div>
           <p className="text-sm mb-2">How do you feel?</p>
-          <div className="flex justify-between">
-            {sentiments.map((item) => (
-              <button
-                type="button"
-                key={item.key}
-                onClick={() => handleEmojiSelect(item)}
-                className={`text-2xl transition transform hover:scale-125 ${
-                  formData.sentiment === item.key
-                    ? "scale-125"
-                    : "opacity-50"
-                }`}
-                aria-label={item.label}
-              >
-                {item.emoji}
-              </button>
-            ))}
+     
+          <div className="flex justify-between items-start">
+            {sentiments.map((item) => {
+              const isActive = formData.sentiment === item.key;
+
+              return (
+                <div
+                  key={item.key}
+                  className="flex flex-col items-center w-full"
+                >
+                  <button
+                    type="button"
+                    onClick={() => handleEmojiSelect(item)}
+                    className={`
+                      text-2xl
+                      transition-all
+                      duration-200
+                      ${isActive ? "scale-125" : "opacity-50 hover:opacity-100"}
+                    `}
+                    aria-label={item.label}
+                  >
+                    {item.emoji}
+                  </button>
+
+                  {/* Active label */}
+                  {isActive && (
+                    <span className="mt-1 text-xs font-semibold text-primary text-center">
+                      {item.label}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
+        
         </div>
 
         {/* Message */}

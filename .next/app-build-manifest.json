@@ -23,16 +23,28 @@
       "static/css/app/programs-and-services/page.css",
       "static/chunks/app/programs-and-services/page.js"
     ],
-    "/donate/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/donate/page.css",
-      "static/chunks/app/donate/page.js"
-    ],
     "/contact-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/contact-us/page.js"
+    ],
+    "/make-a-donation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/page.css",
+      "static/chunks/app/make-a-donation/page.js"
+    ],
+    "/make-a-donation/ways-to-donate/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/ways-to-donate/page.css",
+      "static/chunks/app/make-a-donation/ways-to-donate/page.js"
+    ],
+    "/make-a-donation/fundraise-for-us/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/make-a-donation/fundraise-for-us/page.css",
+      "static/chunks/app/make-a-donation/fundraise-for-us/page.js"
     ]
   }
 }

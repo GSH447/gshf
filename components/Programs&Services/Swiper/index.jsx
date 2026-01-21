@@ -62,7 +62,7 @@ const ProgramsAndServicesSwiper = () => {
       </Swiper> */}
 
       
-       <div className="bg-primary fixed left-0 right-0 bottom-0 z-50 flex justify-center gap-3 px-4 py-2">
+       <div className="fixed left-0 right-0 bottom-0 z-50 flex justify-center gap-3 px-4 py-2">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
