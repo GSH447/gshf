@@ -42,16 +42,20 @@ const ContactInformation = ({
         
 
         <div
-            className="w-fit mx-auto"
+            className="w-fit mx-auto px-10 lg:px-0"
         >
             <h2
                 style={{
                     color: cihTextColor || "#223A5C",
                     fontSize: cihTextSize || "2.5rem",
                 }}
+                className="!sm:text-[1rem]"
             >
                 
-                {contactInformationHeader || "Other ways to contact us"}</h2>
+                {contactInformationHeader || "Other ways to contact us"}
+            
+            </h2>
+
         </div>
 
         <div

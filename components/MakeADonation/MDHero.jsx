@@ -15,7 +15,9 @@ const blobShapes = [
 const PRIMARY_BG = "#FDF2EB";
 
 const MDHero = ({
-    MDTextTitle
+    MDTextTitle,
+    MDSubImages,
+    svgBg
 }) => {
 
 
@@ -58,13 +60,14 @@ const MDHero = ({
                 >
                     <path
                     d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                    fill="#e28ad2" // primary color
+                    fill={svgBg || "#e28ad2"} // primary color
                     />
                 </svg>
 
                 {/* Icon on top */}
                 <Image
-                    src="/assets/images/make-a-donation/make-a-donation.png"
+                    // src="/assets/images/make-a-donation/grant.png"
+                    src={MDSubImages || "/assets/images/make-a-donation/make-a-donation.png"}
                     width={1000}
                     height={1000}
                     alt="chat icon"
