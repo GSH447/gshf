@@ -63,7 +63,7 @@ export default function CookieConsent() {
             {/* Actions */}
             <div className="flex items-center gap-3">
               <button
-                onClick={() => handleConsent("rejected")}
+                onClick={() => handleConsent("accepted")}
                 className="
                   px-4 py-2 text-sm rounded-md
                   border border-gray-300

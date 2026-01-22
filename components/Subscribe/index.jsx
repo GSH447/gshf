@@ -1,6 +1,8 @@
 "use client";
 import React, {useState} from "react";
 import { motion } from "framer-motion";
+import axiosInstance from "../../lib/axios";
+
 
 const SubscribeForm = () => {
     const [firstname, setFirstname] = useState("");
@@ -10,31 +12,37 @@ const SubscribeForm = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
+
     const handleSubscribe = async (e) => {
         e.preventDefault();
         setLoading(true);
         setMessage(null);
         setError(null);
+    
 
         try {
-            const response = await fetch("http://localhost/heelheid/subscribe.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
-            });
-            const result = await response.json();
-            if (result.success) {
-                setMessage(`Subscribed successfully! Location: ${result.location.country}`);
+            const response = await axiosInstance.post('/subscriber', { firstname, lastname, email });
+            const result = response.data;
+        
+            if (result.status === 'success') {
+                setMessage(`Subscribed successfully!`);
                 setEmail("");
             } else {
-                setError(result.error || "Subscription failed.");
+                setError(result.message || "Subscription failed.");
             }
         } catch (err) {
-            setError("Network error, please try again.");
-        } finally {
+            if (err.response && err.response.data) {
+                setError(err.response.data.message || "Something went wrong.");
+            } else {
+                setError(err.message || "Network error, please try again.");
+            }
+        }
+        
+        finally {
             setLoading(false);
         }
     };
+
   return (
     <>
       {/* <!-- ===== Subscribe form ===== --> */}
@@ -92,7 +100,7 @@ const SubscribeForm = () => {
                                     className="p-3 w-full text-gray-700 bg-gray-100 rounded-lg focus:outline-none"
                                     value={firstname}
                                     onChange={(e) => setFirstname(e.target.value)}
-                                    required
+                                    
                                 />
                             </div>
                             
@@ -107,7 +115,7 @@ const SubscribeForm = () => {
                                     className="p-3 w-full text-gray-700 bg-gray-100 rounded-lg focus:outline-none"
                                     value={lastname}
                                     onChange={(e) => setLastname(e.target.value)}
-                                    required
+                                    
                                 />
 
                             </div>

@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import axiosInstance from "../../lib/axios";
+
 export default function ContactForm() {
   const [countries, setCountries] = useState([]); //countries variables
   const [text, setText] = useState(""); //text variables
@@ -99,7 +101,7 @@ export default function ContactForm() {
     setIsChecked(e.target.checked); // Update the checkbox state
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
     setSuccessMessage("");
@@ -109,32 +111,36 @@ export default function ContactForm() {
       countryCode: selectedCountry.code,
     };
 
-    fetch("http://localhost/heelheid/contact.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setSuccessMessage("Message sent successfully!");
-          setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
-          setText("");
-          setLoading(false);
-        } else {
-          setErrorMessage("Failed to send message. Please try again later.");
-          setLoading(false);
+    try {
+        const response = await axiosInstance.post('/contact',  payload );
+        const result = response.data;
+    
+        if (result.status === 'success') {
+          setSuccessMessage(`Submitted successfully!`);
+        } 
+        else {
+          setErrorMessage(result.message || "Submission failed, email admin@gracespringhospitals.com");
         }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setErrorMessage("Failed to send message. Please try again later.");
+    } 
+  
+    
+    catch (err) {
+      const error = err;
+    
+      if (error.response && error.response.data) {
+        setErrorMessage(error.response.data.message || "Something went wrong.");
+      } else if (error.message) {
+        setErrorMessage(error.message || "Network error, please try again.");
+      } else {
+        setErrorMessage("An unexpected error occurred.");
+      }
+    }
+    
+    finally {
         setLoading(false);
-      });
-  };
+    }
 
+  };
   // Modal Toggle
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
