@@ -21,7 +21,7 @@ export default function GrantsFoundations() {
             Government grants help improve cardiac healthcare infrastructure,
             enhance public health initiatives, and support vulnerable patients.
           `,
-          image: "/assets/images/banner/government-grants.svg",
+          image: "/assets/images/make-a-donation/about-public-health-infrastructure-grant.png",
           display: "row-reverse",
           link: "/make-a-donation/government-grants",
           linkCaption: "View Programs",
@@ -34,7 +34,7 @@ export default function GrantsFoundations() {
             Philanthropic foundations play a critical role in advancing pediatric cardiac research,
             treatment access, and long-term health outcomes.
           `,
-          image: "/assets/images/banner/philanthropic-foundations.svg",
+          image: "/assets/images/make-a-donation/grant.png",
           display: "row",
           link: "/make-a-donation/philanthropic-foundations",
           linkCaption: "Partner With Us",
@@ -57,7 +57,7 @@ export default function GrantsFoundations() {
             We welcome grant applications that align with our mission to improve cardiac care,
             support innovation, and save lives.
           `,
-          image: "/assets/images/banner/grant-applications.svg",
+          image: "/assets/images/make-a-donation/grantApplication.png",
           display: "row-reverse",
           link: "/make-a-donation/grant-applications",
           linkCaption: "Apply Now",
@@ -70,7 +70,7 @@ export default function GrantsFoundations() {
             For questions regarding funding opportunities or partnerships,
             our team is available to assist with grant enquiries.
           `,
-          image: "/assets/images/banner/grant-enquiries.svg",
+          image: "/assets/images/make-a-donation/grant.png",
           display: "row",
           link: "/make-a-donation/grant-enquiries",
           linkCaption: "Contact Us",

@@ -1,31 +1,8 @@
 "use client";
+
 //navigation links/sitemaps
-export const navLinks = [
-    { name: "Who we are", url: "#hero" },
-    { name: "What we do", url: "#about" },
-    { name: "Get involved", url: "#portfolios" },
-    { name: "News and stories", url: "#services" },
-    { name: "Contact", url: "#contact" },
-  ];
-
-
-
-  export const links = [
-
+export const links = [
    
-
-
-
-
-
-// Our reports and accounts
-// Discover our latest reports and accounts.
-
-// Careers with us
-// Find out more about working at The Royal Marsden Cancer Charity
-
-
-
   {
     label: "Who we are",
     href: "#",
@@ -38,9 +15,8 @@ export const navLinks = [
         href: "/who-we-are/about-us",
         subMenu: [
           {
-            label: "Find out more about who we are and why we exist",
-            
-    href: "#",
+            label: "Find out more about who we are and why we exist",            
+            href: "#",
           },
         ],
       },
@@ -58,18 +34,6 @@ export const navLinks = [
         ],
       },
       
-      // {
-      //   header: "Our Cardiac Team",
-      //   href: "/who-we-are/our-people",
-      //   subMenu: [
-
-      //     {
-      //       label: "Our Cardiac Team consists of the cardiothoracic and vascular Surgeons, paediatric cardiologists, adult cardiologists, cardiac anaesthetists e.t.c",
-      //       href: "/who-we-are/our-people",
-      //     },
-
-      //   ],
-      // },
       
       {
         header: "Careers with us",
@@ -176,61 +140,57 @@ export const navLinks = [
 
     ],
   },
-
-
-  
-{
-  label: "Make a Donation",
-  href: "/make-a-donation",
-  caption: "#donate #fundraise #partner",
-  subLinks: [
-    {
-      header: "Individual Giving",
-      href: "/make-a-donation/individual-giving",
-      subMenu: [
-        { label: "Make a Donation", href: "/donate" },
-        { label: "Monthly Giving", href: "/make-a-donation/monthly-giving" },
-        { label: "Donate in Memory or Honour", href: "/make-a-donation/memory-honour" },
-        { label: "Special Occasion Giving", href: "/make-a-donation/special-occasion-giving" },
-      ],
-    },
     
-    {
-      header: "Corporate Support",
-      href: "/make-a-donation/corporate-support",
-      subMenu: [
-        { label: "Corporate Sponsorships", href: "/make-a-donation/corporate-sponsorships" },
-        { label: "Payroll Giving", href: "/make-a-donation/payroll-giving" },
-        { label: "Corporate Partnerships", href: "/make-a-donation/corporate-partnerships" },
-        { label: "Sponsor a Day of Care", href: "/make-a-donation/sponsor-a-day" },
-      ],
-    },
+  {
+    label: "Make a Donation",
+    href: "/make-a-donation",
+    caption: "#donate #fundraise #partner",
+    subLinks: [
+      {
+        header: "Individual Giving",
+        href: "/make-a-donation/individual-giving",
+        subMenu: [
+          { label: "Make a Donation", href: "/donate" },
+          { label: "Monthly Giving", href: "/make-a-donation/monthly-giving" },
+          { label: "Donate in Memory or Honour", href: "/make-a-donation/memory-honour" },
+          { label: "Special Occasion Giving", href: "/make-a-donation/special-occasion-giving" },
+        ],
+      },
+      
+      {
+        header: "Corporate Support",
+        href: "/make-a-donation/corporate-support",
+        subMenu: [
+          { label: "Corporate Sponsorships", href: "/make-a-donation/corporate-sponsorships" },
+          { label: "Payroll Giving", href: "/make-a-donation/payroll-giving" },
+          { label: "Corporate Partnerships", href: "/make-a-donation/corporate-partnerships" },
+          { label: "Sponsor a Day of Care", href: "/make-a-donation/sponsor-a-day" },
+        ],
+      },
 
-    {
-      header: "Grants & Foundations",
-      href: "/make-a-donation/grants-foundations",
-      subMenu: [
-        { label: "Government Grants", href: "/make-a-donation/government-grants" },
-        { label: "Philanthropic Foundations", href: "/make-a-donation/philanthropic-foundations" },
-        { label: "Grant Applications", href: "/make-a-donation/grant-applications" },
-        { label: "Grant Enquiries", href: "/make-a-donation/grant-enquiries" },
-      ],
-    },
+      {
+        header: "Grants & Foundations",
+        href: "/make-a-donation/grants-foundations",
+        subMenu: [
+          { label: "Government Grants", href: "/make-a-donation/government-grants" },
+          { label: "Philanthropic Foundations", href: "/make-a-donation/philanthropic-foundations" },
+          { label: "Grant Applications", href: "/make-a-donation/grant-applications" },
+          { label: "Grant Enquiries", href: "/make-a-donation/grant-enquiries" },
+        ],
+      },
 
-    {
-      header: "Fundraising & Events",
-      href: "/make-a-donation/fundraising-events",
-      subMenu: [
-        { label: "Fundraise for Us", href: "/make-a-donation/fundraise-for-us" },
-        { label: "Charity Runs & Walks", href: "/make-a-donation/charity-runs-walks" },
-        { label: "Community Events", href: "/make-a-donation/community-events" },
-        { label: "Find or Join an Event", href: "/make-a-donation/events" },
-      ],
-    },
-  ],
-},
-
-
+      {
+        header: "Fundraising & Events",
+        href: "/make-a-donation/fundraising-events",
+        subMenu: [
+          { label: "Fundraise for Us", href: "/make-a-donation/fundraise-for-us" },
+          { label: "Charity Runs & Walks", href: "/make-a-donation/charity-runs-walks" },
+          { label: "Community Events", href: "/make-a-donation/community-events" },
+          { label: "Find or Join an Event", href: "/make-a-donation/events" },
+        ],
+      },
+    ],
+  },
 
   {
     label: "Contact us",
@@ -239,7 +199,6 @@ export const navLinks = [
     caption: "#excerise #stayhealthy",
 
   },
-
   
 ];
 
@@ -249,28 +208,29 @@ export const FooterLinks = {
 
   
   link1: [
-      { name: "Making breakthroughs happen", url: "#" },
-      { name: "Volunteer today", url: "#" },
-      { name: "Paediatric-leading treatment and care", url: "#" },
-      { name: "Share your story", url: "#" },
-      { name: "Our supporter promise", url: "#" },
-      { name: "News and stories", url: "#" },
+      { name: "Monthly Giving", url: "/make-a-donation/monthly-giving" },
+      { name: "Donate in Memory", url: "/make-a-donation/memory-honour" },
+      { name: "Special Occasion Giving", url: "/make-a-donation/special-occasion-giving" },
+      { name: "Corporate Sponsorships", url: "/make-a-donation/corporate-sponsorships" },
+      { name: "Payroll Giving", url: "/make-a-donation/payroll-giving" },
+      { name: "Sponsor a Day of Care", url: "/make-a-donation/sponsor-a-day" },
+      { name: "More ways to donate", url: "/make-a-donation" },
 
   ],
 
   link2: [
-      { name: "Cardiac-leading treatment and care", url: "#" },
-      { name: "Donate", url: "#" },
-      { name: "Fundraising ideas", url: "#" },
-      { name: "Become a corporate partner", url: "#" },
-      { name: "Corporate partners", url: "#" },
-      { name: "Account", url: "/account" },
+      { name: "Public Awareness Initiatives", url: "/programs-and-services#PublicAwarenessInitiatives" },
+      { name: "Financial Assistance Program", url: "/programs-and-services#FinancialAssistanceProgram" },
+      { name: "Research Funding", url: "/programs-and-services#ResearchFunding" },
+      { name: "Support Groups and Counselling Services", url: "/programs-and-services#SupportGroupsandCounsellingServices" },
+      { name: "Research Initiatives", url: "/programs-and-services#ResearchInitiatives" },
+      { name: "Educational Resources", url: "/programs-and-services#EducationalResources" },
 
   ],
 
   company: [
-      { name: "About us", url: "#" },
-      { name: "What we do", url: "#" },
+      { name: "About us", url: "/who-we-are/about-us" },
+      { name: "Our People", url: "/who-we-are/our-people" },
       { name: "Privacy", url: "#" },
       { name: "Terms & Condition", url: "#" },
   ],

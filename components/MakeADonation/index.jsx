@@ -28,7 +28,7 @@ export default function MakeADonation() {
         display: "row",
         link: "/make-a-donation/individual-giving",
         linkCaption: "Give Today",
-        bgColor: "#ECECEC",
+        bgColor: "#fff",
       }} />
 
       {/* ===================== Corporate Support ===================== */}
@@ -42,7 +42,7 @@ export default function MakeADonation() {
         display: "row-reverse",
         link: "/make-a-donation/corporate-support",
         linkCaption: "Partner With Us",
-        bgColor: "#FFFFFF",
+        bgColor: "#ECECEC",
       }} />
 
 
@@ -66,7 +66,7 @@ export default function MakeADonation() {
         display: "row",
         link: "/make-a-donation/grants-foundations",
         linkCaption: "Learn More",
-        bgColor: "#ECECEC",
+        bgColor: "#fff",
       }} />
 
 
@@ -83,7 +83,7 @@ export default function MakeADonation() {
         display: "row-reverse",
         link: "/make-a-donation/fundraising-events",
         linkCaption: "View Events",
-        bgColor: "#FFFFFF",
+        bgColor: "#ECECEC",
       }} />
 
       

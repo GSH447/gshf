@@ -1,7 +1,7 @@
 {
   "/make-a-donation/page": "app/make-a-donation/page.js",
-  "/make-a-donation/corporate-sponsorships/page": "app/make-a-donation/corporate-sponsorships/page.js",
-  "/make-a-donation/individual-giving/page": "app/make-a-donation/individual-giving/page.js",
+  "/make-a-donation/grants-foundations/page": "app/make-a-donation/grants-foundations/page.js",
   "/make-a-donation/fundraising-events/page": "app/make-a-donation/fundraising-events/page.js",
-  "/make-a-donation/grants-foundations/page": "app/make-a-donation/grants-foundations/page.js"
+  "/make-a-donation/events/page": "app/make-a-donation/events/page.js",
+  "/programs-and-services/page": "app/programs-and-services/page.js"
 }

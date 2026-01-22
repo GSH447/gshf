@@ -23,7 +23,7 @@ export default function IndividualGiving() {
               Every donation directly supports critical heart treatments, medical equipment,
               and patient care services that save lives and restore hope.
             `,
-            image: "/assets/images/banner/make-donation.svg",
+            image: "/assets/images/make-a-donation/mad.png",
             display: "row-reverse",
             link: "/donate",
             linkCaption: "Donate Now",
@@ -36,7 +36,7 @@ export default function IndividualGiving() {
               Monthly giving provides consistent support for children receiving ongoing cardiac care.
               Your sustained generosity ensures continuous treatment and long-term impact.
             `,
-            image: "/assets/images/banner/monthly-giving.svg",
+            image: "/assets/images/make-a-donation/funds-grants.png",
             display: "row",
             link: "/make-a-donation/monthly-giving",
             linkCaption: "Become a Monthly Donor",
@@ -60,7 +60,7 @@ export default function IndividualGiving() {
             Celebrate a life or honor a loved one through a tribute gift.
             These meaningful donations help fund heart care while creating a lasting legacy of compassion.
           `,
-          image: "/assets/images/banner/memory-honour.svg",
+          image: "/assets/images/make-a-donation/Make-A-Donation-In-Honor-Of-Someone-To-These-Special-Causes.png",
           display: "row-reverse",
           link: "/make-a-donation/donate-in-honour",
           linkCaption: "Make a Tribute Gift",
@@ -73,7 +73,7 @@ export default function IndividualGiving() {
             Turn birthdays, anniversaries, and milestones into moments of impact.
             Your special occasion gift helps support children battling heart disease.
           `,
-          image: "/assets/images/banner/special-occasion.svg",
+          image: "/assets/images/make-a-donation/individual-donations-001.png",
           display: "row",
           link: "/make-a-donation/special-occasion-giving",
           linkCaption: "Give with Purpose",

@@ -33,12 +33,12 @@ import { motion } from "framer-motion";
       <section className="overflow-hidden lg:mx-10">
       {/* Dynamic background color */}
         <div
-          className="mx-auto lg:rounded-[24px] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0 mb-10"
+          className=" mx-auto lg:rounded-[24px] px-7.5 py-12.5 md:px-12.5 xl:px-17.5 xl:py-0 mb-10"
           style={{ backgroundColor: bgColor || "transparent" }} // Default if value not provided
         >
 
           <div 
-            className="lg:flex lg:justify-evenly lg:mx-auto px-[48px] py-[33px] gap-10 banner-content-container"            
+            className=" lg:flex lg:justify-evenly lg:mx-auto px-[48px] py-[33px] gap-10 banner-content-container"            
             style={{ flexDirection: display || "row" }} // Default if value not provided
           >
 
@@ -58,14 +58,14 @@ import { motion } from "framer-motion";
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="lg:w-3/4 animate_left  grid"
+              className=" lg:w-3/4 animate_left grid gap-y-6 lg:gap-y-1"
             >
               <div
                 className="my-auto w-full lg:w-fit"
               >
                 {/* Dynamic Title */}
                 <h1
-                  className={`relative m-auto  w-fit banner-dynamic-title ${
+                  className={` relative m-auto  w-fit banner-dynamic-title font-bold lg:font-extrabold ${
                     titleColor ? "" : " text-black"
                   }`}
                   style={{
@@ -74,7 +74,7 @@ import { motion } from "framer-motion";
                     fontFamily: "AvenirBold",
                   }}
                 >
-                  {title || "Hello HeelHeid No Title Available"}
+                  {title || "Hello No Title Available"}
                 </h1>
               </div>
               
@@ -83,7 +83,7 @@ import { motion } from "framer-motion";
               >
                 {/* Dynamic Caption */}
                 <p
-                  className={`relative m-auto text-[15px] text-justify leading-6 banner-dynamic-caption ${
+                  className={` relative m-auto text-[15px] text-justify leading-6 banner-dynamic-caption ${
                     captionColor ? "" : " text-black"
                   }`}
                   style={{
@@ -110,7 +110,7 @@ import { motion } from "framer-motion";
 
 
               <div 
-                className="my-auto "
+                className=" my-auto "
               >
 
 
@@ -118,10 +118,10 @@ import { motion } from "framer-motion";
                     <Link
                       href={link}
                       target="_blank" 
-                      className="inline-flex items-center rounded-lg px-4 py-2 font-medium m-auto bg-primary hover:bg-black gap-1 lg:my-10"
+                      className=" inline-flex items-center rounded-lg px-5 py-3 lg:py-2 font-medium m-auto bg-primary hover:bg-black gap-1 lg:my-10"
                     >
                       <div className="my-auto">
-                        <p className="text-white banner-link-caption">{linkCaption} </p>
+                        <p className="text-white banner-link-caption font-bold">{linkCaption} </p>
                       </div>
 
                       <div className="my-auto">

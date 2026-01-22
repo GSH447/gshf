@@ -23,11 +23,11 @@ export default function CorporateSupport() {
             Corporate sponsorships fund essential programs and events that advance pediatric cardiac care
             while creating meaningful community and brand impact.
           `,
-          image: "/assets/images/banner/corporate-sponsorships.svg",
+          image: "/assets/images/make-a-donation/corporate-support.png",
           display: "row",
           link: "/make-a-donation/corporate-sponsorships",
           linkCaption: "Become a Sponsor",
-          bgColor: "#ECECEC",
+          bgColor: "#FFFFFF",
         }} />
 
         <BannerCard banner={{
@@ -36,11 +36,11 @@ export default function CorporateSupport() {
             Payroll giving allows employees to support life-saving heart care through regular,
             tax-effective contributions made directly from their salary.
           `,
-          image: "/assets/images/banner/payroll-giving.svg",
+          image: "/assets/images/make-a-donation/giving.png",
           display: "row-reverse",
           link: "/make-a-donation/payroll-giving",
           linkCaption: "Get Started",
-          bgColor: "#FFFFFF",
+          bgColor: "#ECECEC",
         }} />
 
 
@@ -59,7 +59,7 @@ export default function CorporateSupport() {
             Long-term corporate partnerships help drive innovation, expand cardiac programs,
             and ensure sustainable healthcare solutions for children and families.
           `,
-          image: "/assets/images/banner/corporate-partnerships.svg",
+          image: "/assets/images/make-a-donation/Grants&Foundations.png",
           display: "row",
           link: "/make-a-donation/corporate-partnerships",
           linkCaption: "Explore Partnerships",
@@ -72,7 +72,7 @@ export default function CorporateSupport() {
             Sponsoring a day of care helps cover vital heart treatments, nursing support,
             and medical services for patients facing cardiac disease.
           `,
-          image: "/assets/images/banner/sponsor-day-care.svg",
+          image: "/assets/images/make-a-donation/001.png",
           display: "row-reverse",
           link: "/make-a-donation/sponsor-a-day",
           linkCaption: "Sponsor a Day",

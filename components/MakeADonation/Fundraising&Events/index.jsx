@@ -22,11 +22,11 @@ export default function FundraisingEvents() {
             Start your own fundraiser or take on a challenge to help provide
             critical heart care for children and families in need.
           `,
-          image: "/assets/images/banner/fundraise-for-us.svg",
+          image: "/assets/images/make-a-donation/001.png",
           display: "row",
           link: "/make-a-donation/fundraise-for-us",
           linkCaption: "Start Fundraising",
-          bgColor: "#ECECEC",
+          bgColor: "#FFFFFF",
         }} />
 
         <BannerCard banner={{
@@ -35,11 +35,11 @@ export default function FundraisingEvents() {
             Join a charity run or walk to raise funds, promote heart health,
             and support children affected by cardiac disease.
           `,
-          image: "/assets/images/banner/charity-runs.svg",
+          image: "/assets/images/make-a-donation/vmo.png",
           display: "row-reverse",
           link: "/make-a-donation/charity-runs-walks",
           linkCaption: "Join an Event",
-          bgColor: "#FFFFFF",
+          bgColor: "#ECECEC",
         }} />
 
 
@@ -58,7 +58,7 @@ export default function FundraisingEvents() {
             Community events create powerful opportunities to raise awareness,
             inspire giving, and support life-saving cardiac programs.
           `,
-          image: "/assets/images/banner/community-events.svg",
+          image: "/assets/images/make-a-donation/giving.png",
           display: "row",
           link: "/make-a-donation/community-events",
           linkCaption: "Get Involved",
@@ -71,7 +71,7 @@ export default function FundraisingEvents() {
             Discover upcoming fundraising events or join an existing initiative
             to help save lives through improved cardiac care.
           `,
-          image: "/assets/images/banner/find-event.svg",
+          image: "/assets/images/make-a-donation/individual-donations-001.png",
           display: "row-reverse",
           link: "/make-a-donation/events",
           linkCaption: "Find an Event",

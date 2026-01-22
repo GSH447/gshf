@@ -102,7 +102,7 @@ const ContactSection = ({ contacts }) => (
 const FooterBottom = ({ currentYear }) => {
 
     return (
-        <div className="border-t border-gray-300   lg:mt-6 py-6 flex flex-col sm:flex-row justify-between mx-auto text-gray-600  ">
+        <div className="border-t border-gray-300  lg:mt-6 pt-10 pb-[5rem] flex flex-col sm:flex-row justify-between mx-auto text-gray-600  ">
 
             <div className=" flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto">
 
