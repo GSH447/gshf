@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import axiosInstance from "../../lib/axios";
 
 
 
@@ -33,8 +34,8 @@ export default function ClientFeedbackForm() {
   }); //selectedCountry variables
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
 
     /* ---------------- FETCH COUNTRIES ---------------- */
@@ -82,32 +83,66 @@ export default function ClientFeedbackForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
-    setSuccess("");
-
-    try {
-      const res = await fetch("/api/feedback", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Submission failed");
-
-      setSuccess("Thank you for your feedback 💙");
-      setFormData({
-        name: "",
-        email: "",
-        type: "feedback",
-        sentiment: "",
-        emoji: "",
-        message: "",
-      });
-    } catch (err) {
-      setError("Unable to send feedback. Please try again.");
-    } finally {
-      setLoading(false);
+    setErrorMessage("");
+    setSuccessMessage("");
+    const payload = {
+      ...formData,
+      // sentiment: item.key,
+      // emoji: item.emoji,
+      countryCode: selectedCountry.code,
     }
+
+    
+        try {
+            const response = await axiosInstance.post('/feedback',  payload );
+            const result = response.data;
+        
+            if (result.status === 'success') {
+              setSuccessMessage(`Submitted successfully!`);
+            } 
+            else {
+              setErrorMessage(result.message || "Submission failed, email admin@gracespringhospitals.com");
+            }
+        } 
+      
+        
+        catch (err) {
+          const error = err;
+        
+          if (error.response && error.response.data) {
+            setErrorMessage(error.response.data.message || "Something went wrong.");
+          } else if (error.message) {
+            setErrorMessage(error.message || "Network error, please try again.");
+          } else {
+            setErrorMessage("An unexpected error occurred.");
+          }
+        }
+        
+        finally {
+            setLoading(false);
+        }
+    // try {
+    //   const res = await axiosInstance.post("/feedback", {
+    //     body: JSON.stringify(formData),
+    //   });
+
+    //   if (!res.ok) throw new Error("Submission failed");
+
+    //   setSuccess("Thank you for your feedback 💙");
+    //   setFormData({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    //     type: "feedback",
+    //     sentiment: "",
+    //     emoji: "",
+    //     message: "",
+    //   });
+    // } catch (err) {
+    //   setError("Unable to send feedback. Please try again.");
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
@@ -270,8 +305,8 @@ export default function ClientFeedbackForm() {
           // required
         />
 
-        {error && <p className="text-red-500 text-sm">{error}</p>}
-        {success && <p className="text-green-600 text-sm">{success}</p>}
+        {errorMessage && <p className="text-red-500 text-sm">{errorMessage}</p>}
+        {successMessage && <p className="text-green-600 text-sm">{successMessage}</p>}
 
         <button
           type="submit"

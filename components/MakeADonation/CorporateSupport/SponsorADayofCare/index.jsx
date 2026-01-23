@@ -32,10 +32,10 @@ const SponsoraDayofCare = () => {
       
       <ContactInformation
           contactInformationBg={"#fff"}
-          contactInformationHeader={"Other ways to donate in memory"}
-          cihOfficeText={"Donate at our office"}
-          cihPhoneText={"Donate over the phone"}
-          cihPostText={"Donate by post"}
+          contactInformationHeader={"Other ways to Sponsor a Day of Care"}
+          cihOfficeText={"Sponsor at our office"}
+          cihPhoneText={"Sponsor over the phone"}
+          cihPostText={"Sponsor by post"}
       />
 
       <SubscribeCTA/>
