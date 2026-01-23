@@ -23,6 +23,7 @@ const PhilanthropicFoundations = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/Grants&Foundations.png"}
         WDTitle={"Philanthropic Foundations Donation"}
         WDTitle1={"Partner with us to create sustainable change."}
         WDTitle2={"Foundation funding supports innovative cardiac research, treatment, and community health programs."}

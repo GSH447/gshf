@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const PayrollGiving = () => {
@@ -23,6 +23,7 @@ const PayrollGiving = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/giving.png"}
         WDTitle={"Payroll Giving Donation"}
         WDTitle1={"An easy way for employees to give regularly."}
         WDTitle2={"Payroll giving allows staff to donate directly from their salary, creating consistent support with minimal effort."}

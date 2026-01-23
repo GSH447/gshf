@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const DonateinmemoryorHonour = () => {

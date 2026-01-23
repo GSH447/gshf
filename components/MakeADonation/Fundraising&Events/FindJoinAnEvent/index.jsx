@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const FindorJoinanEvent = () => {
@@ -23,6 +23,7 @@ const FindorJoinanEvent = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/about-public-health-infrastructure-grant.png"}
         WDTitle={"Get involved today."}
         WDTitle1={"Find or Join an Event to Donate."}
         WDTitle2={"Discover upcoming events or join an existing fundraiser near you."}

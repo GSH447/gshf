@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const FundraiseforUs = () => {
@@ -23,6 +23,7 @@ const FundraiseforUs = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/individualgiving.png"}
         WDTitle={"Fundraise for Us"}
         WDTitle1={"Raise funds your way. Create a fundraising campaign and help support people living with cardiac conditions."}
         WDTitle2={"Support life-saving cardiac care with a one-time donation. Your contribution helps fund treatment, medical programs, and patient support where it’s needed most."}

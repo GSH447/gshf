@@ -32,8 +32,9 @@ const WaysToDonateSubsHero = ({
           src={bgImages || "/assets/images/make-a-donation/donate-in-memory.png"}
           alt="Donation background"
           fill
-          className="object-cover object-top"
+          className="object-cover object-top mt-[9%]"
           priority
+          // style={{ objectPosition: "top" }}
         />
       </motion.div>
 
@@ -42,16 +43,16 @@ const WaysToDonateSubsHero = ({
 
       </section>
 
-      <section className="rounded-[32px] shadow-lg gradient-bg mx-2 -mt-[28.5rem] lg:-mt-[9rem]">
+      <section className="rounded-[32px] gradient-bg mx-2 -mt-[28.5rem] lg:-mt-[9rem]">
 
 
-        <div className=" container w-fit mx-auto rounded-[32px] shadow-lg  flex flex-col-reverse lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 custom-bg">
+        <div className=" container w-fit mx-auto rounded-[32px]  flex flex-col lg:flex-row nine20 lg:p-[3rem] p-[1rem] gap-2 custom-bg">
 
 
-      <LoveSymbol
-         size="love-xxl"
-         position="love-center"
-       />
+          <LoveSymbol
+            size="love-xxl"
+            position="love-center"
+          />
           {/* <div className="right-circle" ></div> */}
 
           <motion.div
@@ -82,7 +83,7 @@ const WaysToDonateSubsHero = ({
                   className=""
                 >
                   <h1 
-                      className="relative text-4xl lg:text-6xl text-[#4966AA] "
+                      className="relative text-4xl lg:text-6xl text-white lg:text-[#4966AA] "
                       style={{fontFamily: 'AvenirBold'}}
                   >
                     {WDTitle || "Save a Life"}
@@ -93,17 +94,17 @@ const WaysToDonateSubsHero = ({
                   className=""
                 >
                   
-                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
+                  <p className="text-white lg:text-[#2A157C] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
                     {WDTitle1 || "Donating for your loved one life, and supports people with cardiac at The Gracespring Health Foundation."}
-                  </h3>
+                  </p>
 
                   <br/>
                   <br/>
 
                   
-                  <h3 className="text-[#2A157C ] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
+                  <p className="text-white lg:text-[#2A157C] text-[1.1rem] lg:text-[1.2rem] font-extrabold">
                     {WDTitle2 || "If you’re planning a funeral or memorial for a loved one, we can support you to collect donations in their memory, or set up a tribute page for your loved one."}
-                  </h3>
+                  </p>
 
                 </div>
                 

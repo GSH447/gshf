@@ -23,6 +23,7 @@ const GrantEnquiries = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/monthly-giving.jpg"}
         WDTitle={"Grant Enquiries"}
         WDTitle1={"Support life-saving cardiac care with a one-time or monthly donation."}
         WDTitle2={"Your contribution helps fund treatment, medical programs, and patient support where it’s needed most."}

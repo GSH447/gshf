@@ -87,7 +87,7 @@ export const save_a_life = [
   title: "Find an event",
   description: "Take part in one of our events to challenge yourself and raise money to support life-saving work at The Gracespring Health Foundation.", 
   btnText: "Find an event",
-  url: "#",
+  url: "/make-a-donation/events",
   alt: "#GracespringHospitalsFoundation"
 },
 { 
@@ -97,7 +97,7 @@ export const save_a_life = [
   title: "Give your time",
   description: "Our volunteers are vital. Find a volunteer role to suit you.", 
   btnText: "Volunteer with us",
-  url: "#",
+  url: "/make-a-donation/community-events",
   alt: "#GracespringHospitalsFoundation"
 },
 { 
@@ -107,7 +107,7 @@ export const save_a_life = [
   title: "Fundraise for us",
   description: "Together, we're developing new, better treatment for people with cardiac disease at The Gracespring Health Foundation and beyond.", 
   btnText: "Ways to fundraise",
-  url: "#",
+  url: "/make-a-donation/fundraise-for-us",
   alt: "#GracespringHospitalsFoundation"
 },
 

@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const CommunityEvents = () => {
@@ -23,6 +23,7 @@ const CommunityEvents = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/yipee.jpg"}
         WDTitle={"Community Events Donation"}
         WDTitle1={"Bring people together for impact."}
         WDTitle2={"Host or participate in community-led events that support heart health and patient care."}

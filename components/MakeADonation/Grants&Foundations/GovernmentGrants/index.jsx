@@ -23,6 +23,7 @@ const GovernmentGrants = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/about-public-health-infrastructure-grant.png"}
         WDTitle={"Government Grants"}
         WDTitle1={"Support large-scale cardiac health initiatives."}
         WDTitle2={"Government grants help fund programs that improve access to care and strengthen healthcare outcomes."}

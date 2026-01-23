@@ -23,6 +23,7 @@ const GrantApplications = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/grantApplication.png"}
         WDTitle={"Grant Applications"}
         WDTitle1={"Support life-saving cardiac care with a one-time donation. Your contribution helps fund treatment, medical programs, and patient support where it’s needed most."}
         WDTitle2={"Learn how to apply for funding."}

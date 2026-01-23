@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const CorporateSponsorships = () => {
@@ -23,6 +23,7 @@ const CorporateSponsorships = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/corporate-support.png"}
         WDTitle={"Corporate Sponsorships Donation"}
         WDTitle1={"Partner with us to make a measurable difference."}
         WDTitle2={"Corporate sponsorships support vital cardiac programs while showcasing your organisation’s commitment to community impact."}

@@ -3,7 +3,7 @@ import React from 'react';
 // import SaveALife from '../../Buttons/SaveALife';
 // import HeroImageGridSlider from './HeroImageGridSlider';
 import ContactInformation from '../../../Contact/ContactInformation';
-import WaysToDonateSubsHero from '../Card/Hero';
+import WaysToDonateSubsHero from '../../Grants&Foundations/Card/Hero';
 import SubscribeCTA from '../../../Banner/CTA/subscribe';
 
 const SponsoraDayofCare = () => {
@@ -23,6 +23,7 @@ const SponsoraDayofCare = () => {
 
 
       <WaysToDonateSubsHero
+        bgImages={"/assets/images/make-a-donation/001.png"}
         WDTitle={"Sponsor a Day of Care"}
         WDTitle1={"Make a direct impact in one day."}
         WDTitle2={"Sponsoring a day of care helps cover treatment and essential services for cardiac patients when they need it most."}
