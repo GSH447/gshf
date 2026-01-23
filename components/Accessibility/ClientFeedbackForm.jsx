@@ -20,7 +20,7 @@ export default function ClientFeedbackForm() {
     phone: "",
     type: "feedback",
     sentiment: "",
-    emoji: "",
+    // emoji: "",
     message: "",
   });
 
@@ -76,7 +76,7 @@ export default function ClientFeedbackForm() {
     setFormData({
       ...formData,
       sentiment: item.key,
-      emoji: item.emoji,
+      // emoji: item.emoji,
     });
   };
 
