@@ -8,7 +8,7 @@ const FooterCurves = () => {
     <>
 
      <div
-       className=" relative w-full overflow-hidden bg-[#DBE1EF] py-[2.2rem] lg:py-[4.2rem] px-5 lg:px-10 flex lg:flex-row flex-col justify-between gap-[2em]"
+       className=" relative w-full overflow-hidden bg-[#2B0E82] py-[2.2rem] lg:py-[4.2rem] px-5 lg:px-10 flex lg:flex-row flex-col justify-between gap-[2em]"
      >
         <svg
           viewBox="0 0 1440 160"

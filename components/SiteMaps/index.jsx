@@ -241,17 +241,17 @@ export const FooterLinks = {
       {
           name: `Gracespring Health Foundation, Block 3, Plot 32, Ajayi Apata estate, Sangotedo, Lekki, Lagos, Nigeria.`,
           url: "#Gracespring#Health#Foundation#Block3#Plot32#Ajayi#Apata#estate#Sangotedo#Lekki#Lagos#Nigeria.",
-          iconPath: "/assets/icons/location.svg" || null,
+          iconPath: "/assets/icons/location-white.svg" || null,
       },
       {
           name: "gracespringhealthfoundation@outlook.com",
           url: "mailto:gracespringhealthfoundation@outlook.com",
-          iconPath: "/assets/icons/email.svg" || null,
+          iconPath: "/assets/icons/email-white.svg" || null,
       },
       {
           name: "+234 808-255-0192",
           url: "tel:+2348082550192",
-          iconPath: "/assets/icons/phone.svg" || null,
+          iconPath: "/assets/icons/phone-white.svg" || null,
       },
       // ...
   ],
@@ -259,7 +259,7 @@ export const FooterLinks = {
   footerBottom: [
     { name: "Terms", url: "/terms-of-use" },
     { name: "Privacy", url: "/privacy-policy" },
-    { name: "Sitemap", url: "https://heelheidbusiness.com/sitemap.html" },
+    { name: "Sitemap", url: "https://foundation.gracespringhospitals.com/sitemap.html" },
   ],
 
   social: [
@@ -267,33 +267,33 @@ export const FooterLinks = {
         {
             name: "Youtube",
             url: "#",
-            iconPath: "/assets/icons/youtube.svg" || null,
+            iconPath: "/assets/icons/youtube-white.svg" || null,
             iconPathHover: "/assets/icons/youtube-primary.svg" || null,
         },
       {
           name: "Facebook",
           url: "#",
-          iconPath: "/assets/icons/facebook.svg" || null,
+          iconPath: "/assets/icons/facebook-white.svg" || null,
           iconPathHover: "/assets/icons/facebook-primary.svg" || null,
       },
       {
           name: "Twitter",
           url: "#",
-          iconPath: "/assets/icons/twitter.svg" || null,
+          iconPath: "/assets/icons/twitter-white.svg" || null,
           iconPathHover: "/assets/icons/twitter-primary.svg" || null,
       },
       
       {
         name: "Instagram",
         url: "#",
-        iconPath: "/assets/icons/instagram.svg" || null,
+        iconPath: "/assets/icons/instagram-white.svg" || null,
         iconPathHover: "/assets/icons/instagram-primary.svg" || null,
     },
     
     {
         name: "Linkedin",
         url: "#",
-        iconPath: "/assets/icons/linkedin.svg" || null,
+        iconPath: "/assets/icons/linkedin-white.svg" || null,
         iconPathHover: "/assets/icons/linkedin-primary.svg" || null,
     },
   ],

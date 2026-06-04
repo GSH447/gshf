@@ -23,7 +23,7 @@ const Footer = () => {
 
                     <Link href="/">
                       <Image 
-                        src={"/logo-nobg.png"} 
+                        src={"/gshf-logo.png"} 
                         width={1000} 
                         height={1000}
                         alt="Gracespring Hospitals Foundation" 
@@ -69,11 +69,11 @@ const Footer = () => {
 
 const Section = ({ title, links }) => (
     <AnimatedDiv className="lg:w-56 lg:flex-1 lg:min-w-48">
-        <h2 className="text-1xl font-semibold text-gray-800 mb-4">{title}</h2>
-        <ul className="text-gray-600 space-y-2">
+        <h2 className="text-1xl font-semibold text-white mb-4">{title}</h2>
+        <ul className="text-white space-y-2">
             {links.map((link, index) => (
                 <li key={index}>
-                    <Link href={link.url} className="hover:text-primary transition duration-300 lg:text-[14px]">{link.name}</Link>
+                    <Link href={link.url} className="hover:text-white-800 transition duration-300 lg:text-[14px]">{link.name}</Link>
                 </li>
             ))}
         </ul>
@@ -82,7 +82,7 @@ const Section = ({ title, links }) => (
 
 const ContactSection = ({ contacts }) => (
     <AnimatedDiv className="flex-1 min-w-48">
-        <ul className=" text-gray-600 space-y-2">
+        <ul className=" text-white space-y-2">
             {contacts.map((item, index) => (
                 <li key={index} className=" flex space-x-3">
                     <Image 
@@ -92,7 +92,7 @@ const ContactSection = ({ contacts }) => (
                         alt="Contact-Icons" 
                         className=" w-[1rem]" 
                     />
-                    <Link href={item.url} className=" hover:text-primary transition duration-300 lg:text-[14px] text-left">{item.name}</Link>
+                    <Link href={item.url} className=" hover:text-white-800 transition duration-300 lg:text-[14px] text-left">{item.name}</Link>
                 </li>
             ))}
         </ul>
@@ -102,13 +102,13 @@ const ContactSection = ({ contacts }) => (
 const FooterBottom = ({ currentYear }) => {
 
     return (
-        <div className="border-t border-gray-300  lg:mt-6 pt-10 pb-[5rem] flex flex-col sm:flex-row justify-between mx-auto text-gray-600  ">
+        <div className="border-t border-gray-300  lg:mt-6 pt-10 pb-[5rem] flex flex-col sm:flex-row justify-between mx-auto text-white">
 
             <div className=" flex flex-col sm:flex-row lg:justify-between lg:items-center sm:items-start gap-4 sm:gap-10 w-full sm:w-auto">
 
                 <Link href="/">
                     <Image 
-                    src={"/logo-icon-nobg.png"} 
+                    src={"/gshf-logo.png"} 
                     width={1000} 
                     height={1000}
                     alt="Gracespring Hospitals Foundation" 

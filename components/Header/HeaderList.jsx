@@ -51,7 +51,7 @@ export default function Navbar() {
       //   isScrolled && "shadow-sm shadow-accent"
       // )}
       className={cn(
-        "fixed top-0 z-50 w-full border-accent bg-[#EDEDF7] transition-all px-3 flex",
+        "fixed top-0 z-50 w-full border-accent bg-primary transition-all px-3 flex",
         isScrolled && "shadow-sm shadow-accent px-5"
       )}
     >
@@ -60,7 +60,7 @@ export default function Navbar() {
       <div className="w-fit">
         <Link href="/">
           <Image 
-            src={"/logo-nobg.png"} 
+            src={"/gshf-logos.png"} 
             width={1000} 
             height={1000}
             alt="Gracespring Hospitals Foundation" 
@@ -95,11 +95,11 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "text-muted flex items-center gap-x-0.5 group-hover:text-accent transition-all px-3 py-1 rounded-md hover:bg-secondary",
+                    "text-white flex items-center gap-x-0.5 group-hover:text-white transition-all px-3 py-1 rounded-md hover:bg-secondary",
                     pathname === link.href &&
-                      "text-accent font-semibold bg-secondary",
+                      "text-white font-semibold bg-secondary",
                     hovering === index &&
-                      "text-accent font-semibold bg-secondary"
+                      "text-white font-semibold bg-secondary"
                   )}
                 >
                   {link.label}
@@ -203,7 +203,7 @@ export default function Navbar() {
         <div className="hidden lg:block flex items-center gap-x-4 mr-5">
  
         <motion.button
-          className="bg-primary hover:bg-black text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
+          className="bg-white text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -218,7 +218,7 @@ export default function Navbar() {
 
         <a 
           href="/donate"
-          className="text-white text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
+          className="text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
         >
           Donate today
         </a>
