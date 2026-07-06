@@ -249,8 +249,8 @@ export const FooterLinks = {
           iconPath: "/assets/icons/email-white.svg" || null,
       },
       {
-          name: "+234 808-255-0192",
-          url: "tel:+2348082550192",
+          name: "+234 705-648-2776",
+          url: "tel:+2347056482776",
           iconPath: "/assets/icons/phone-white.svg" || null,
       },
       // ...
