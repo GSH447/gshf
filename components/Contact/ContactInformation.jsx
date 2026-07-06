@@ -239,7 +239,7 @@ const ContactInformation = ({
 
                     
                     <p className="text-md text-primary text-center font-bold">
-                        on <Link href={"tel:+2348082550192"}>+234 808-255-0192</Link>  
+                        on <Link href={"tel:+2347056482776"}>+234 705-648-2776</Link>  
                     </p>
 
                     
@@ -255,7 +255,7 @@ const ContactInformation = ({
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <Link
-                    href={"tel:+2348082550192"}
+                    href={"tel:+2347056482776"}
                     className="inline-block text-sm text-primary font-semibold underline"
                     >
                       Call us
