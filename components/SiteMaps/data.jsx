@@ -120,11 +120,11 @@ export const team = {
   management: [
     { 
       id: 1,
-      image: "/assets/images/team/augustine+olugbemi-nobg.jpeg",
+      image: "/assets/images/team/dr-augustine-olugbemi.jpeg",
       title: " Dr. Augustine J. Olugbemi",
-      description: "Founder/ Cardiacthoracic and Vascular Surgeon",
+      description: "Founder/ Cardiothoracic and Vascular Surgeon",
       url: "#",
-      alt: "Founder/ Cardiacthoracic and Vascular Surgeon",
+      alt: "Founder/ Cardiothoracic and Vascular Surgeon",
       about: `Dr Augustine Jeremai Olugbemi is a seasoned Nigerian and South African trained Cardiothoracic and Vascular surgeon, with a wealth of experience from Lagos University Teaching Hospital (LUTH), the Inkosi Albert Luthuli Central Hospital (IALCH), Durban, South Africa; a leading South African Quartenary hospital; National Cardiothoracic Centre, Korle-Bu Teaching hospital, Accra, Ghana and Duke University (Division of Thoracic Surgery), Durham, North Carolina, USA.
       He is proficient in Cardiac, Thoracic and Vascular procedures, including Video Assisted Thoracoscopic Surgery (VATS) and one of the very few Cardiac surgeons in Nigeria, proficient in both adult and paediatric cardiac cases (Both congenital and acquired).
       He has been involved in many medical missions by Family Care Association, an American based medical hospitality group, with leading roles in the surgical division and worked as Consultant Cardiothoracic and Vascular Surgeon at the Lagos University Teaching Hospital, (LUTH), Babcock University Teaching Hospital (BUTH). He set up the Cardiothoracic and vascular surgery programme at the Nigerian Navy Reference Hospital (NNRH) Ojo, Lagos, Nigeria in 2017. He also pioneered open heart surgery programme in Reddington hospital Lagos, Nigeria in 2021, Evercare hospital Lekki (with another surgeon), Lagos, Nigeria in 2022, and Federal Medical Centre, (FMC) Abeokuta, Ogun State, Nigeria in 2024 where he also serves as the head of the Cardiac team and programme. 
@@ -290,7 +290,7 @@ export const team = {
     { 
       id: 2,
       image: "/assets/images/team/jola+olugbemi.svg",
-      title: "Dr (Mrs) Mojolaoluwa Olugbemi",
+      title: "Dr. Jola Olugbemi",
       description: "General Surgeon (Robotics and Laparoscopic)",
       url: "#",
       alt: "Dr Jola Olugbemi - ChM (Gen Surg), FRCS (Eng), FWACS, FMCS, Pg Cert (Med Edu) - Consultant Colorectal and General Surgeon",
