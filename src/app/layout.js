@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       
       <Header />
         {children}
-      <FooterCurves/>
+      {/* <FooterCurves/> */}
       <Footer />
       <CookieConsent/>
       <AccessibilityComp/>

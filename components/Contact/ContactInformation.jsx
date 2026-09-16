@@ -12,7 +12,7 @@ const blobShapes = [
 
 
 
-const PRIMARY_BG = "#FDF2EB";
+const white_BG = "#161240";
 
 const ContactInformation = ({
     contactInformationBg,
@@ -37,7 +37,7 @@ const ContactInformation = ({
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
         className="relative z-10 mx-auto py-[2.5rem] lg:p-10 mb-[5rem]"
-        style={{backgroundColor: contactInformationBg || PRIMARY_BG}}
+        style={{backgroundColor: contactInformationBg || white_BG}}
       >
         
 
@@ -46,7 +46,7 @@ const ContactInformation = ({
         >
             <h2
                 style={{
-                    color: cihTextColor || "#223A5C",
+                    color: cihTextColor || "#e5e8ed",
                     fontSize: cihTextSize || "2.5rem",
                 }}
                 className="!sm:text-[1rem]"
@@ -88,7 +88,7 @@ const ContactInformation = ({
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e28ad2" // primary color
+                        fill="#e28ad2" // white color
                         />
                     </svg>
 
@@ -113,7 +113,7 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
+                    <h2 className="text-[1.6rem] font-extrabold text-white mb-2 text-center">
                         {cihOfficeText || "Visit our Office"}
                     </h2>
 
@@ -127,24 +127,24 @@ const ContactInformation = ({
              
 
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       The Gracespring Health Foundation   
                     </p>
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     > 
                       Block 3, Plot 32, Ajayi Apata estate
                     </p>
                     
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       Sangotedo, Lekki, Lagos 
                     </p>
                     
                     {/* <p
-                    className="inline-block text-lg text-primary font-semibold"
+                    className="inline-block text-lg text-white font-semibold"
                     >
                       NG
                     </p> */}
@@ -157,7 +157,7 @@ const ContactInformation = ({
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       Monday - Friday, 9am - 5pm.
                     </p>
@@ -198,7 +198,7 @@ const ContactInformation = ({
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#e29a8a" // primary color
+                        fill="#e29a8a" // white color
                         />
                     </svg>
 
@@ -223,7 +223,7 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
+                    <h2 className="text-[1.6rem] font-extrabold text-white mb-2 text-center">
                         {cihPhoneText || "By phone"}
                     </h2>
 
@@ -233,17 +233,17 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <p className="text-md text-primary text-center font-bold">
+                    <p className="text-md text-white text-center font-bold">
                         Get in touch with our supporter care team
                     </p>
 
                     
-                    <p className="text-md text-primary text-center font-bold">
+                    <p className="text-md text-white text-center font-bold">
                         on <Link href={"tel:+2347056482776"}>+234 705-648-2776</Link>  
                     </p>
 
                     
-                    <p className="text-md text-primary text-center font-bold">
+                    <p className="text-md text-white text-center font-bold">
                         Monday - Friday between 9am- 5pm.
                     </p>
 
@@ -256,7 +256,7 @@ const ContactInformation = ({
                 <div className=" text-center m-auto grid">
                     <Link
                     href={"tel:+2347056482776"}
-                    className="inline-block text-sm text-primary font-semibold underline"
+                    className="inline-block text-sm text-white font-semibold underline"
                     >
                       Call us
                     </Link>
@@ -302,7 +302,7 @@ const ContactInformation = ({
                     >
                         <path
                         d="M10,10 C50,0 80,20 70,50 C60,80 30,90 20,60 C10,30 20,10 30,10 Z"
-                        fill="#8ae293" // primary color
+                        fill="#8ae293" // white color
                         />
                     </svg>
 
@@ -327,7 +327,7 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <h2 className="text-[1.6rem] font-extrabold text-primary mb-2 text-center">
+                    <h2 className="text-[1.6rem] font-extrabold text-white mb-2 text-center">
                         {cihPostText || "By post or mail"}
                     </h2>
 
@@ -337,7 +337,7 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <p className="text-md text-primary text-center font-bold">
+                    <p className="text-md text-white text-center font-bold">
                         Please address any post to us at:
                     </p>
 
@@ -349,30 +349,30 @@ const ContactInformation = ({
                 {/* CTA */}
                 <div className=" text-center m-auto grid">
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       Fundraising Operations
                     </p>
 
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       The Gracespring Health Foundation   
                     </p>
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     > 
                       Block 3, Plot 32, Ajayi Apata estate
                     </p>
                     
                     <p
-                    className="inline-block text-sm text-primary font-semibold"
+                    className="inline-block text-sm text-white font-semibold"
                     >
                       Sangotedo, Lekki, Lagos 
                     </p>
                     
                     {/* <p
-                    className="inline-block text-lg text-primary font-semibold"
+                    className="inline-block text-lg text-white font-semibold"
                     >
                       NG
                     </p> */}
@@ -383,7 +383,7 @@ const ContactInformation = ({
                     className=""
                 >
 
-                    <p className="text-md text-primary text-center font-bold">
+                    <p className="text-md text-white text-center font-bold">
                         Please address any mail to us:
                     </p>
 
@@ -396,7 +396,7 @@ const ContactInformation = ({
                 <div className=" text-center m-auto grid">
                     <Link
                     href={"mailto:gracespringhealthfoundation@outlook.com"}
-                    className="inline-block text-sm text-primary font-semibold underline"
+                    className="inline-block text-sm text-white font-semibold underline"
                     >
                       Email us
                     </Link>

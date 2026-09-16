@@ -28,7 +28,7 @@ export default function MobileNav() {
 
 
       
-      <div className=" lg:hidden mr-2">
+      {/* <div className=" lg:hidden mr-2">
         <motion.button
           className="bg-white text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
           whileHover={{ scale: 1.05 }}
@@ -51,7 +51,7 @@ export default function MobileNav() {
         </Link>
 
         </motion.button>
-      </div>
+      </div> */}
 
       <div className=" flex gap-2">
 
@@ -170,13 +170,17 @@ export default function MobileNav() {
             </div>
           ))}
 
-        <Link
-          href="/donate"
-
-          className="w-[50%] mx-auto flex items-center justify-center rounded-full bg-white p-3 text-primary text-lg duration-300 ease-in-out hover:bg-white lg:hidden"
-        >
-          Donate today
-        </Link>
+{/* In your MobileNav.js file, update the Donate button area */}
+<div className="lg:hidden mr-2">
+  <motion.a
+    href="/sponsor"
+    className="bg-[#E3BE50] text-[#161240] font-bold py-2 px-4 shadow-md flex items-center justify-center text-sm"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Sponsor a patient
+  </motion.a>
+</div>
 
         <Link
           href="/contact-us"

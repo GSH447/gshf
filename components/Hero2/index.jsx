@@ -3,76 +3,184 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroTypeWriter from "./TypewriteEffect";
+import Link from "next/link";
 
 const Hero2 = () => {
-    
-
   return (
     <section
       id="hero"
-      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+      className="relative w-full min-h-screen overflow-hidden flex flex-col justify-between pt-24 "
     >
-
-      <motion.div className="absolute inset-0">
+      {/* ================= BACKGROUND IMAGE ================= */}
+      <motion.div className="absolute inset-0 z-0 ">
         <Image
-          src="/assets/images/hero/care-03.png"
-          alt="Donation background"
+          src="/assets/images/New/hero/1/2.png"
+          // src="/assets/images/hero/care-03.png" // Replace with actual surgery image path
+          alt="Surgery background"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
         />
       </motion.div>
 
-      {/* ================= OVERLAY (Opacity Control) ================= */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+      {/* ================= OVERLAY (Dark Blue/Purple Tint) ================= */}
+      <div className="absolute inset-0 bg-[#161240]/85 md:bg-[#161240]/80 mix-blend-multiply z-0 " />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#161240]/95 via-[#161240]/70 to-transparent z-0 " />
 
-
-
-       {/* ================= CONTENT ================= */}
-       <div className="relative z-10 text-white px-4 text-center max-w-4xl hero-typewriter-container">
+       {/* ================= CONTENT (Top part) ================= */}
+       <div className="relative z-10 text-white px-6 md:px-12 lg:px-24 xl:px-32 max-w-7xl w-full flex-grow flex flex-col justify-center  pt-[10rem] py-[12rem]">
          <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="space-y-6"
+          className="space-y-6 max-w-2xl"
         >
-          {/* Hero Text */}
-          <motion.h1
-            initial={{ rotateY: 90, opacity: 0 }}
-            animate={{ rotateY: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 200, damping: 25 }}
-            className="lg:text-[42px] text-[26px] font-extrabold leading-tight"
-            style={{ fontFamily: "AvenirBold" }}
+          {/* Small Gold Accent Line */}
+          <motion.div 
+            initial={{ scaleX: 0 }} 
+            animate={{ scaleX: 1 }} 
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="w-12 h-[3px] bg-[#E3BE50] mb-6 origin-left" 
+          />
+
+          {/* Main Heading (Serif Font) */}
+
+          <div className=" lg:space-y-3">
+      
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1 }}
+              className="text-2xl md:text-5xl lg:text-[52px] font-medium leading-[1.5]"
+              style={{ fontFamily: "Georgia, serif" }} 
+            >
+              Open heart surgery,<br/>
+            </motion.h1>
+            
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1 }}
+              className="text-2xl md:text-5xl lg:text-[52px] font-medium leading-[1.5]"
+              style={{ fontFamily: "Georgia, serif" }} 
+            >
+              performed in Nigeria,<br/>
+            </motion.h1>
+            
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1 }}
+              className="text-2xl md:text-5xl lg:text-[52px] font-medium leading-[1.5]"
+              style={{ fontFamily: "Georgia, serif" }} 
+            >
+              for people who could<br/>
+            </motion.h1>
+            
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 1 }}
+              className="text-2xl md:text-5xl lg:text-[52px] font-medium leading-[1.5]"
+              style={{ fontFamily: "Georgia, serif" }} 
+            >
+              never have paid for it.
+            </motion.h1>
+
+          </div>
+
+          {/* Subtext Paragraph */}
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 1 }}
+            className="text-sm md:text-base lg:text-[17px] text-gray-200 mt-6 max-w-[620px] leading-relaxed"
           >
-            <HeroTypeWriter />
-          </motion.h1>
+            <p>
+               The Gold Star Cardiac Surgery Initiative funds open heart surgery for 
+            </p>
+            
+            <p>
+              Nigerians — children born with heart defects and adults with acquired 
+            </p>
+            
+            <p>
+              heart disease — whose families cannot meet the cost of care. Surgery 
+            </p>
+            
+            <p>
+              takes place at Gracespring Hospitals in Lagos, performed by a permanent,
+            </p>
 
-          {/* Sub Text */}
-          {/* <p className="text-sm lg:text-lg text-gray-200 max-w-2xl mx-auto">
-            Delivering trusted, innovative, and compassionate healthcare
-            solutions for everyone.
-          </p> */}
+            <p>
+            locally based cardiac team.
+            </p>
 
-          {/* CTA Buttons */}
-          {/* <div className="flex justify-center gap-4 pt-4">
-            <a
-              href="/auth/signup"
-              className="px-6 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primaryblack transition"
+
+
+
+          </motion.p>
+
+          {/* Action Buttons */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="flex flex-wrap gap-4 pt-6"
+          >
+            <Link
+              href="/sponsor"
+              className="bg-[#E3BE50] text-[#161240] font-bold py-3 px-6 text-sm lg:text-[15px] hover:bg-[#d4ae42] transition-colors flex items-center justify-center"
             >
-              Get Started
-            </a>
-
-            <a
-              href="/contact"
-              className="px-6 py-2 rounded-full border border-white text-white text-sm font-semibold hover:bg-white hover:text-black transition"
+              Sponsor a patient
+            </Link>
+            <Link
+              href="/how-it-works"
+              className="bg-transparent border border-white text-white font-bold py-3 px-6 text-sm lg:text-[15px] hover:bg-white hover:text-[#161240] transition-colors flex items-center justify-center"
             >
-              Contact Us
-            </a>
-          </div> */}
+              How the programme works
+            </Link>
+          </motion.div>
+
         </motion.div>
       </div>
 
+      {/* ================= STATS BANNER (Bottom part) ================= */}
+      <div className="relative z-20 w-full bg-primary border-t border-white/10 mt-auto  py-10">
+        <div className="px-6 md:px-12 lg:px-24 xl:px-32 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            
+            {/* Stat 1 */}
+            <div className="p-6 lg:p-0 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
+              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>3</span>
+              <p className="text-white text-xs lg:text-sm leading-snug">open heart operations completed</p>
+              <p className="text-white text-xs lg:text-sm leading-snug">in our first surgical series</p>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
+              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>100%</span>
+              <p className="text-white text-xs lg:text-sm leading-snug">of those operations funded</p>
+              <p className="text-white text-xs lg:text-sm leading-snug">by charitable sponsors</p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="p-6 lg:p-8 border-b md:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
+              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦0</span>
+              <p className="text-white text-xs lg:text-sm leading-snug">asked of the families of</p>
+              <p className="text-white text-xs lg:text-sm leading-snug">sponsored patients</p>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="p-6 lg:p-8  flex flex-col justify-center">
+              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦15m</span>
+              <p className="text-white text-xs lg:text-sm leading-snug">the full documented cost of</p>
+              <p className="text-white text-xs lg:text-sm leading-snug">sponsoring one patient</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
@@ -84,127 +192,74 @@ export default Hero2;
 
 // "use client";
 
-// import React, { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import HeroTypeWriter from "./TypewriteEffect";
-
-// const heroImages = [
-//   "/assets/images/hero/care-01.png",
-//   "/assets/images/hero/care-02.png",
-//   "/assets/images/hero/care-03.png",
-// ];
+// import React from "react";
+// import { motion } from "framer-motion";
+// import Image from "next/image";
 
 // const Hero2 = () => {
-//   const [currentImage, setCurrentImage] = useState(0);
-
-//   // Auto-rotate background images
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentImage((prev) => (prev + 1) % heroImages.length);
-//     }, 6000); // 6 seconds
-
-//     return () => clearInterval(interval);
-//   }, []);
-
 //   return (
 //     <section
 //       id="hero"
-//       className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+//       className="relative w-full h-screen overflow-hidden flex items-center justify-start pt-20"
 //     >
-//       {/* ================= BACKGROUND IMAGES ================= */}
-//       {/* <AnimatePresence>
-//         <motion.div
-//           key={currentImage}
-//           className="absolute inset-0 bg-cover bg-center"
-//           style={{
-//             backgroundImage: `url(${heroImages[currentImage]})`,
-//           }}
-//           initial={{ opacity: 0, scale: 1.05 }}
-//           animate={{ opacity: 1, scale: 1 }}
-//           exit={{ opacity: 0 }}
-//           transition={{ duration: 1.5, ease: "easeInOut" }}
+//       {/* ================= BACKGROUND IMAGE ================= */}
+//       <motion.div className="absolute inset-0">
+//         <Image
+//           src="/assets/images/hero/care-03.png" // Replace with actual surgery image path
+//           alt="Surgery background"
+//           fill
+//           className="object-cover object-center"
+//           priority
 //         />
-//       </AnimatePresence> */}
+//       </motion.div>
 
-// <AnimatePresence>
-//   <motion.div
-//     key={currentImage}
-//     className="
-//       absolute inset-0
-//       bg-cover
-//       bg-[position:50%_20%]
-//       sm:bg-center
-//     "
-//     style={{
-//       backgroundImage: `url(${heroImages[currentImage]})`,
-//     }}
-//     initial={{ opacity: 0, scale: 1.05 }}
-//     animate={{ opacity: 1, scale: 1 }}
-//     exit={{ opacity: 0 }}
-//     transition={{ duration: 1.5, ease: "easeInOut" }}
-//   />
-// </AnimatePresence>
+//       {/* ================= OVERLAY (Dark Blue/Purple Tint) ================= */}
+//       <div className="absolute inset-0 bg-[#161240]/85 md:bg-[#161240]/75 mix-blend-multiply" />
+//       <div className="absolute inset-0 bg-gradient-to-r from-[#161240]/90 to-transparent" />
 
-//       {/* ================= OVERLAY (Opacity Control) ================= */}
-//       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-
-//       {/* ================= CONTENT ================= */}
-//       <div className="relative z-10 text-white px-4 text-center max-w-4xl hero-typewriter-container">
-//         <motion.div
+//        {/* ================= CONTENT ================= */}
+//        <div className="relative z-10 text-white px-6 md:px-16 lg:px-24 xl:px-32 max-w-7xl w-full">
+//          <motion.div
 //           initial={{ opacity: 0, y: 40 }}
 //           animate={{ opacity: 1, y: 0 }}
 //           transition={{ duration: 1, ease: "easeOut" }}
-//           className="space-y-6"
+//           className="space-y-6 max-w-2xl"
 //         >
-//           {/* Hero Text */}
+//           {/* Small Gold Accent Line */}
+//           <motion.div 
+//             initial={{ scaleX: 0 }} 
+//             animate={{ scaleX: 1 }} 
+//             transition={{ delay: 0.5, duration: 0.8 }}
+//             className="w-12 h-1 bg-[#E3BE50] mb-8 origin-left" 
+//           />
+
+//           {/* Main Heading (Serif Font) */}
 //           <motion.h1
-//             initial={{ rotateY: 90, opacity: 0 }}
-//             animate={{ rotateY: 0, opacity: 1 }}
-//             transition={{ type: "spring", stiffness: 200, damping: 25 }}
-//             className="lg:text-[42px] text-[26px] font-extrabold leading-tight"
-//             style={{ fontFamily: "AvenirBold" }}
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ delay: 0.2, duration: 1 }}
+//             className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight font-serif tracking-wide"
+//             style={{ fontFamily: "Georgia, serif" }} // Optional: Use a specific serif web font here if installed
 //           >
-//             <HeroTypeWriter />
+//             Open heart surgery,<br/>
+//             performed in Nigeria,<br/>
+//             for people who could<br/>
+//             never have paid for it.
 //           </motion.h1>
 
-//           {/* Sub Text */}
-//           {/* <p className="text-sm lg:text-lg text-gray-200 max-w-2xl mx-auto">
-//             Delivering trusted, innovative, and compassionate healthcare
-//             solutions for everyone.
-//           </p> */}
-
-//           {/* CTA Buttons */}
-//           {/* <div className="flex justify-center gap-4 pt-4">
-//             <a
-//               href="/auth/signup"
-//               className="px-6 py-2 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primaryblack transition"
-//             >
-//               Get Started
-//             </a>
-
-//             <a
-//               href="/contact"
-//               className="px-6 py-2 rounded-full border border-white text-white text-sm font-semibold hover:bg-white hover:text-black transition"
-//             >
-//               Contact Us
-//             </a>
-//           </div> */}
+//           {/* Subtext Paragraph */}
+//           <motion.p 
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ delay: 0.6, duration: 1 }}
+//             className="text-sm md:text-base lg:text-lg text-gray-200 mt-6 max-w-[600px] leading-relaxed"
+//           >
+//             The Gold Star Cardiac Surgery Initiative funds open heart surgery for 
+//             Nigerians — children born with heart defects and adults with acquired 
+//             heart disease — whose families cannot meet the cost of care. Surgery 
+//             takes place at Gracespring Hospitals in Lagos, performed by permanent staff.
+//           </motion.p>
 //         </motion.div>
-//       </div>
-
-//       {/* ================= DOT INDICATORS ================= */}
-//       <div className="hidden absolute bottom-6 flex gap-2 z-10">
-//         {heroImages.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => setCurrentImage(index)}
-//             className={`h-2 w-2 rounded-full transition-all ${
-//               currentImage === index
-//                 ? "bg-white w-6"
-//                 : "bg-white/50"
-//             }`}
-//           />
-//         ))}
 //       </div>
 //     </section>
 //   );

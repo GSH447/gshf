@@ -17,7 +17,7 @@ const Loading = () => {
           className="flex items-center justify-center h-screen"
         >
           <img
-            src="/logo.svg"
+            src="/gshf.jpg"
             alt="logo"
             className="w-20 h-20"
           />

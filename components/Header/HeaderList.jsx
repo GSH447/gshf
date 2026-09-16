@@ -4,10 +4,8 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
-// import { cn } from "../../lib/utils";
 import { cn } from "../../lib/utils";
-// import { links } from "../../constants/navLinks";
-import { links } from "../SiteMaps";
+import { links } from "../SiteMaps"; // Uses your existing links data
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -16,17 +14,13 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [hovering, setHovering] = useState(null);
-  // const subRef = useRef() as React.MutableRefObject;
   const subRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== "undefined") {
-        if (window.scrollY >= 20) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
+        // Trigger solid background slightly after scrolling
+        setIsScrolled(window.scrollY >= 20);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -44,191 +38,276 @@ export default function Navbar() {
     }
   }
 
+  // Function to accurately check if the current route matches the link
+  const checkActive = (href) => {
+    if (href === "/" && pathname !== "/") return false;
+    return pathname === href || pathname.startsWith(href);
+  };
+
   return (
     <header
-      // className={cn(
-      //   " fixed top-0 z-50 w-full border-accent bg-background backdrop-blur supports-[backdrop-filter]:bg-background-transparent transition-all px-3 flex",
-      //   isScrolled && "shadow-sm shadow-accent"
-      // )}
       className={cn(
-        "fixed top-0 z-50 w-full border-accent bg-primary transition-all px-3 flex",
-        isScrolled && "shadow-sm shadow-accent px-5"
+        "fixed top-0 z-50 w-full transition-all duration-300 px-4 lg:px-[8rem] flex items-center",
+        // Seamless transparent background at the top, solid dark blue with shadow when scrolled
+        isScrolled ? "bg-[#2B0F80] shadow-lg py-3 border-b border-white/5 " : "bg-transparent py-5 border-none"
       )}
     >
-        
+      <div className="flex w-fit ">
 
-      <div className="w-fit">
-        <Link href="/">
-          <Image 
-            src={"/gshf-logos.png"} 
-            width={1000} 
-            height={1000}
-            alt="Gracespring Hospitals Foundation" 
-            className="gshf-Logo"
-            priority
-            id="logo"
-          />
-        </Link>
+        <div className="flex gap-2 items-center ">
+          <Link href="/">
+            <Image 
+              src={"/gshf-logo-nobg.png"} 
+              width={180} 
+              height={60}
+              alt="Gracespring Hospitals Foundation" 
+              className="object-contain"
+              // className="w-auto h-[50px] md:h-[48px] object-contain"
+              priority
+              id="logo"
+            />
+          </Link>
+        </div>
+
+        
+        {/* <div className="grid gap-2 items-center ">
+
+          <div>
+            <p className="text-white text-[15px] font-bold">
+              Gracespring
+            </p>
+          </div>
+          <div>
+            <p className="text-[#E3BE50] text-[15px] font-bold">
+              Health Foundation
+            </p>
+          </div>
+          
+
+        </div> */}
+
       </div>
 
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-end lg:justify-between m-auto">
+      <div className="container flex h-full max-w-screen-2xl items-center justify-end lg:justify-between m-auto flex-1 ml-8">
         {/* Mobile sidebar */}
-         <MobileNav />
+        <div className="lg:hidden">
+           <MobileNav />
+        </div>
 
-        <div className="hidden md:flex items-center gap-x-10">
-
-
+        <div className="hidden lg:flex items-center gap-x-8 ml-auto mr-10 h-full">
           <nav
-            className="flex items-center gap-3"
+            className="flex items-center gap-8 h-full"
             onMouseLeave={() => {
               if (!subRef.current) {
                 setHovering(null);
               }
             }}
           >
-            {links.map((link, index) => (
-              <div
-                key={link.label}
-                className="block group"
-                onMouseEnter={() => handleMouseEnter(index)}
-              >
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "text-white flex items-center gap-x-0.5 group-hover:text-white transition-all px-3 py-1 rounded-md hover:bg-secondary",
-                    pathname === link.href &&
-                      "text-white font-semibold bg-secondary",
-                    hovering === index &&
-                      "text-white font-semibold bg-secondary"
-                  )}
-                >
-                  {link.label}
-                  {link.subLinks && (
-                    <ChevronDown
-                      className={cn(
-                        "w-5 h-5 transition-all group-hover:text-accent",
-                        hovering === index && "rotate-180"
-                      )}
-                    />
-                  )}
-                </Link>
-              </div>
-            ))}
+            {links.map((link, index) => {
+              const isActive = checkActive(link.href);
 
+              return (
+                <div
+                  key={link.label}
+                  className="relative group h-full flex items-center"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                >
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-x-1"
+                  >
+                    {/* The text wrapper handles the underline exactly below the text */}
+                    <span 
+                      className={cn(
+                        "pb-1 border-b-[3px] transition-all duration-200 text-[15px]",
+                        isActive 
+                          ? "border-[#E3BE50] text-white font-medium" 
+                          : "border-transparent text-gray-200 group-hover:text-white group-hover:border-[#E3BE50]"
+                      )}
+                    >
+                      {link.label}
+                    </span>
+                    
+                    {link.subLinks && (
+                      <ChevronDown
+                        className={cn(
+                          "w-4 h-4 transition-all ml-1 text-gray-300 group-hover:text-[#E3BE50]",
+                          hovering === index && "rotate-180"
+                        )}
+                      />
+                    )}
+                  </Link>
+                </div>
+              );
+            })}
+
+            {/* Submenu Dropdown Container */}
             <div
               ref={subRef}
-              // className={cn(
-              //   "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8  w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
-              //   hovering || hovering === 0
-              //     ? "opacity-100 border-t border-b border-accent mx-auto"
-              //     : "opacity-0 border-none"
-              // )}
-
               className={cn(
-                "absolute top-[7.6rem] left-1/2 -translate-x-1/2 p-8 w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-md z-50 min-h-[50vh]",
+                "absolute top-[100%] left-1/2 -translate-x-1/2 p-8 w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-xl rounded-b-md z-50",
                 hovering !== null
-                  ? "opacity-100 pointer-events-auto border-t border-b border-accent"
-                  : "opacity-0 pointer-events-none border-none"
+                  ? "opacity-100 pointer-events-auto border-t-[3px] border-[#E3BE50] translate-y-0"
+                  : "opacity-0 pointer-events-none -translate-y-4"
               )}
-
               onMouseLeave={() => setHovering(null)}
             >
-              <div className="grid grid-cols-4 max-w-[1560px] mx-auto gap-6">
-                {hovering !== null && links[hovering].navImage && (
-                  <div className="flex flex-col">
-                    <div className="relative w-full h-full rounded-md">
-                      <Image
-                        src={links[hovering].navImage}
-                        alt={links[hovering].label}
-                        fill
-                        className="object-cover object-center rounded-md"
-                      />
-                    </div>
-                    <div className="text-center pt-2">
-                      {links[hovering].caption}
-                    </div>
-                  </div>
-                )}
-                {hovering !== null &&
-                  links[hovering].subLinks?.map((subLink, index) => (
-                    <React.Fragment key={index}>
-                      {subLink.header && (
-                        <div className="space-y-2">
-                          <Link 
-                            className="text-primary font-bold pb-1"
-                            href={subLink.href}
-                          >
-                            {subLink.header}
-                          </Link>
-                          {subLink.subMenu && (
-                            <>
-                              {subLink.subMenu.map((menuItem) => (
-                                <Link
-                                  key={menuItem.label}
-                                  href={menuItem.href}
-                                  className="text-muted block text-sm hover:text-accent transition"
-                                >
-                                  {menuItem.label}
-                                </Link>
-                              ))}
-                            </>
-                          )}
-                        </div>
-                      )}
-                      {subLink.subImages?.map((subImage) => (
-                        <div key={subImage.label}>
-                          <Link
-                            href={subImage.href}
-                            className="relative block w-full h-[200px] rounded-md overflow-hidden group"
-                          >
-                            <Image
-                              src={subImage.image}
-                              alt={subImage.label}
-                              fill
-                              className="object-cover object-center rounded-md group-hover:scale-105 transition group-hover:opacity-80"
-                            />
-                          </Link>
-                          <div className="text-center pt-2">
-                            {subImage.label}
-                          </div>
-                        </div>
-                      ))}
-                    </React.Fragment>
-                  ))}
-              </div>
+              {/* Insert your Submenu Grid Logic here (same as before) */}
             </div>
           </nav>
         </div>
 
-        <div className="hidden lg:block flex items-center gap-x-4 mr-5">
- 
-        <motion.button
-          className="bg-white text-white font-semibold py-2 px-5 rounded-full shadow-md flex"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-
-        <Image
-          src={"/assets/icons/love.png"}
-          width={20}
-          height={20}
-          alt="love"
-          className="my-auto ml-2"
-        />
-
-        <a 
-          href="/donate"
-          className="text-primary flex lg:items-center lg:justify-center h-full lg:w-full my-auto lg:text-[16px] font-bold"
-        >
-          Donate today
-        </a>
-
-        </motion.button>
-
+        {/* CTA Button matched to UI reference */}
+        <div className="hidden lg:flex items-center">
+          <motion.a
+            href="/sponsor-a-patient"
+            className="bg-[#E3BE50] text-[#161240] text-[15px] font-bold py-3 px-6 flex items-center justify-center hover:bg-[#d4ae42] transition-colors shadow-sm"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Sponsor a patient
+          </motion.a>
         </div> 
-
       </div>
-
     </header>
   );
 }
+
+
+// "use client";
+
+// import { usePathname } from "next/navigation";
+// import React, { useEffect, useRef, useState } from "react";
+// import MobileNav from "./MobileNav";
+// import Link from "next/link";
+// import { cn } from "../../lib/utils";
+// import { links } from "../SiteMaps";
+// import { ChevronDown } from "lucide-react";
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+
+// export default function Navbar() {
+//   const pathname = usePathname();
+//   const [isScrolled, setIsScrolled] = useState(false);
+//   const [hovering, setHovering] = useState(null);
+//   const subRef = useRef(null);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (typeof window !== "undefined") {
+//         if (window.scrollY >= 20) {
+//           setIsScrolled(true);
+//         } else {
+//           setIsScrolled(false);
+//         }
+//       }
+//     };
+//     window.addEventListener("scroll", handleScroll);
+
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+//   function handleMouseEnter(index) {
+//     if (links[index].subLinks) {
+//       setHovering(index);
+//     } else {
+//       setHovering(null);
+//     }
+//   }
+
+//   return (
+//     <header
+//       className={cn(
+//         "fixed top-0 z-50 w-full border-b border-white/10 bg-[#161240]/90 backdrop-blur-sm transition-all px-4 lg:px-12 flex",
+//         isScrolled && "shadow-md bg-[#161240]"
+//       )}
+//     >
+//       <div className="w-fit py-2">
+//         <Link href="/">
+//           <Image 
+//             src={"/gshf-logos.png"} 
+//             width={180} 
+//             height={60}
+//             alt="Gracespring Hospitals Foundation" 
+//             className="w-auto h-12 object-contain"
+//             priority
+//             id="logo"
+//           />
+//         </Link>
+//       </div>
+
+//       <div className="container flex h-[72px] max-w-screen-2xl items-center justify-end lg:justify-between m-auto">
+//         {/* Mobile sidebar */}
+//         <MobileNav />
+
+//         <div className="hidden md:flex items-center gap-x-8 ml-auto mr-8">
+//           <nav
+//             className="flex items-center gap-6"
+//             onMouseLeave={() => {
+//               if (!subRef.current) {
+//                 setHovering(null);
+//               }
+//             }}
+//           >
+//             {links.map((link, index) => (
+//               <div
+//                 key={link.label}
+//                 className="block group h-full py-6"
+//                 onMouseEnter={() => handleMouseEnter(index)}
+//               >
+//                 <Link
+//                   href={link.href}
+//                   className={cn(
+//                     "text-gray-100 flex items-center gap-x-1 group-hover:text-white transition-all pb-1 border-b-2 border-transparent",
+//                     pathname === link.href &&
+//                       "text-white font-medium border-[#E3BE50]", // Gold underline for active link
+//                     hovering === index &&
+//                       "text-white font-medium border-[#E3BE50]"
+//                   )}
+//                 >
+//                   {link.label}
+//                   {link.subLinks && (
+//                     <ChevronDown
+//                       className={cn(
+//                         "w-4 h-4 transition-all group-hover:text-[#E3BE50]",
+//                         hovering === index && "rotate-180"
+//                       )}
+//                     />
+//                   )}
+//                 </Link>
+//               </div>
+//             ))}
+
+//             {/* Submenu Dropdown */}
+//             <div
+//               ref={subRef}
+//               className={cn(
+//                 "absolute top-[72px] left-1/2 -translate-x-1/2 p-8 w-[85%] bg-[#EDEDF7] transition-all ease-in-out mx-auto shadow-lg rounded-b-md z-50 min-h-[50vh]",
+//                 hovering !== null
+//                   ? "opacity-100 pointer-events-auto border-t border-b border-accent"
+//                   : "opacity-0 pointer-events-none border-none"
+//               )}
+//               onMouseLeave={() => setHovering(null)}
+//             >
+//               {/* ... (Keep your existing submenu dropdown grid code here) ... */}
+//             </div>
+//           </nav>
+//         </div>
+
+//         {/* CTA Button */}
+//         <div className="hidden lg:flex items-center">
+//           <motion.a
+//             href="/sponsor"
+//             className="bg-[#E3BE50] text-[#161240] text-sm lg:text-[15px] font-bold py-3 px-6 flex items-center justify-center hover:bg-[#d4ae42] transition-colors"
+//             whileHover={{ scale: 1.02 }}
+//             whileTap={{ scale: 0.98 }}
+//           >
+//             Sponsor a patient
+//           </motion.a>
+//         </div> 
+//       </div>
+//     </header>
+//   );
+// }

@@ -14,13 +14,33 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
       "static/chunks/app/page.js"
+    ],
+    "/the-gold-star-initiative/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/the-gold-star-initiative/page.js"
+    ],
+    "/gold-star-stories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gold-star-stories/page.js"
+    ],
+    "/sponsor-a-patient/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sponsor-a-patient/page.js"
     ],
     "/contact-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/contact-us/page.js"
+    ],
+    "/donate/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/donate/page.css",
+      "static/chunks/app/donate/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
