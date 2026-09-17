@@ -56,6 +56,18 @@ export default function MobileNav() {
       <div className=" flex gap-2">
 
 
+        {/* CTA Button matched to UI reference */}
+        <div className="flex lg:hidden items-center">
+          <motion.a
+            href="/sponsor-a-patient"
+            className="bg-[#E3BE50] text-[#161240] text-[13px] font-bold py-3 px-2 flex items-center justify-center hover:bg-[#d4ae42] transition-colors shadow-sm"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Sponsor a patient
+          </motion.a>
+        </div> 
+
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="ml-2 block md:hidden"
