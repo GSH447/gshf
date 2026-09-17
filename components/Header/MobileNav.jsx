@@ -114,7 +114,7 @@ export default function MobileNav() {
                 className={cn(
                   "text-white hover:cursor-pointer rounded-md hover:text-white hover:bg-secondary transition ease-in-out py-2 px-2 flex items-center justify-between",
                   pathname === link.href &&
-                    "text-accent bg-secondary font-semibold",
+                    "text-[#E3BE50] bg-secondary font-semibold",
                   openedMenu === index &&
                     "text-accent bg-secondary font-semibold"
                 )}
@@ -131,7 +131,7 @@ export default function MobileNav() {
                   </button>
                 )}
               </Link>
-              {openedMenu === index && (
+              {/* {openedMenu === index && (
                 <div className="pl-2">
                   {link.subLinks?.map((subLink, idx) => (
                     <React.Fragment key={idx}>
@@ -166,21 +166,21 @@ export default function MobileNav() {
                     </React.Fragment>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
 
-{/* In your MobileNav.js file, update the Donate button area */}
-<div className="lg:hidden mr-2">
-  <motion.a
-    href="/sponsor"
-    className="bg-[#E3BE50] text-[#161240] font-bold py-2 px-4 shadow-md flex items-center justify-center text-sm"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    Sponsor a patient
-  </motion.a>
-</div>
+        {/* In your MobileNav.js file, update the Donate button area */}
+        <div className="lg:hidden mr-2">
+          <motion.a
+            href="/sponsor-a-patient"
+            className="bg-[#E3BE50] text-[#161240] font-bold py-2 px-4 shadow-md flex items-center justify-center text-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Sponsor a patient
+          </motion.a>
+        </div>
 
         <Link
           href="/contact-us"

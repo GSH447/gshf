@@ -27,7 +27,15 @@ export default function SponsorshipGovernance() {
           <span className="text-[#E3BE50] mt-1">❖</span>
           <div>
             <h3 className="text-[#161240] font-bold mb-2">Consent governs every story</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">Patient stories and images are used only with explicit written consent from the patient or their family, ensuring their dignity is respected.</p>
+            <p className="text-gray-600 text-sm leading-relaxed">No photographs, name or story is published without written consent. Patients may choose to be named, or remain anonymous.</p>
+          </div>
+        </div>
+        
+        <div className="flex gap-4">
+          <span className="text-[#E3BE50] mt-1">❖</span>
+          <div>
+            <h3 className="text-[#161240] font-bold mb-2">Sponsors receive structured reporting</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">A pre-surgery summary, a recovery update, a medical outcome summary, and an annual report for continuing partners</p>
           </div>
         </div>
       </div>
