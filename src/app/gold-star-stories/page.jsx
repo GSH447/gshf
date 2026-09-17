@@ -5,6 +5,7 @@ import PageHero from "../../../components/Hero";
 import GoldStarStories from "../../../components/Sections/GoldStarStories";
 import SponsorshipGoldStar from "../../../components/Sections/SponsorshipGoldStar";
 import Stories from "../../../components/Sections/Stories";
+import FirstSeries from "../../../components/Sections/FirstSeries";
 
 export default function TheGoldStarInitiative() {
   return (
@@ -15,6 +16,7 @@ export default function TheGoldStarInitiative() {
       />
       
       <GoldStarStories />
+      <FirstSeries />
       <Stories />
       <SponsorshipGoldStar />
       

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function SponsorshipDetails() {
   return (
-    <section className="py-20 lg:py-32 px-6 md:px-12 lg:px-24 xl:px-32 max-w-[1420px] mx-auto">
+    <section className="py-10 lg:py-10 px-6 md:px-12 lg:px-24 xl:px-32 max-w-[1420px] mx-auto">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
