@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function InsideProgramme() {
   return (
     <section className="py-20 lg:py-32 px-6 md:px-12 lg:px-24 xl:px-32 max-w-[1420px] mx-auto">
-      <div className="w-12 h-[3px]" />
+      <div className="w-12 h-[3px] bg-[#E3BE50] mb-6" />
       <h2 className="text-3xl lg:text-4xl font-serif text-[#161240] mb-4 font-bold">Inside the programme</h2>
       <div>
       <p className="text-gray-700 max-w-3xl">

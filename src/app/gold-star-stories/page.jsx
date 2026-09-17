@@ -4,6 +4,7 @@ import React from "react";
 import PageHero from "../../../components/Hero";
 import GoldStarStories from "../../../components/Sections/GoldStarStories";
 import SponsorshipGoldStar from "../../../components/Sections/SponsorshipGoldStar";
+import Stories from "../../../components/Sections/Stories";
 
 export default function TheGoldStarInitiative() {
   return (
@@ -14,6 +15,7 @@ export default function TheGoldStarInitiative() {
       />
       
       <GoldStarStories />
+      <Stories />
       <SponsorshipGoldStar />
       
     </main>

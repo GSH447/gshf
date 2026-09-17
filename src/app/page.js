@@ -6,6 +6,7 @@ import VisionBanner from "../../components/Sections/VisionBanner";
 import SponsorshipDetails from "../../components/Sections/SponsorshipDetails";
 import SponsorsList from "../../components/Sections/SponsorsList";
 import SponsorshipCTA from "../../components/Sections/SponsorshipCTA";
+import InsideProgramme from "../../components/Sections/InsideProgramme";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
 
       {/* 5. "What a sponsorship pays for" Section */}
       <SponsorshipDetails />
+
+      <InsideProgramme />
 
       {/* 6. "Our first sponsors" Section */}
       <SponsorsList />

@@ -36,8 +36,8 @@ export default function GoldStarStories() {
         imagePosition="right"
         imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar2.jpeg"
         imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №1"
-        title="[Patient name], age [x]"
+        preTitle="Gold Star №2"
+        title="Azeezat Adedokun, 8 yrs"
         detailsTable={[
           { label: "Condition", value: "Congenital heart defect" },
           { label: "Procedure", value: "Open heart repair" },
@@ -58,8 +58,8 @@ export default function GoldStarStories() {
         imagePosition="left"
         imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar3.jpg"
         imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №1"
-        title="[Patient name], age [x]"
+        preTitle="Gold Star №3"
+        title="Alaba Adegun, 45Y"
         detailsTable={[
           { label: "Condition", value: "Congenital heart defect" },
           { label: "Procedure", value: "Open heart repair" },
