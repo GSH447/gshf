@@ -18,9 +18,24 @@ export default function PatientStories() {
         >
           <div className="w-12 h-[3px] bg-[#E3BE50] mb-6" />
 
+          <div>
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-medium font-serif leading-tight text-[#161240] mb-8">
             Our first three patients came through surgery and went home.
           </h2>
+          </div>
+
+          {/* Image Content */}
+          <div 
+            className="relative  w-full lg:hidden flex"
+          >
+            <Image
+              src="/assets/images/New/Landing-Page/1/first-three-patients.jpg"
+              // src="/assets/images/patients.jpg" // Add your image to this path
+              alt="Patient recovering after surgery"
+              fill
+              className="hidden lg:flex object-cover object-center"
+            />
+          </div>
 
           <div className="space-y-6 text-gray-700 text-sm md:text-base leading-relaxed">
 
@@ -87,7 +102,7 @@ export default function PatientStories() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative h-[400px] lg:h-[500px] w-full"
+          className="relative h-[400px] lg:h-[500px] w-full hidden lg:flex"
         >
           <Image
             src="/assets/images/New/Landing-Page/1/first-three-patients.jpg"

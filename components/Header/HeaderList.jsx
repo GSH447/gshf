@@ -54,7 +54,7 @@ export default function Navbar() {
     >
       <div className="flex w-fit ">
 
-        <div className="flex gap-2 items-center ">
+        <div className="flex gap-2 items-center hidden lg:flex">
           <Link href="/">
             <Image 
               src={"/gshf-logo-nobg.png"} 
@@ -68,6 +68,22 @@ export default function Navbar() {
             />
           </Link>
         </div>
+
+          <div className="lg:hidden flex">
+            <div className=" justify-center items-center w-fit">
+              <Link href="/">
+                <Image 
+                  src={"/gshf-logo-nobg.png"} 
+                  width={1000} 
+                  height={1000}
+                  alt="Gracespring Hospitals Foundation" 
+                  className="gshf-Logo"
+                  priority
+                  id="logo"
+                />
+              </Link>
+            </div>
+          </div>
 
         
         {/* <div className="grid gap-2 items-center ">
