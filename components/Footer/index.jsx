@@ -86,14 +86,14 @@ const Footer = () => {
       <div className="max-w-[1420px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 border-t border-white/10 mt-10 pt-10">
         
         {/* Column 1 */}
-        <div className=" justify-self-start">
+        <div className="border-2 border-[transparent] justify-self-start">
           <p className="text-gray-300 text-sm leading-relaxed">
             Gracespring Health Foundation - Our Path of Care, A Path of Impact
           </p>
         </div>
 
         {/* Column 2 */}
-        <div className=" justify-self-end">
+        <div className="border-2 border-[transparent]  sm:justify-self-end">
           <p className="text-gray-300 text-sm leading-relaxed">
             Patient photographs published with written consent.
           </p>

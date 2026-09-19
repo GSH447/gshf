@@ -97,26 +97,60 @@ const Hero2 = () => {
             transition={{ delay: 0.6, duration: 1 }}
             className="text-sm md:text-base lg:text-[17px] text-gray-200 mt-6 max-w-[620px] leading-relaxed"
           >
-            <p>
-               The Gold Star Cardiac Surgery Initiative funds open heart surgery for 
-            </p>
-            
-            <p>
-              Nigerians — children born with heart defects and adults with acquired 
-            </p>
-            
-            <p>
-              heart disease — whose families cannot meet the cost of care. Surgery 
-            </p>
-            
-            <p>
-              takes place at Gracespring Hospitals in Lagos, performed by a permanent,
-            </p>
+            <div className="hidden lg:grid ">
 
-            <p>
-            locally based cardiac team.
-            </p>
 
+              <p className="text-justify">
+                The Gold Star Cardiac Surgery Initiative funds open heart surgery for 
+              </p>
+              
+              <p>
+                Nigerians — children born with heart defects and adults with acquired 
+              </p>
+              
+              <p>
+                heart disease — whose families cannot meet the cost of care. Surgery 
+              </p>
+              
+              <p>
+                takes place at Gracespring Hospitals in Lagos, performed by a permanent,
+              </p>
+
+              <p>
+              locally based cardiac team.
+              </p>
+
+
+
+            </div>
+
+
+
+            <div className="lg:hidden grid">
+
+              {/* 
+              <p className="border-2 border-[red] w-[90%] word-wrap">
+                The Gold Star Cardiac Surgery Initiative funds open heart surgery for 
+              
+                Nigerians — children born with heart defects and adults with acquired 
+              
+                heart disease — whose families cannot meet the cost of care. Surgery 
+             
+                takes place at Gracespring Hospitals in Lagos, performed by a permanent,
+                locally based cardiac team.
+              </p> */}
+
+              {/* Option 1: Standard Left Aligned (Most readable for web) */}
+
+
+              {/* Option 2: Justified (Straight edges on both the left and right sides) */}
+              <p className="max-w-3xl text-white text-base md:text-lg leading-relaxed text-justify w-[90%]">
+                The Gold Star Cardiac Surgery Initiative funds open heart surgery for Nigerians — children born with heart defects and adults with acquired heart disease — whose families cannot meet the cost of care. Surgery takes place at Gracespring Hospitals in Lagos, performed by a permanent, locally based cardiac team.
+              </p>
+
+
+
+            </div>
 
 
 
@@ -153,28 +187,28 @@ const Hero2 = () => {
             
             {/* Stat 1 */}
             <div className="p-6 lg:p-0 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
-              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>3</span>
+              <span className="text-[#E3BE50] text-5xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>3</span>
               <p className="text-white text-xs lg:text-sm leading-snug">open heart operations completed</p>
               <p className="text-white text-xs lg:text-sm leading-snug">in our first surgical series</p>
             </div>
 
             {/* Stat 2 */}
             <div className="p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
-              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>100%</span>
+              <span className="text-[#E3BE50] text-5xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>100%</span>
               <p className="text-white text-xs lg:text-sm leading-snug">of those operations funded</p>
               <p className="text-white text-xs lg:text-sm leading-snug">by charitable sponsors</p>
             </div>
 
             {/* Stat 3 */}
             <div className="p-6 lg:p-8 border-b md:border-b-0 lg:border-r border-white/10 flex flex-col justify-center">
-              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦0</span>
+              <span className="text-[#E3BE50] text-5xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦0</span>
               <p className="text-white text-xs lg:text-sm leading-snug">asked of the families of</p>
               <p className="text-white text-xs lg:text-sm leading-snug">sponsored patients</p>
             </div>
 
             {/* Stat 4 */}
             <div className="p-6 lg:p-8  flex flex-col justify-center">
-              <span className="text-[#E3BE50] text-3xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦15m</span>
+              <span className="text-[#E3BE50] text-5xl md:text-4xl lg:text-5xl mb-2" style={{ fontFamily: "Georgia, serif" }}>₦15m</span>
               <p className="text-white text-xs lg:text-sm leading-snug">the full documented cost of</p>
               <p className="text-white text-xs lg:text-sm leading-snug">sponsoring one patient</p>
             </div>

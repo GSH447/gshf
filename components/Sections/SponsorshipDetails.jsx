@@ -11,15 +11,21 @@ export default function SponsorshipDetails() {
         viewport={{ once: true }}
         className="mb-5 max-w-3xl"
       >
-        <div className="w-12 h-[3px] bg-[#E3BE50] mb-6" />
+
+          {/* Small Gold Accent Line */}
+          <motion.div 
+            initial={{ scaleX: 0 }} 
+            animate={{ scaleX: 1 }} 
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="w-12 h-[3px] bg-[#E3BE50] mb-6 origin-left" 
+          />
+
         <h2 className="text-3xl md:text-4xl lg:text-[35px] font-bold font-serif text-[#161240] mb-6">
           What a sponsorship pays for
         </h2>
-        <p className="text-gray-700 text-base leading-relaxed">
+        <p className="text-gray-700 text-base leading-relaxed  text-justify w-[95%]">
           Sponsorship covers a patient's whole journey, not a single procedure. Each case 
-        </p>
-        
-        <p className="text-gray-700 text-base leading-relaxed">
+     
           carries a documented cost breakdown, and funds are reconciled case by case.
         </p>
       </motion.div>
@@ -37,7 +43,16 @@ export default function SponsorshipDetails() {
         ].map((item) => (
           <div key={item.id} className="pt-6">
             
-            <div key={item.id} className="border-2 border-[#E3BE50] w-5 "/>
+            {/* <div key={item.id} className="border-2 border-[#E3BE50] w-5 "/> */}
+            {/* Small Gold Accent Line */}
+            <motion.div
+              key={item.id} 
+              initial={{ scaleX: 0 }} 
+              animate={{ scaleX: 1 }} 
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="w-5 h-[3px] bg-[#E3BE50] mb-6 origin-left" 
+            />
+            
             <span className="text-[#E3BE50] font-serif text-xl block mb-2">{item.id}</span>
             <h3 className="text-[#161240] font-bold font-serif text-lg mb-3">{item.title}</h3>
             <div className=" w-[80%]">

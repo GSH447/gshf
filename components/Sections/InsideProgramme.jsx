@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function InsideProgramme() {
   // Store your images and captions here to keep the code clean
@@ -16,17 +17,24 @@ export default function InsideProgramme() {
   return (
     <section className="py-20 lg:py-32 px-6 md:px-12 lg:px-24 xl:px-32 max-w-[1420px] mx-auto">
       
-      <div className="w-12 h-[3px] bg-[#E3BE50] mb-6" />
+      
+      {/* Small Gold Accent Line */}
+      <motion.div 
+        initial={{ scaleX: 0 }} 
+        animate={{ scaleX: 1 }} 
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="w-12 h-[3px] bg-[#E3BE50] mb-6 origin-left" 
+      />
       
       <h2 className="text-3xl lg:text-4xl font-serif text-[#161240] mb-4 font-bold">
         Inside the programme
       </h2>
       
       <div className="mb-12">
-        <p className="text-gray-700 max-w-3xl">
+        <p className="text-gray-700 max-w-3xl text-justify w-[95%]">
           Theatre, intensive care and recovery at Gracespring Hospitals. Photographs 
-        </p>
-        <p className="text-gray-700 max-w-3xl">
+        {/* </p>
+        <p className="text-gray-700 max-w-3xl"> */}
           published with the written consent of the patients and families concerned.
         </p>
       </div>

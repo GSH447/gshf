@@ -69,8 +69,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-          <div className="lg:hidden flex">
-            <div className=" justify-center items-center w-fit">
+          <div className="lg:hidden flex w-[80%]">
               <Link href="/">
                 <Image 
                   src={"/gshf-logo-nobg.png"} 
@@ -82,7 +81,6 @@ export default function Navbar() {
                   id="logo"
                 />
               </Link>
-            </div>
           </div>
 
         

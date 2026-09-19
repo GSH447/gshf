@@ -22,11 +22,11 @@ export default function SponsorshipCTA() {
 
           <div>
 
-          <p className="text-[#161240]/80 text-base">
+          <p className="text-[#161240]/80 text-base text-justify w-[95%]">
             Sponsor a single patient, or fund a programme of ten, twenty or 
-          </p>
+          {/* </p>
           
-          <p className="text-[#161240]/80 text-base">
+          <p className="text-[#161240]/80 text-base"> */}
             more. We will design the partnership around what works for you.
           </p>
 

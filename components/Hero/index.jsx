@@ -13,7 +13,15 @@ export default function PageHero({ title, description }) {
           className="max-w-4xl"
         >
           {/* Gold Accent Line */}
-          <div className="w-12 h-[3px] bg-[#E3BE50] mb-8 " />
+
+          {/* Small Gold Accent Line */}
+          <motion.div 
+            initial={{ scaleX: 0 }} 
+            animate={{ scaleX: 1 }} 
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="w-12 h-[3px] bg-[#E3BE50] mb-6 origin-left" 
+          />
+          
           
           {/* Dynamic Title */}
           <h1 

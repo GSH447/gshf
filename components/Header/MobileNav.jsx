@@ -53,7 +53,7 @@ export default function MobileNav() {
         </motion.button>
       </div> */}
 
-      <div className=" flex gap-2">
+      <div className="flex gap-4">
 
 
         {/* CTA Button matched to UI reference */}
