@@ -15,7 +15,7 @@ const Hero2 = () => {
       <motion.div className="absolute inset-0 z-0 ">
         <Image
           // src="/assets/images/New/hero/1/2.png"
-          src="/assets/images/New/hero/3.png"
+          src="/assets/images/New/hero/2.png"
           // src="/assets/images/hero/care-03.png" // Replace with actual surgery image path
           alt="Surgery background"
           fill
