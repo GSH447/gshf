@@ -17,7 +17,7 @@ export default function PermanentTeam() {
           className="relative h-[400px] lg:h-[600px] w-full order-2 lg:order-2"
         >
           <Image
-            src="/assets/images/New/Landing-Page/1/medical-team.jpg"
+            src="/assets/images/new/Landing-Page/1/medical-team.jpg"
             // src="/assets/images/medical-team.jpg" // Add your image to this path
             alt="Gracespring Medical Team"
             fill

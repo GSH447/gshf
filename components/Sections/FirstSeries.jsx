@@ -5,12 +5,12 @@ import Image from "next/image";
 export default function FirstSeries() {
   // Store the data here to keep the JSX clean
   const seriesImages = [
-    { id: 1, src: "/assets/images/New/first_series_program/1.jpg", caption: "Waking up in intensive care." },
-    { id: 2, src: "/assets/images/New/first_series_program/2.jpg", caption: "Sitting up two (2) days after open heart surgery." },
-    { id: 3, src: "/assets/images/New/first_series_program/3.jpg", caption: "The team with a patient who has turned the corner." },
-    { id: 4, src: "/assets/images/New/first_series_program/4.jpg", caption: "Discharge day" },
-    { id: 5, src: "/assets/images/New/first_series_program/5.jpg", caption: "Patients, families and clinicians before going home." },
-    { id: 6, src: "/assets/images/New/first_series_program/6.jpeg", caption: "A Gold Star and the team that cared for her." },
+    { id: 1, src: "/assets/images/new/first_series_program/1.jpg", caption: "Waking up in intensive care." },
+    { id: 2, src: "/assets/images/new/first_series_program/2.jpg", caption: "Sitting up two (2) days after open heart surgery." },
+    { id: 3, src: "/assets/images/new/first_series_program/3.jpg", caption: "The team with a patient who has turned the corner." },
+    { id: 4, src: "/assets/images/new/first_series_program/4.jpg", caption: "Discharge day" },
+    { id: 5, src: "/assets/images/new/first_series_program/5.jpg", caption: "Patients, families and clinicians before going home." },
+    { id: 6, src: "/assets/images/new/first_series_program/6.jpeg", caption: "A Gold Star and the team that cared for her." },
   ];
 
   return (

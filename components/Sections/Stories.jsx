@@ -90,7 +90,7 @@ export default function Stories() {
           className="relative h-[400px] lg:h-[500px] w-full"
         >
           <Image
-            src="/assets/images/New/Gold_Star_Stories/1/stories.jpeg"
+            src="/assets/images/new/Gold_Star_Stories/1/stories.jpeg"
             // src="/assets/images/patients.jpg" // Add your image to this path
             alt="Patient recovering after surgery"
             fill
