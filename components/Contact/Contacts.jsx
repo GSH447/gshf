@@ -17,7 +17,7 @@ const ContactsUsHero = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
         className="relative z-10 mx-auto pt-40 pb-[2.5rem] lg:px-10 lg:pb-10"
-        style={{ backgroundColor: PRIMARY_BG }}
+        // style={{ backgroundColor: PRIMARY_BG }}
       >
         
         {/* Inner Container: Removed mt-[5rem] so it doesn't push the content too far down */}

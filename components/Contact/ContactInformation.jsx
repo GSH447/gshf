@@ -37,7 +37,7 @@ const ContactInformation = ({
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
         className="relative z-10 mx-auto py-[2.5rem] lg:p-10 mb-[5rem]"
-        style={{backgroundColor: contactInformationBg || white_BG}}
+        // style={{backgroundColor: contactInformationBg || white_BG}}
       >
         
 

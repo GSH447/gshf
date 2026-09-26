@@ -25,7 +25,7 @@ const Hero2 = () => {
       </motion.div>
 
       {/* ================= OVERLAY (Dark Blue/Purple Tint) ================= */}
-      <div className="absolute inset-0 bg-[#161240]/85 md:bg-[#161240]/80 mix-blend-multiply z-0 " />
+      <div className="absolute inset-0 bg-[#161240]/85 md:bg-[#161240]/70 mix-blend-multiply z-0 " />
       <div className="absolute inset-0 bg-gradient-to-r from-[#161240]/95 via-[#161240]/70 to-transparent z-0 " />
 
        {/* ================= CONTENT (Top part) ================= */}
@@ -164,7 +164,7 @@ const Hero2 = () => {
             className="flex flex-wrap gap-4 pt-6"
           >
             <Link
-              href="/sponsor"
+              href="/sponsor-a-patient"
               className="bg-[#E3BE50] text-[#161240] font-bold py-3 px-6 text-sm lg:text-[15px] hover:bg-[#d4ae42] transition-colors flex items-center justify-center"
             >
               Sponsor a patient

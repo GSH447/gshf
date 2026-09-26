@@ -40,6 +40,14 @@ export const links = [
   },
   
   {
+    label: "Meet our trustees",
+    href: "/meet-our-trustees",
+    // icon: FaEnvelope,
+    caption: "#excerise #stayhealthy",
+
+  },
+  
+  {
     label: "Contact us",
     href: "/contact-us",
     // icon: FaEnvelope,
