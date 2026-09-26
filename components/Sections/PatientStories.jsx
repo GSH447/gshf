@@ -34,7 +34,7 @@ export default function PatientStories() {
           {/* Fixed Mobile Image Content */}
           <div className="relative h-[300px] sm:h-[400px] w-full lg:hidden mb-8 rounded-sm overflow-hidden">
             <Image
-              src="/assets/images/new/Landing-Page/1/first-three-patients.jpg"
+              src="/assets/images/New/Landing-Page/1/first-three-patients.jpg"
               alt="Patient recovering after surgery"
               fill
               className="object-cover object-center"
@@ -75,7 +75,7 @@ export default function PatientStories() {
           className="relative h-[400px] lg:h-[500px] xl:h-[600px] w-full hidden lg:block rounded-sm overflow-hidden"
         >
           <Image
-            src="/assets/images/new/Landing-Page/1/first-three-patients.jpg"
+            src="/assets/images/New/Landing-Page/1/first-three-patients.jpg"
             alt="Patient recovering after surgery"
             fill
             className="object-cover object-center"

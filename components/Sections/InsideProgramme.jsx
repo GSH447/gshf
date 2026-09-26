@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 export default function InsideProgramme() {
   // Store your images and captions here to keep the code clean
   const programImages = [
-    { id: 1, src: "/assets/images/new/inside_program/1.jpg", caption: "Team brief at the bedside before a case begins." },
-    { id: 2, src: "/assets/images/new/inside_program/2.jpg", caption: "Open heart surgery under way in theatre." },
-    { id: 3, src: "/assets/images/new/inside_program/3.jpg", caption: "The first hours after surgery, in intensive care." },
-    { id: 4, src: "/assets/images/new/inside_program/4.jpg", caption: "Breathing excerises begin within days of surgery." },
-    { id: 5, src: "/assets/images/new/inside_program/5.jpg", caption: "Daily review by the cardiac team." },
-    { id: 6, src: "/assets/images/new/inside_program/6.jpg", caption: "Recovery on the ward, a few days after" },
+    { id: 1, src: "/assets/images/New/inside_program/1.jpg", caption: "Team brief at the bedside before a case begins." },
+    { id: 2, src: "/assets/images/New/inside_program/2.jpg", caption: "Open heart surgery under way in theatre." },
+    { id: 3, src: "/assets/images/New/inside_program/3.jpg", caption: "The first hours after surgery, in intensive care." },
+    { id: 4, src: "/assets/images/New/inside_program/4.jpg", caption: "Breathing excerises begin within days of surgery." },
+    { id: 5, src: "/assets/images/New/inside_program/5.jpg", caption: "Daily review by the cardiac team." },
+    { id: 6, src: "/assets/images/New/inside_program/6.jpg", caption: "Recovery on the ward, a few days after" },
   ];
 
   return (

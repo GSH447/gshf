@@ -20,7 +20,7 @@ export default function TheNeed() {
           {/* MOBILE IMAGE: Renders directly after the title, hidden on large desktop screens */}
           <div className="relative h-[300px] sm:h-[400px] w-full rounded-sm overflow-hidden mb-8 lg:hidden">
             <Image 
-              src="/assets/images/new/Gold_Star_Initiative/1/the_need.jpg"
+              src="/assets/images/New/Gold_Star_Initiative/1/the_need.jpg"
               alt="Surgery Team" 
               fill 
               className="object-cover object-center" 
@@ -43,7 +43,7 @@ export default function TheNeed() {
         {/* DESKTOP IMAGE: Hidden on mobile/tablet, shown on the right on large screens */}
         <div className="relative h-[500px] w-full rounded-sm overflow-hidden hidden lg:block">
           <Image 
-            src="/assets/images/new/Gold_Star_Initiative/1/the_need.jpg"
+            src="/assets/images/New/Gold_Star_Initiative/1/the_need.jpg"
             alt="Surgery Team" 
             fill 
             className="object-cover object-center" 

@@ -11,7 +11,7 @@ const trusteesData = [
     role: "Chairman",
     occupation: "Stockbroking",
     location: "Victoria Island, Lagos",
-    imageSrc: "/assets/images/new/trustees/Joe_Ugbede_Abba.png",
+    imageSrc: "/assets/images/New/trustees/Joe_Ugbede_Abba.png",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const trusteesData = [
     role: "Member",
     occupation: "Engineering",
     location: "Lekki Phase 1, Lagos",
-    imageSrc: "/assets/images/new/trustees/ASIBOR_EROMOSELE.png",
+    imageSrc: "/assets/images/New/trustees/ASIBOR_EROMOSELE.png",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const trusteesData = [
     role: "Member",
     occupation: "Doctor",
     location: "International / Diaspora",
-    imageSrc: "/assets/images/new/trustees/Dr_Tagbo_Azubike.png",
+    imageSrc: "/assets/images/New/trustees/Dr_Tagbo_Azubike.png",
   }
 ];
 

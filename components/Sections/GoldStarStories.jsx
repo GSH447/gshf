@@ -11,7 +11,7 @@ export default function GoldStarStories() {
         {/* 2. Example: Patient Story (Image on Left, includes table and quote) */}
       <DynamicSplitSection
         imagePosition="right"
-        imageSrc="/assets/images/new/Gold_Star_Stories/1/goldstar2.jpeg"
+        imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar2.jpeg"
         imageAlt="Patient posing in a yellow shirt"
         preTitle="Gold Star №1"
         title="Azeezat Adedokun, 8 yrs"
@@ -35,7 +35,7 @@ export default function GoldStarStories() {
       {/* 3. Example: Patient Story (Image on Left, includes table and quote) */}
       <DynamicSplitSection
         imagePosition="left"
-        imageSrc="/assets/images/new/Gold_Star_Stories/1/goldstar3.jpg"
+        imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar3.jpg"
         imageAlt="Patient posing in a yellow shirt"
         preTitle="Gold Star №3"
         title="Adegun Alaba, 45Y"
