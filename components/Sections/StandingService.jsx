@@ -11,8 +11,8 @@ export default function StandingService() {
         {/* order-first places the image on top on mobile, and on the left on desktop */}
         <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] w-full rounded-sm overflow-hidden order-first lg:order-first">
           <Image 
-            src="/assets/images/New/Gold_Star_Initiative/DSC_4005.jpg" 
-            alt="Hospital Room" 
+            src="/assets/images/New/Gold_Star_Initiative/2_2.jpg" 
+            alt="cardiopulmonary bypass equipped" 
             fill 
             className="object-cover object-center" 
           />
