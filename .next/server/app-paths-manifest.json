@@ -1,4 +1,4 @@
 {
-  "/the-gold-star-initiative/page": "app/the-gold-star-initiative/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/the-gold-star-initiative/page": "app/the-gold-star-initiative/page.js"
 }
