@@ -73,7 +73,7 @@ export default function Stories() {
 
           <div>
             <Link 
-              href="/gold-star-initiative"
+              href="/the-gold-star-initiative"
               className="bg-primary text-white font-bold py-4 px-8 whitespace-nowrap hover:bg-[#E3BE50] hover:text-black transition-colors inline-block"
             >
               How the programme is governed
