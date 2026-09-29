@@ -6,9 +6,9 @@ export default function GoldStarStories() {
   return (
     <main className="bg-white min-h-screen">
       
-
       <hr className="border-gray-100" />
-        {/* 2. Example: Patient Story (Image on Left, includes table and quote) */}
+      
+      {/* 1. Example: Patient Story */}
       <DynamicSplitSection
         imagePosition="right"
         imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar2.jpeg"
@@ -17,7 +17,7 @@ export default function GoldStarStories() {
         title="Azeezat Adedokun, 8 yrs"
         detailsTable={[
           { label: "Condition", value: "Congenital heart defect" },
-          { label: "Procedure", value: "Open heart repair" },
+          { label: "Procedure", value: "Open heart repair - VSD Closure" },
           { label: "Sponsored by", value: "Marine Platforms Limited and Global Health Charity and Training Foundation Inc." },
           { label: "Status", value: "Recovered and home with her family" }
         ]}
@@ -27,21 +27,19 @@ export default function GoldStarStories() {
         quote="I Azeezat Adedokun am now relief I say a very big thanks"
       />
       
-
-      
-      
       <hr className="border-gray-100" />
 
-      {/* 3. Example: Patient Story (Image on Left, includes table and quote) */}
+      {/* 2. Example: Patient Story */}
       <DynamicSplitSection
         imagePosition="left"
         imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar3.jpg"
         imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №3"
+        imageFraming="object-[50%_25%]" // <-- Custom framing passed here
+        preTitle="Gold Star №2"
         title="Adegun Alaba, 45Y"
         detailsTable={[
           { label: "Condition", value: "Congenital heart defect" },
-          { label: "Procedure", value: "Open heart repair" },
+          { label: "Procedure", value: "Open heart repair - ASD Closure" },
           { label: "Sponsored by", value: "Marine Platforms Limited and Global Health Charity and Training Foundation Inc." },
           { label: "Status", value: "Recovered and home with her family" }
         ]}
@@ -51,22 +49,19 @@ export default function GoldStarStories() {
         quote="I really apperciate the Gracespring Health Foundation and Gracespring Hospitals God will continue to bless and lift you people more than expectations Amen."
       />
 
-
-
-
-
       <hr className="border-gray-100" />
 
-      {/* 2. Example: Patient Story (Image on Left, includes table and quote) */}
+      {/* 3. Example: Patient Story */}
       <DynamicSplitSection
         imagePosition="right"
-        imageSrc="/gshf.jpg"
+        imageSrc="/assets/images/New/Gold_Star_Stories/1/elizabeth.jpeg"
+        imageFraming="object-top" // <-- Custom framing passed here
         imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №2"
+        preTitle="Gold Star №3"
         title="Elizabeth Oshikomaya, 8Y"
         detailsTable={[
           { label: "Condition", value: "Congenital heart defect" },
-          { label: "Procedure", value: "Open heart repair" },
+          { label: "Procedure", value: "Open heart repair - AVSD repair" },
           { label: "Sponsored by", value: "Marine Platforms Limited and Global Health Charity and Training Foundation Inc." },
           { label: "Status", value: "Recovered and home with her family" }
         ]}
@@ -76,50 +71,7 @@ export default function GoldStarStories() {
         quote="Thank you all for the care and support"
       />
 
-
-
-      {/* <hr className="border-gray-100" /> */}
-        {/* 2. Example: Patient Story (Image on Left, includes table and quote) */}
-      {/* <DynamicSplitSection
-        imagePosition="right"
-        imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar2.jpeg"
-        imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №2"
-        title="Azeezat Adedokun, 8 yrs"
-        detailsTable={[
-          { label: "Condition", value: "Congenital heart defect" },
-          { label: "Procedure", value: "Open heart repair" },
-          { label: "Sponsored by", value: "Marine Platforms Limited and Global Health Charity and Training Foundation Inc." },
-          { label: "Status", value: "Recovered and home with her family" }
-        ]}
-        paragraphs={[
-          "I am very apperciate fro all what Gracespring Hospital did in my family life so grateful"
-        ]}
-        quote="I Azeezat Adedokun am now relief I say a very big thanks"
-      /> */}
-
-
-      {/* <hr className="border-gray-100" /> */}
-        {/* 3. Example: Patient Story (Image on Left, includes table and quote) */}
-      {/* <DynamicSplitSection
-        imagePosition="left"
-        imageSrc="/assets/images/New/Gold_Star_Stories/1/goldstar3.jpg"
-        imageAlt="Patient posing in a yellow shirt"
-        preTitle="Gold Star №3"
-        title="Alaba Adegun, 45Y"
-        detailsTable={[
-          { label: "Condition", value: "Congenital heart defect" },
-          { label: "Procedure", value: "Open heart repair" },
-          { label: "Sponsored by", value: "Marine Platforms Limited and Global Health Charity and Training Foundation Inc." },
-          { label: "Status", value: "Recovered and home with her family" }
-        ]}
-        paragraphs={[
-          "[Two or three sentences in the family's words, or GHF's, describing what life was like before surgery — breathlessness, missed school, repeated admissions — and what the diagnosis meant for the family financially.]",
-          "[What happened at Gracespring: assessment, the operation, days in intensive care, the first time she sat up, the day she went home.]"
-        ]}
-        quote="[A short quote from the parent or patient, in their own words, taken from the acknowledgement letter with gratitude.]"
-      /> */}
-
     </main>
   );
 }
+

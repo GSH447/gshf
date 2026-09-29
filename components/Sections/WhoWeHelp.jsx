@@ -13,7 +13,7 @@ export default function WhoWeHelp() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {[
             { id: "1", title: "Children", text: "Born with congenital heart disease — including septal defects, patent ductus arteriosus and Tetralogy of Fallot." },
-            { id: "2", title: "Adults", text: "With acquired heart disease — rheumatic and degenerative valve disease, and other conditions correctable by surgery." },
+            { id: "2", title: "Adults", text: "With acquired heart disease — rheumatic and degenerative valve disease, Coronary artery disease (CAD), and other conditions correctable by surgery." },
             { id: "3", title: "Assessed clinically", text: "Every case is selected on clinical grounds and documented before any sponsor is matched to it." },
             { id: "4", title: "Supported fully", text: "Sponsored patients and their families are asked for nothing towards the cost of their care." }
           ].map((item) => (

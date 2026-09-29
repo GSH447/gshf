@@ -170,7 +170,7 @@ const Hero2 = () => {
               Sponsor a patient
             </Link>
             <Link
-              href="/how-it-works"
+              href="/the-gold-star-initiative"
               className="bg-transparent border border-white text-white font-bold py-3 px-6 text-sm lg:text-[15px] hover:bg-white hover:text-[#161240] transition-colors flex items-center justify-center"
             >
               How the programme works

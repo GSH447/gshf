@@ -5,12 +5,16 @@ import Image from "next/image";
 export default function FirstSeries() {
   // Store the data here to keep the JSX clean
   const seriesImages = [
-    { id: 1, src: "/assets/images/New/first_series_program/1.jpg", caption: "Waking up in intensive care." },
-    { id: 2, src: "/assets/images/New/first_series_program/2.jpg", caption: "Sitting up two (2) days after open heart surgery." },
+    { id: 1, src: "/assets/images/New/first_series_program/1.jpg", caption: "Waking up in intensive care.", position: "object-[50%_30%]"  },
+    { id: 2, src: "/assets/images/New/first_series_program/2.jpg", caption: "Sitting up two (2) days after open heart surgery.", position: "object-[50%_30%]"  },
     { id: 3, src: "/assets/images/New/first_series_program/3.jpg", caption: "The team with a patient who has turned the corner." },
     { id: 4, src: "/assets/images/New/first_series_program/4.jpg", caption: "Discharge day" },
-    { id: 5, src: "/assets/images/New/first_series_program/5.jpg", caption: "Patients, families and clinicians before going home." },
-    { id: 6, src: "/assets/images/New/first_series_program/6.jpeg", caption: "A Gold Star and the team that cared for her." },
+
+    { id: 5, src: "/assets/images/New/first_series_program/5.jpg", caption: "Patients, families and clinicians before going home.", position: "object-[50%_15%]" },
+    { id: 6, src: "/assets/images/New/first_series_program/6.jpeg", caption: "A Gold Star and the team that cared for her.", position: "object-[50%_40%]" },
+
+    // { id: 5, src: "/assets/images/New/first_series_program/5.jpg", caption: "Patients, families and clinicians before going home." },
+    // { id: 6, src: "/assets/images/New/first_series_program/6.jpeg", caption: "A Gold Star and the team that cared for her." },
   ];
 
   return (
@@ -42,7 +46,9 @@ export default function FirstSeries() {
                   src={item.src} 
                   alt={item.caption} 
                   fill 
-                  className="object-cover" 
+                  className={`object-cover ${item.position || ""}`}
+                  // className={item.id === 5 || item.id === 6 ? "object-cover object-[50%_15%]" : "object-cover"}
+                  // className="object-cover" 
                 />
               </div>
 
