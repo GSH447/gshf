@@ -14,7 +14,7 @@ const nextConfig = {
     return [
       {
         source: '/api/backend/:path*',
-        destination: 'https://20-26-8-221.gracespringhospitals.com/:path*',
+        destination: 'https://20-26-8-221.gracespringhealthfoundation.com/:path*',
       },
     ]
   }
