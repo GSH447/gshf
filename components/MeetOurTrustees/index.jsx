@@ -10,7 +10,7 @@ const trusteesData = [
     role: "Chairman",
     occupation: "Stockbroking",
     location: "Victoria Island, Lagos",
-    imageSrc: "/assets/images/New/trustees/Joe_Ugbede_Abba.png",
+    imageSrc: "/assets/images/New/trustees/Joe_Ugbede_Abba.jpeg",
     position: "object-top", // <-- Add this custom position for ID 1
   },
   {
