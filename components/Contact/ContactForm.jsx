@@ -155,7 +155,7 @@ export default function ContactForm() {
     >
 
       
-        <div className="lg:w-fit m-auto p-10 bg-white shadow-xl rounded-lg">
+        <div className="lg:w-fit m-auto p-10 bg-white shadow-xl">
 
           <div className=" w-fit mb-5">
 

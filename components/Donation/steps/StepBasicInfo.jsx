@@ -118,14 +118,14 @@ export default function StepBasicInfo({
 
   /* ---------------- UI ---------------- */
   return (
-    <div className="w-fit m-auto">
-      <div className="w-fit mx-auto my-4">
+    <div className="w-fit m-auto ">
+      <div className="w-fit mx-auto my-4 ">
         <h3 className="text-primary text-center font-bold tracking-wide">
           Enter your details
         </h3>
       </div>
 
-      <form className="flex flex-col space-y-4 w-full px-[0.5rem]">
+      <form className="flex flex-col space-y-4 w-full px-[0.5rem] ">
         {/* TITLE */}
         <div>
           <label className="text-black">Title</label>

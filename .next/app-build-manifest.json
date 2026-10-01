@@ -16,30 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/the-gold-star-initiative/page": [
+    "/contact-us/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/the-gold-star-initiative/page.js"
-    ],
-    "/gold-star-stories/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/gold-star-stories/page.js"
-    ],
-    "/sponsor-a-patient/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sponsor-a-patient/page.js"
+      "static/chunks/app/contact-us/page.js"
     ],
     "/meet-our-trustees/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/meet-our-trustees/page.js"
     ],
-    "/contact-us/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact-us/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

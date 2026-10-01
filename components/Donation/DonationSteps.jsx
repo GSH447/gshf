@@ -87,18 +87,19 @@ export default function DonationSteps({ donation }) {
     <>
 
     <div
-        className="lg:flex gap-2"
+        className="lg:flex gap-2 "
     >
 
         <div
-            className="lg:w-2/3 bg-white border lg:rounded-2xl relative"
+            className="lg:w-4/5 bg-white border lg:rounded-2xl relative"
         >
 
             <div
                 className=""
             >
                 <Image
-                    src="/assets/images/hero/care-01.png"
+                
+                    src="/assets/images/New/Landing-Page/1/medical-team.jpg"
                     alt="Donation "
                     width={1000}
                     height={1000}
@@ -118,32 +119,32 @@ export default function DonationSteps({ donation }) {
             </div>
             
             <div
-                className=" px-6"
+                className=" bg-primary p-6"
             >
                 <div
                     className="hidden lg:block flex mb-4"
                 >
                     <Image
-                        src="/logo-nobg.png"
+                        src="/gshf-logo-nobg.png"
                         alt="Donation "
                         width={1000}
                         height={1000}
-                        className="w-[23%]"
+                        className="w-[30%]"
                     />
                 </div>
 
                 <div>
-                    <h2 className="font-bold my-2">Your support is life-saving</h2>
+                    <h2 className="font-bold my-2 text-white">Your support is life-saving</h2>
                 </div>
 
                 <div
-                    className="my-2 text-justify text-sm"
+                    className="my-2 text-justify text-sm text-white"
                 >
                     1 in 100 of us in the Nigeria will be diagnosed with Cogential Heart Disease. Together, we’re funding groundbreaking research at The Gracespring Health Foundation to develop better ways to treat people with Cogential Heart Disease everywhere. 
                 </div>
                 
                 <div>
-                    <b>Donate now and help make a difference today</b>
+                    <b className=" text-white">Donate now and help make a difference today</b>
                 </div>
 
             </div>
@@ -157,7 +158,7 @@ export default function DonationSteps({ donation }) {
         </div>
         
         <div
-            className="lg:w-1/3 bg-white border lg:rounded-2xl p-2 relative"
+            className="lg:w-2/4 bg-white border lg:rounded-2xl p-2 relative "
         >
             <>
             {/* BACK BUTTON */}

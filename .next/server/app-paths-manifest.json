@@ -1,7 +1,6 @@
 {
-  "/gold-star-stories/page": "app/gold-star-stories/page.js",
-  "/meet-our-trustees/page": "app/meet-our-trustees/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
   "/contact-us/page": "app/contact-us/page.js",
-  "/sponsor-a-patient/page": "app/sponsor-a-patient/page.js",
-  "/page": "app/page.js"
+  "/meet-our-trustees/page": "app/meet-our-trustees/page.js"
 }
