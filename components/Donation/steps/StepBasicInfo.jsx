@@ -30,11 +30,26 @@ export default function StepBasicInfo({
   });
 
 
+
+
+
+
+
+
+
+
   /* ---------------- FETCH COUNTRIES ---------------- */
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
-      .then((res) => res.json())
+    // Call the local Next.js proxy route
+    fetch("/api/countries")
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
+        // Ensure data is an array before processing
+        if (!Array.isArray(data)) return;
+
         const countryData = data
           .filter((c) => c.idd?.root && c.flags?.png)
           .map((c) => ({
@@ -51,6 +66,28 @@ export default function StepBasicInfo({
         console.error("🌍 Country fetch error:", err.message)
       );
   }, []);
+
+  /* ---------------- FETCH COUNTRIES ---------------- */
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v3.1/all?fields=idd,name,flags")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const countryData = data
+  //         .filter((c) => c.idd?.root && c.flags?.png)
+  //         .map((c) => ({
+  //           code: c.idd.root + (c.idd.suffixes?.[0] || ""),
+  //           flag: c.flags.png,
+  //           name: c.name.common,
+  //         }));
+
+  //       setCountries(countryData);
+  //       const nigeria = countryData.find((c) => c.code === "+234");
+  //       if (nigeria) setSelectedCountry(nigeria);
+  //     })
+  //     .catch((err) =>
+  //       console.error("🌍 Country fetch error:", err.message)
+  //     );
+  // }, []);
 
   /* ---------------- HANDLERS ---------------- */
   const handleCountryChange = (country) => {

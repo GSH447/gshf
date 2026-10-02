@@ -32,20 +32,20 @@ export default function DonationModal({ isOpen, donation, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[9999] bg-white backdrop-blur-sm w-[100%] grid lg:flex items-center justify-center px-4 py-6 overflow-auto"
+          className="fixed inset-0 z-[9999] bg-white backdrop-blur-sm w-[100%] grid lg:flex items-center justify-center lg:px-4 lg:py-6 overflow-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <div className="w-full h-full flex flex-col relative max-w-7xl mx-auto">
-            <div className="block lg:hidden bg-primary">
+            <div className="block lg:hidden bg-primary px-2">
               <Image
                 src="/gshf-logo-nobg.png"
                 alt="Donation"
                 width={1000}
                 height={1000}
-                className="w-[23%]"
+                className="w-[30%]"
               />
             </div>
 
@@ -61,12 +61,33 @@ export default function DonationModal({ isOpen, donation, onClose }) {
                   rounded-full
                   p-2
                   bg-gray-100
-                  hover:bg-primary
+                  hover:bg-primary hover:text-white
                   transition
                   z-50
                 "
               >
-                <X className="w-5 h-5 text-gray-600" />
+
+                <div className="flex">
+
+                    
+                  <div>
+                
+                    <X className="w-5 h-5 text-gray-600 hover:text-white" /> 
+                
+                  </div>
+
+                  
+                  <div>
+                    <p className=" hover:text-white">
+                    Close
+                    </p>
+                    
+
+                  </div>
+
+                  
+                </div>
+                
               </button>
             </div>
 
