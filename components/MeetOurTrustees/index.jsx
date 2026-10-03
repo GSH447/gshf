@@ -188,7 +188,7 @@ export default function TrusteesPage() {
             {/* TIER 1: CHAIRMAN */}
             {chairman && (
               <div className="flex flex-col items-center w-full px-4">
-                <div className="w-full max-w-[300px]">
+                <div className="border-2 border-[red] w-full max-w-[300px]">
                   <TrusteeCard trustee={chairman} isLeader={true} />
                 </div>
                 {/* Vertical Drop touching the scrollable container */}

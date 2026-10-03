@@ -14,19 +14,31 @@ const Hero2 = () => {
     >
       {/* ================= BACKGROUND IMAGE ================= */}
       <motion.div className="absolute inset-0 z-0">
+
         <Image
-          src="/assets/images/New/hero/2.png"
+          src="/assets/images/New/hero/IMG-20260821-WA0031.jpg"
+          alt="Medical professionals performing surgery"
+          fill
+          priority
+          quality={100}
+          sizes="100vw"
+          className="object-cover object-[top_100%] md:object-[left_50%] lg:object-[left_50%]"
+          // className="object-cover object-[center_15%] md:object-[center_25%] transition-all duration-700"
+        />
+
+        {/* <Image
+          src="/assets/images/New/hero/IMG-20260821-WA0031.jpg"
           alt="Surgery background"
           fill
           // Changed to object-[center_15%] to lift the image up and show the human element
-          className="object-cover object-[center_15%]"
+          className="object-cover object-[top_100%] md:object-[left_75%] lg:object-[left_75%]"
           priority
-        />
+        /> */}
       </motion.div>
 
       {/* ================= OVERLAY (Dark Blue/Purple Tint) ================= */}
-      <div className="absolute inset-0 bg-[#161240]/85 md:bg-[#161240]/70 mix-blend-multiply z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#161240]/95 via-[#161240]/70 to-transparent z-0" />
+      <div className="absolute inset-0 bg-[#161240]/85 bg-[#161240]/30 mix-blend-multiply z-0" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#161240]/45 via-[#161240]/70 to-transparent z-0" />
 
       {/* ================= MAIN CONTENT (Text + Card) ================= */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-5 flex-grow flex flex-col md:flex-row items-center justify-between gap-12 pt-[4rem] pb-[4rem] md:pt-[6rem] ">
